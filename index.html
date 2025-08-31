@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأندلس للهجرة - خدمات الإقامة في إسبانيا</title>
+    <link rel="icon" href="https://andalusimmigration.com/wp-content/uploads/2025/05/cropped-fiv-1-300x300.png"
+        sizes="192x192">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #8a742f;
+            --beige: #f2eedf;
+            --black: #26261e;
+            --light-gold: #c4a758;
+            --dark-gold: #5d4f1f;
+            --header-footer-bg: #f9f6f0;
+            /* لون خلفية فاتح للهيدر والفوتر */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--beige);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--header-footer-bg);
+            /* تغيير لون خلفية الهيدر */
+            color: var(--black);
+            /* تغيير لون النص */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(138, 116, 47, 0.2);
+            /* إضافة حدود فاصلة */
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* width: 50px; */
+            height: 50px;
+            background-color: transparent;
+            border-radius: 50%;
+            color: var(--black);
+            /* تغيير لون النص */
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover img {
+            transform: scale(1.1);
+        }
+
+        nav {
+            flex: 1;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        nav a {
+            color: var(--black);
+            /* تغيير لون الروابط */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Social Media Links in Header */
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(138, 116, 47, 0.1);
+            /* تغيير لون الخلفية */
+            color: var(--gold);
+            /* تغيير لون الأيقونات */
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background-color: var(--gold);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--black);
+            /* تغيير لون الزر */
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw;
+            /* 16:9 Aspect Ratio */
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            display: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        /* Consultation Popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+        }
+
+        .popup {
+            background-color: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+            animation: popupFadeIn 0.3s ease-out;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes popupFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--black);
+            transition: color 0.3s;
+        }
+
+        .close-popup:hover {
+            color: var(--gold);
+        }
+
+        .popup h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--black);
+            text-align: center;
+        }
+
+        .popup p {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #555;
+        }
+
+        .popup-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .popup-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .popup-form input,
+        .popup-form select,
+        .popup-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            background-color: var(--beige);
+        }
+
+        .popup-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .popup-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .popup-form button:hover {
+            background-color: var(--light-gold);
+        }
+
+        .popup-message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .popup-message.success {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .popup-message.error {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--black);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background-color: var(--beige);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--beige);
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--gold);
+        }
+
+        /* Destinations Section */
+        .destinations {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .dest-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: var(--beige);
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .dest-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .dest-info {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 20px;
+            color: white;
+        }
+
+        .dest-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--beige);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Service Details Popup */
+        .service-details-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .service-details-overlay.active {
+            display: flex;
+        }
+
+        .service-details {
+            background-color: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: popupFadeIn 0.3s ease-out;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-details-header {
+            background-color: var(--gold);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .service-details-header h2 {
+            font-size: 28px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-details-header i {
+            font-size: 32px;
+        }
+
+        .service-details-content {
+            padding: 30px;
+        }
+
+        .service-details-section {
+            margin-bottom: 30px;
+        }
+
+        .service-details-section h3 {
+            font-size: 22px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--beige);
+            padding-bottom: 10px;
+        }
+
+        .service-details-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-details-section ul {
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .service-details-section li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .service-media {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-media img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-media img:hover {
+            transform: scale(1.05);
+        }
+
+        .service-videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .service-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .service-cta {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .service-cta .btn {
+            margin: 0 10px;
+        }
+
+        /* Why Spain Section */
+        .why-spain {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .why-card {
+            background-color: var(--beige);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border-right: 3px solid var(--gold);
+        }
+
+        .why-card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        .why-card p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--beige);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: var(--black);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: var(--gold);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            background-color: white;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Contact Section - Updated Design */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(138, 116, 47, 0.2);
+        }
+
+        .contact-form h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--black);
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-form h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+
+        .contact-form p {
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--black);
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            background-color: var(--beige);
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(138, 116, 47, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--dark-gold);
+            /* تغيير اللون إلى ذهبي غامق */
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--dark-gold);
+            /* تغيير اللون إلى ذهبي غامق */
+        }
+
+        .contact-info p {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--black);
+            /* تغيير اللون إلى أسود */
+            max-width: 90%;
+        }
+
+        .contact-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            border: 1px solid rgba(138, 116, 47, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-item i {
+            font-size: 28px;
+            color: var(--gold);
+            /* تغيير اللون إلى ذهبي */
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .contact-item h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--black);
+            /* تغيير اللون إلى أسود */
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+            /* تغيير اللون إلى رمادي داكن */
+        }
+
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message {
+            background-color: #f44336;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 50px 0;
+            background-color: var(--black);
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            background-color: transparent;
+            color: white;
+            text-align: right;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--light-gold);
+            box-shadow: 0 0 10px rgba(138, 116, 47, 0.3);
+        }
+
+        .newsletter-form button {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--light-gold);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--header-footer-bg);
+            /* تغيير لون خلفية الفوتر */
+            color: var(--black);
+            /* تغيير لون النص */
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(138, 116, 47, 0.2);
+            /* إضافة حدود فاصلة */
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo .logo {
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+        }
+
+        .footer-logo h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-links a {
+            color: var(--black);
+            /* تغيير لون الروابط */
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(138, 116, 47, 0.1);
+            /* تغيير لون الخلفية */
+            color: var(--gold);
+            /* تغيير لون الأيقونات */
+            transition: all 0.3s;
+        }
+
+        .footer-social-links a:hover {
+            background-color: var(--gold);
+            transform: translateY(-5px);
+            color: white;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(138, 116, 47, 0.2);
+            /* تغيير لون الحد */
+            font-size: 14px;
+            color: #666;
+            /* تغيير لون النص */
+        }
+
+        .copyright a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                position: relative;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--header-footer-bg);
+                /* تغيير لون خلفية القائمة المتنقلة */
+                padding: 20px;
+                display: none;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .social-links {
+                display: none;
+            }
+
+            .hero {
+                height: 60vh;
+                min-height: 400px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            /* Contact Section Mobile Responsive */
+            .contact::before {
+                width: 100%;
+                height: 30%;
+                clip-path: polygon(0 0%, 100% 0%, 100% 70%, 0% 100%);
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-form {
+                order: 2;
+            }
+
+            .contact-info {
+                order: 1;
+                text-align: center;
+            }
+
+            .contact-info h3 {
+                color: var(--black);
+            }
+
+            .contact-info h3::after {
+                background-color: var(--gold);
+            }
+
+            .contact-info p {
+                color: var(--black);
+                margin: 0 auto 30px;
+            }
+
+            .contact-items {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-item {
+                background-color: var(--beige);
+                border: 1px solid rgba(138, 116, 47, 0.2);
+            }
+
+            .contact-item i {
+                color: var(--gold);
+            }
+
+            .contact-item h4 {
+                color: var(--black);
+            }
+
+            .contact-item p {
+                color: #555;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+                border-radius: 30px;
+            }
+
+            /* Service Details Mobile Responsive */
+            .service-details {
+                max-width: 95%;
+                margin: 10px;
+            }
+
+            .service-details-header {
+                padding: 15px 20px;
+            }
+
+            .service-details-header h2 {
+                font-size: 24px;
+            }
+
+            .service-details-content {
+                padding: 20px;
+            }
+
+            .service-media,
+            .service-videos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png" alt="الأندلس للهجرة">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#destinations">الوجهات</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- صورة خلفية جذابة لإسبانيا -->
+        <img class="hero-image"
+            src="https://plus.unsplash.com/premium_photo-1716138192476-f34e85ad43c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="إسبانيا">
+        <!-- فيديو من يوتيوب عن إسبانيا (مخفي افتراضياً) -->
+        <iframe class="hero-video"
+            src="https://www.youtube.com/embed/H-Y7Mds_gnw?autoplay=1&mute=1&loop=1&playlist=H-Y7Mds_gnw&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>الأندلس للهجرة</h2>
+            <p>الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل</p>
+            <button class="btn" id="consultationBtn">احصل على استشارتك المجانية</button>
+        </div>
+    </section>
+    <!-- Consultation Popup -->
+    <div class="popup-overlay" id="consultationPopup">
+        <div class="popup">
+            <button class="close-popup" id="closePopup">&times;</button>
+            <h3>استشارة مجانية</h3>
+            <p>املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن</p>
+            <div class="popup-message" id="popupMessage"></div>
+            <form class="popup-form" id="consultationForm">
+                <div class="form-group">
+                    <label for="popupName">الاسم الكامل</label>
+                    <input type="text" id="popupName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="popupPhone">رقم الهاتف</label>
+                    <input type="tel" id="popupPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="popupEmail">البريد الإلكتروني</label>
+                    <input type="email" id="popupEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="popupService">الخدمة المطلوبة</label>
+                    <select id="popupService" name="service" required>
+                        <option value="">اختر الخدمة</option>
+                        <option value="residency">الإقامة</option>
+                        <option value="real-estate">العقارات</option>
+                        <option value="study">الدراسة في إسبانيا</option>
+                        <option value="tourist">تأشيرة سياحية</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="popupMessageText">رسالة إضافية</label>
+                    <textarea id="popupMessageText" name="message"
+                        placeholder="اكتب أي معلومات إضافية تود مشاركتها..."></textarea>
+                </div>
+                <button type="submit">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <div class="section-title">
+                <h2>قيمنا</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>الشفافية والجودة</h3>
+                    <p>نلتزم بأعلى معايير الشفافية والجودة في جميع خدماتنا المقدمة لعملائنا</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>التخصيص والاهتمام الفردي</h3>
+                    <p>نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي فائق</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>الابتكار وسرعة العمل</h3>
+                    <p>نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز معاملاتكم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>من نحن</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>الأندلس للهجرة</h3>
+                    <p>شركة متخصصة في تقديم خدمات الإقامة في إسبانيا. لدينا خبرة واسعة في الاستثمار والهجرة إلى إسبانيا،
+                        ونقدم حلولاً قانونية واستشارية مخصصة لمساعدة رجال الأعمال والأفراد الباحثين عن الحصول على
+                        الإقامة الإسبانية بسهولة وثقة.</p>
+                    <p>خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في إسبانيا. شبكة واسعة من الشراكات
+                        مع وكالات الخدمات ووكلاء العقارات والبنوك في إسبانيا.</p>
+                    <p>نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة دائمة حتى بعد تنفيذ شروط
+                        الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات.</p>
+                    <a href="#services" class="btn">اكتشف خدماتنا</a>
+                </div>
+                <div class="about-image">
+                    <!-- صورة فريق العمل - يمكن استبدال الرابط -->
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="فريق الأندلس للهجرة"
+                        onerror="this.src='https://via.placeholder.com/500x300/8a742f/ffffff?text=فريق+الأندلس+للهجرة'">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-title">
+                <h2>اختر وجهتك </h2>
+            </div>
+            <div class="dest-grid">
+                <div class="dest-card">
+                    <!-- صورة مدريد -->
+                    <img src="https://img.static-kl.com/images/media/65848EF5-2848-4EA7-BE113130180A0A55" alt="مدريد"
+                        onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مدريد'">
+                    <div class="dest-info">
+                        <h3>مدريد... قلب إسبانيا</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <!-- صورة برشلونة -->
+                    <img src="https://media.timeout.com/images/106185654/750/562/image.jpg" alt="برشلونة"
+                        onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=برشلونة'">
+                    <div class="dest-info">
+                        <h3>برشلونة.. أكثر من مجرد مدينة</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <!-- صورة فالنسيا -->
+                    <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
+                        alt="بلنسية" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=بلنسية'">
+                    <div class="dest-info">
+                        <h3>فالنسيا.. جوهرة البحر المتوسط</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <!-- صورة إشبيلية -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2hOosZz76f6coKfbXfd9Cx-tM5pwhiKZxtw&s"
+                        alt="إشبيلية"
+                        onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=إشبيلية'">
+                    <div class="dest-info">
+                        <h3>إشبيلية.. روح الأندلس</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <!-- صورة مالقة -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ow1YV3XgwPeU7EzEC0KthPsu4lKhs3_2tw&s"
+                        alt="مالقة" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مالقة'">
+                    <div class="dest-info">
+                        <h3>مالقة.. كوستا ديل سول</h3>
+                    </div>
+                </div>
+                <div class="dest-card">
+                    <!-- صورة أليكانتي -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8Eaa1oZy5mNaaSBzKLcqjD_Rix6_FzigOQ&s"
+                        alt="أليكانتي"
+                        onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=أليكانتي'">
+                    <div class="dest-info">
+                        <h3>أليكانتي.. مدينة التقاليد</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="residency">
+                    <i class="fas fa-id-card"></i>
+                    <h3>الإقامة</h3>
+                    <p>احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات اللازمة بسرعة وكفاءة.</p>
+                    <a href="#" class="btn service-details-btn">المزيد</a>
+                </div>
+                <div class="service-card" data-service="real-estate">
+                    <i class="fas fa-home"></i>
+                    <h3>العقارات</h3>
+                    <p>إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار المناسب للاستثمار في إسبانيا.</p>
+                    <a href="#" class="btn service-details-btn">المزيد</a>
+                </div>
+                <div class="service-card" data-service="study">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>الدراسة في إسبانيا</h3>
+                    <p>الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل. نساعدك في الحصول على قبول
+                        جامعي.</p>
+                    <a href="#" class="btn service-details-btn">المزيد</a>
+                </div>
+                <div class="service-card" data-service="tourist">
+                    <i class="fas fa-plane"></i>
+                    <h3>تأشيرة سياحية</h3>
+                    <p>زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة.</p>
+                    <a href="#" class="btn service-details-btn">المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Details Popup -->
+    <div class="service-details-overlay" id="serviceDetailsOverlay">
+        <div class="service-details" id="serviceDetails">
+            <button class="close-popup" id="closeServiceDetails">&times;</button>
+            <div class="service-details-header">
+                <h2 id="serviceTitle"><i id="serviceIcon"></i> <span id="serviceName"></span></h2>
+            </div>
+            <div class="service-details-content" id="serviceContent">
+                <!-- سيتم ملء المحتوى ديناميكيًا -->
+            </div>
+        </div>
+    </div>
+    <!-- Why Spain Section -->
+    <section class="why-spain">
+        <div class="container">
+            <div class="section-title">
+                <h2>لماذا إسبانيا؟</h2>
+                <p>إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>مناخ رائع وثقافة نابضة بالحياة</h3>
+                    <p>إسبانيا جنة لمحبي أشعة الشمس والمهرجات والأجواء الحية، حيث تقدم إسبانيا مزيجاً لا يضاهى من الطقس
+                        المثالي والثقافة الغنية.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>تكلفة معيشة معقولة</h3>
+                    <p>توفر إسبانيا تكلفة معيشة أقل من معظم دول أوروبا الغربية (مثل المملكة المتحدة وفرنسا أو ألمانيا)
+                        مع الحفاظ على جودة حياة عالية.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-users"></i>
+                    <h3>شعب ودود ومترحب</h3>
+                    <p>العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور القوي بالانتماء للمجتمع،
+                        أصبحت إسبانيا مكاناً رائعاً لندعوه وطناً.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-train"></i>
+                    <h3>بنية تحتية ممتازة</h3>
+                    <p>من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال الرقمي، فإن البنية التحتية لإسبانيا تجعل
+                        الحياة اليومية مريحة وسهلة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>الأسئلة الشائعة</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كم من الوقت يستغرق معالجة طلب الإقامة الإسبانية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تعتمد مدة معالجة طلب الإقامة الإسبانية على نوع الإقامة ومكان التقديم. إليك النقاط العامة:</p>
+                        <ul>
+                            <li><strong>نوع التأشيرة:</strong> تعتمد مدة العملية على نوع التأشيرة، بعض التأشيرات تستغرق
+                                وقتاً أطول من غيرها، في معظم الحالات قد تستغرق بين 1 إلى 6 أشهر.</li>
+                            <li><strong>وقت السنة:</strong> فصل الصيف والعطلات (أغسطس/ديسمبر) قد تبطئ الأمور.</li>
+                            <li><strong>أخطاء في الوثائق:</strong> الوثائق المفقودة يمكن أن تسبب تأخيرات، يجب أن تتأكد
+                                من أن الوثائق التي تقدمها هي المطلوبة لتجنب التأخيرات والرفض.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كم من الوقت يستغرق التقديم للحصول على الجنسية الإسبانية؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>بشكل عام، يجب أن تكون مقيمًا في إسبانيا لمدة 10 سنوات قبل أن تتمكن من التقديم للحصول على
+                            الجنسية الإسبانية. ومع ذلك، هناك استثناءات لهذه القاعدة:</p>
+                        <ul>
+                            <li>5 سنوات للاجئين</li>
+                            <li>سنتان للمواطنين من دول أمريكا اللاتينية أو دول أخرى ذات صلات تاريخية وثقافية مع إسبانيا
+                            </li>
+                            <li>سنة واحدة للأشخاص المتزوجين من مواطنين إسبان</li>
+                            <li>سنة واحدة للأطفال المولودين في إسبانيا</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل أحتاج إلى البقاء في إسبانيا للحفاظ على الإقامة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، للاحتفاظ بإقامتك الإسبانية، يجب أن تقضي فترة محددة من الوقت في إسبانيا كل عام. تعتمد
+                            المدة الدقيقة على نوع الإقامة التي لديك:</p>
+                        <ul>
+                            <li><strong>الإقامة المؤقتة:</strong> يجب ألا تغادر إسبانيا لأكثر من 6 أشهر متتالية أو 10
+                                أشهر إجمالاً في السنة.</li>
+                            <li><strong>الإقامة الدائمة:</strong> بعد الحصول على الإقامة الدائمة، يمكنك البقاء خارج
+                                إسبانيا لفترات أطول.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف أبدأ مع خدماتكم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>للبدء مع خدماتنا، يمكنك اتباع الخطوات التالية:</p>
+                        <ol>
+                            <li>تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال على موقعنا.</li>
+                            <li>سنقوم بتحديد استشارة أولية لفهم احتياجاتك وأهدافك.</li>
+                            <li>سنقدم لك خطة عمل مخصصة وفقًا لوضعك.</li>
+                            <li>بعد موافقتك، سنبدأ في تقديم الخدمات المتفق عليها.</li>
+                            <li>سنواصل معك طوال العملية حتى تحقيق أهدافك.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section - Updated Design -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>ارسل لنا رسالة</h3>
+                    <p>نحن هنا لمساعدتك. املأ النموذج وسنتواصل معك في أقرب وقت ممكن</p>
+                    <div class="success-message" id="successMessage">
+                        تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.
+                    </div>
+                    <div class="error-message" id="errorMessage">
+                        حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.
+                    </div>
+                    <form id="contactForm" action="https://formspree.io/f/xjvqyvqj" method="POST">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">إرسال رسالة</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>هل لديك أسئلة؟</h3>
+                    <p>اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق بالهجرة إلى إسبانيا أو خدماتنا.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <h4>الهاتف</h4>
+                            <p>+34 604272482</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>anasabdo704@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>النشرة الإخبارية</h3>
+            <p>انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!</p>
+            <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/xjvqyvqj" method="POST">
+                <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+                <input type="hidden" name="_subject" value="اشتراك في النشرة الإخبارية - الأندلس للهجرة">
+                <button type="submit">اشترك</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home" class="logo">
+                        <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png"
+                            alt="الأندلس للهجرة">
+                    </a>
+
+                </div>
+                <div class="footer-links">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">من نحن</a>
+                    <a href="#destinations">الوجهات</a>
+                    <a href="#services">الخدمات</a>
+                    <a href="#contact">اتصل بنا</a>
+                </div>
+                <div class="footer-social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
+                <p><a href="#">الشروط والأحكام</a> | <a href="#">سياسة الخصوصية</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // بيانات الخدمات التفصيلية
+        const servicesData = {
+            residency: {
+                title: "الإقامة",
+                icon: "fas fa-id-card",
+                description: "نقدم خدمات شاملة للحصول على الإقامة الإسبانية بأنواعها المختلفة. فريقنا من الخبراء يرشدك خطوة بخطوة لتحقيق حلمك بالإقامة في إسبانيا.",
+                sections: [
+                    {
+                        title: "أنواع الإقامة التي نقدمها",
+                        content: "نحن متخصصون في تقديم خدمات الإقامة بأنواعها المختلفة:",
+                        list: [
+                            "الإقامة الذهبية عبر الاستثمار",
+                            "الإقامة عن طريق العمل",
+                            "الإقامة العائلية",
+                            "الإقامة عن طريق الدراسة",
+                            "الإقامة للرياديين وأصحاب المشاريع"
+                        ]
+                    },
+                    {
+                        title: "مزايا الإقامة الإسبانية",
+                        content: "الحصول على الإقامة الإسبانية يوفر لك العديد من المزايا:",
+                        list: [
+                            "التنقل بحرية في منطقة شنغن",
+                            "إمكانية لم شمل العائلة",
+                            "الوصول إلى نظام صحي وتعليمي عالي الجودة",
+                            "بيئة استثمارية آمنة ومستقرة",
+                            "جودة حياة عالية في واحدة من أفضل الدول الأوروبية"
+                        ]
+                    },
+                    {
+                        title: "خطوات الحصول على الإقامة",
+                        content: "نساعدك في جميع مراحل الحصول على الإقامة:",
+                        list: [
+                            "تقييم حالتك وتحديد أفضل نوع إقامة يناسبك",
+                            "إعداد المستندات المطلوبة بدقة",
+                            "تقديم الطلب ومتابعته مع الجهات المختصة",
+                            "الدعم خلال المقابلات إن لزم الأمر",
+                            "المساعدة في استخراج بطاقة الإقامة بعد الموافقة"
+                        ]
+                    }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1503376780353-7b66b6bf1b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                ],
+                videos: [
+                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
+                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                ]
+            },
+            "real-estate": {
+                title: "العقارات",
+                icon: "fas fa-home",
+                description: "نقدم خدمات استثمارية شاملة في سوق العقارات الإسباني. نساعدك في العثور على العقار المناسب الذي يلبي احتياجاتك الاستثمارية وشروط الإقامة.",
+                sections: [
+                    {
+                        title: "خدماتنا العقارية",
+                        content: "نقدم مجموعة متكاملة من الخدمات العقارية:",
+                        list: [
+                            "البحث عن عقارات استثمارية في أفضل المدن الإسبانية",
+                            "تقييم العقارات وفرص الاستثمار",
+                            "المساعدة في إجراءات الشراء والتسجيل",
+                            "إدارة العقارات بعد الشراء",
+                            "تأجير العقارات وإدارة المستأجرين"
+                        ]
+                    },
+                    {
+                        title: "أفضل المدن للاستثمار العقاري",
+                        content: "نركز على المدن التي توفر أفضل فرص الاستثمار:",
+                        list: [
+                            "مدريد: العاصمة الاقتصادية والثقافية",
+                            "برشلونة: مركز تجاري وسياحي عالمي",
+                            "فالنسيا: فرص استثمارية واعدة بسعر تنافسي",
+                            "مالقة: وجهة سياحية شهيرة على البحر المتوسط",
+                            "أليكانتي: مدينة ساحلية جذابة للمستثمرين"
+                        ]
+                    },
+                    {
+                        title: "أنواع العقارات المتاحة",
+                        content: "نساعدك في الاستثمار في مختلف أنواع العقارات:",
+                        list: [
+                            "الشقق السكنية في المدن الكبرى",
+                            "الفلل والمنازل الفاخرة",
+                            "العقارات التجارية والمكاتب",
+                            "الفنادق والوحدات السياحية",
+                            "الأراضي والمشاريع الإنمائية"
+                        ]
+                    }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                ],
+                videos: [
+                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
+                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                ]
+            },
+            study: {
+                title: "الدراسة في إسبانيا",
+                icon: "fas fa-graduation-cap",
+                description: "نساعدك في تحقيق حلمك بالدراسة في إسبانيا. نقدم خدمات شاملة من البحث عن الجامعة المناسبة إلى الحصول على القبول والتأشيرة.",
+                sections: [
+                    {
+                        title: "خدماتنا التعليمية",
+                        content: "نقدم دعماً شاملاً للطلاب الراغبين في الدراسة في إسبانيا:",
+                        list: [
+                            "البحث عن الجامعات والبرامج المناسبة",
+                            "المساعدة في إجراءات التقديم والقبول",
+                            "إعداد المستندات المطلوبة للتأشيرة",
+                            "توفير السكن المناسب للطلاب",
+                            "الدعم بعد الوصول إلى إسبانيا"
+                        ]
+                    },
+                    {
+                        title: "مزايا الدراسة في إسبانيا",
+                        content: "الدراسة في إسبانيا تقدم العديد من المزايا:",
+                        list: [
+                            "نظام تعليمي عالي الجودة ومعترف به عالمياً",
+                            "تكاليف دراسية معقولة مقارنة بدول أوروبا الأخرى",
+                            "فرص تعلم اللغة الإسبانية والإنجليزية",
+                            "بيئة دولية متنوعة وثقافية غنية",
+                            "فرص عمل بعد التخرج في إسبانيا وأوروبا"
+                        ]
+                    },
+                    {
+                        title: "التخصصات المتاحة",
+                        content: "نساعدك في الالتحاق بمختلف التخصصات:",
+                        list: [
+                            "الأعمال والاقتصاد والإدارة",
+                            "الهندسة والتكنولوجيا",
+                            "الطب والعلوم الصحية",
+                            "العلوم الإنسانية والاجتماعية",
+                            "الفنون والتصميم والعمارة"
+                        ]
+                    }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                ],
+                videos: [
+                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
+                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                ]
+            },
+            tourist: {
+                title: "تأشيرة سياحية",
+                icon: "fas fa-plane",
+                description: "نساعدك في الحصول على تأشيرة سياحية لإسبانيا بسهولة ويسر. نقدم إرشادات دقيقة وإعداد المستندات المطلوبة لضمان قبول طلبك.",
+                sections: [
+                    {
+                        title: "خدماتنا للتأشيرة السياحية",
+                        content: "نقدم دعماً كاملاً للحصول على تأشيرة السياحة:",
+                        list: [
+                            "تقييم أهليتك للحصول على التأشيرة",
+                            "إعداد المستندات المطلوبة بدقة",
+                            "ملء استمارات التقديم بشكل صحيح",
+                            "تحديد المواعيد وحجز المقابلات",
+                            "متابعة حالة الطلب حتى صدور التأشيرة"
+                        ]
+                    },
+                    {
+                        title: "المستندات المطلوبة",
+                        content: "نساعدك في إعداد جميع المستندات اللازمة:",
+                        list: [
+                            "جواز سفر ساري المفعول",
+                            "صور شخصية حديثة",
+                            "تأمين سفر صحي",
+                            "حجز طيران وإقامة",
+                            "إثبات القدرة المالية",
+                            "خط سير الرحلة التفصيلي"
+                        ]
+                    },
+                    {
+                        title: "أفضل الوجهات السياحية",
+                        content: "نساعدك في التخطيط لزيارة أفضل الوجهات:",
+                        list: [
+                            "مدريد: المتاحف والقصور الملكية",
+                            "برشلونة: معرض جوجنهايم وكامب نو",
+                            "إشبيلية: القصر الملكي وحي سانتا كروز",
+                            "غرناطة: الحمراء وحي البيازين",
+                            "بلنسية: مدينة الفنون والعلوم"
+                        ]
+                    }
+                ],
+                images: [
+                    "https://images.unsplash.com/photo-1543783207-ec92e4b52632?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                ],
+                videos: [
+                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
+                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                ]
+            }
+        };
+
+        // Mobile Navigation
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            mobileMenuBtn.addEventListener('click', function () {
+                mainNav.classList.toggle('active');
+                // Change icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mainNav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            // Close menu when clicking on a link
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mainNav.classList.remove('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+        // Hero Image/Video Handling
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroImage = document.querySelector('.hero-image');
+            const heroVideo = document.querySelector('.hero-video');
+            // Initially show image, hide video
+            heroImage.style.display = 'block';
+            heroVideo.style.display = 'none';
+            // Function to switch to video after a delay
+            function switchToVideo() {
+                heroImage.style.display = 'none';
+                heroVideo.style.display = 'block';
+            }
+            // Add error event listener to video
+            heroVideo.addEventListener('error', function () {
+                console.log('Video failed to load, showing image instead');
+                heroImage.style.display = 'block';
+                heroVideo.style.display = 'none';
+            });
+            // Auto-switch to video after 3 seconds (optional)
+            // Uncomment the line below if you want to auto-switch to video
+            // setTimeout(switchToVideo, 3000);
+        });
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Toggle active class on current item
+                    item.classList.toggle('active');
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+        // Consultation Popup Form
+        document.addEventListener('DOMContentLoaded', function () {
+            const consultationBtn = document.getElementById('consultationBtn');
+            const consultationPopup = document.getElementById('consultationPopup');
+            const closePopup = document.getElementById('closePopup');
+            const consultationForm = document.getElementById('consultationForm');
+            const popupMessage = document.getElementById('popupMessage');
+            const submitButton = consultationForm.querySelector('button[type="submit"]');
+            // Open popup when clicking the consultation button
+            consultationBtn.addEventListener('click', function () {
+                consultationPopup.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+            // Close popup when clicking the close button
+            closePopup.addEventListener('click', function () {
+                consultationPopup.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+                popupMessage.style.display = 'none';
+                consultationForm.reset();
+            });
+            // Close popup when clicking outside the popup content
+            consultationPopup.addEventListener('click', function (e) {
+                if (e.target === consultationPopup) {
+                    consultationPopup.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                    popupMessage.style.display = 'none';
+                    consultationForm.reset();
+                }
+            });
+            // Handle form submission
+            consultationForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Disable submit button
+                submitButton.disabled = true;
+                submitButton.textContent = 'جاري الإرسال...';
+                // Get form data
+                const formData = new FormData(consultationForm);
+                // Add additional data
+                formData.append('_subject', 'طلب استشارة مجانية من الأندلس للهجرة');
+                formData.append('_template', 'table');
+                // Send form data using fetch
+                fetch('https://formspree.io/f/xjvqyvqj', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            popupMessage.textContent = 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.';
+                            popupMessage.className = 'popup-message success';
+                            popupMessage.style.display = 'block';
+                            // Reset form
+                            consultationForm.reset();
+                            // Close popup after 3 seconds
+                            setTimeout(() => {
+                                consultationPopup.classList.remove('active');
+                                document.body.style.overflow = ''; // Enable scrolling
+                                popupMessage.style.display = 'none';
+                            }, 3000);
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // Show error message
+                        popupMessage.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
+                        popupMessage.className = 'popup-message error';
+                        popupMessage.style.display = 'block';
+                    })
+                    .finally(() => {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'إرسال الطلب';
+                    });
+            });
+        });
+        // Contact Form
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Disable submit button
+                submitButton.disabled = true;
+                submitButton.textContent = 'جاري الإرسال...';
+                // Get form data
+                const formData = new FormData(contactForm);
+                // Send form data using fetch
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Show success message
+                            successMessage.style.display = 'block';
+                            errorMessage.style.display = 'none';
+                            // Reset form
+                            contactForm.reset();
+                            // Hide success message after 5 seconds
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                            }, 5000);
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // Show error message
+                        errorMessage.style.display = 'block';
+                        successMessage.style.display = 'none';
+                    })
+                    .finally(() => {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'إرسال رسالة';
+                    });
+            });
+        });
+        // Newsletter Form
+        document.addEventListener('DOMContentLoaded', function () {
+            const newsletterForm = document.getElementById('newsletterForm');
+            const submitButton = newsletterForm.querySelector('button[type="submit"]');
+            newsletterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Disable submit button
+                submitButton.disabled = true;
+                submitButton.textContent = 'جاري الإرسال...';
+                // Get form data
+                const formData = new FormData(newsletterForm);
+                // Send form data using fetch
+                fetch(newsletterForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Reset form
+                            newsletterForm.reset();
+                            // Show success message (create a temporary one)
+                            const successMsg = document.createElement('div');
+                            successMsg.textContent = 'تم إرسال طلب الاشتراك بنجاح!';
+                            successMsg.style.cssText = `
+                            background-color: #4CAF50;
+                            color: white;
+                            padding: 10px;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            text-align: center;
+                        `;
+                            newsletterForm.appendChild(successMsg);
+                            // Remove message after 3 seconds
+                            setTimeout(() => {
+                                successMsg.remove();
+                            }, 3000);
+                        } else {
+                            throw new Error('Network response was not ok');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // Show error message
+                        const errorMsg = document.createElement('div');
+                        errorMsg.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
+                        errorMsg.style.cssText = `
+                        background-color: #f44336;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        text-align: center;
+                    `;
+                        newsletterForm.appendChild(errorMsg);
+                        // Remove message after 3 seconds
+                        setTimeout(() => {
+                            errorMsg.remove();
+                        }, 3000);
+                    })
+                    .finally(() => {
+                        // Re-enable submit button
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'اشترك';
+                    });
+            });
+        });
+        // Service Details Popup
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceDetailsBtns = document.querySelectorAll('.service-details-btn');
+            const serviceDetailsOverlay = document.getElementById('serviceDetailsOverlay');
+            const closeServiceDetails = document.getElementById('closeServiceDetails');
+            const serviceTitle = document.getElementById('serviceTitle');
+            const serviceIcon = document.getElementById('serviceIcon');
+            const serviceName = document.getElementById('serviceName');
+            const serviceContent = document.getElementById('serviceContent');
+
+            // Open service details when clicking on a service card
+            serviceDetailsBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const serviceCard = this.closest('.service-card');
+                    const serviceType = serviceCard.getAttribute('data-service');
+                    const service = servicesData[serviceType];
+
+                    if (service) {
+                        // Update service details header
+                        serviceIcon.className = service.icon;
+                        serviceName.textContent = service.title;
+
+                        // Build service details content
+                        let contentHTML = `
+                            <div class="service-details-section">
+                                <h3>نظرة عامة</h3>
+                                <p>${service.description}</p>
+                            </div>
+                        `;
+
+                        // Add sections
+                        service.sections.forEach(section => {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>${section.title}</h3>
+                                    <p>${section.content}</p>
+                                    ${section.list ? `
+                                        <ul>
+                                            ${section.list.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    ` : ''}
+                                </div>
+                            `;
+                        });
+
+                        // Add images
+                        if (service.images && service.images.length > 0) {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>صور الخدمة</h3>
+                                    <div class="service-media">
+                                        ${service.images.map(img => `
+                                            <img src="${img}" alt="${service.title}" loading="lazy">
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add videos
+                        if (service.videos && service.videos.length > 0) {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>فيديوهات توضيحية</h3>
+                                    <div class="service-videos">
+                                        ${service.videos.map(video => `
+                                            <div class="service-video">
+                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add CTA section
+                        contentHTML += `
+                            <div class="service-cta">
+                                <button class="btn" id="serviceConsultationBtn">احصل على استشارة مجانية</button>
+                                <button class="btn" id="closeServiceDetailsBtn">إغلاق</button>
+                            </div>
+                        `;
+
+                        // Update content
+                        serviceContent.innerHTML = contentHTML;
+
+                        // Show overlay
+                        serviceDetailsOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+                        // Add event listeners to the new buttons
+                        document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
+                            serviceDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                            document.getElementById('consultationBtn').click();
+                        });
+
+                        document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
+                            serviceDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    }
+                });
+            });
+
+            // Close popup when clicking the close button
+            closeServiceDetails.addEventListener('click', function () {
+                serviceDetailsOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+
+            // Close popup when clicking outside the popup content
+            serviceDetailsOverlay.addEventListener('click', function (e) {
+                if (e.target === serviceDetailsOverlay) {
+                    serviceDetailsOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+        });
+        // Smooth scrolling for all anchor links
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all anchor links
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Get the target element
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Calculate the offset (considering sticky header)
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        // Smooth scroll to target
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
