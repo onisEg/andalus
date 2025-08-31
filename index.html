@@ -713,6 +713,104 @@
             margin: 0 10px;
         }
 
+        /* Terms and Privacy Popup */
+        .terms-privacy-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 4000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .terms-privacy-overlay.active {
+            display: flex;
+        }
+
+        .terms-privacy {
+            background-color: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: popupFadeIn 0.3s ease-out;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .terms-privacy-header {
+            background-color: var(--gold);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .terms-privacy-header h2 {
+            font-size: 28px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .terms-privacy-header i {
+            font-size: 32px;
+        }
+
+        .terms-privacy-content {
+            padding: 30px;
+        }
+
+        .terms-privacy-section {
+            margin-bottom: 30px;
+        }
+
+        .terms-privacy-section h3 {
+            font-size: 22px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--beige);
+            padding-bottom: 10px;
+        }
+
+        .terms-privacy-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .terms-privacy-section ul {
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .terms-privacy-section li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .terms-privacy-cta {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .terms-privacy-cta .btn {
+            margin: 0 10px;
+        }
+
         /* Why Spain Section */
         .why-spain {
             padding: 80px 0;
@@ -1299,6 +1397,24 @@
             .service-videos {
                 grid-template-columns: 1fr;
             }
+
+            /* Terms and Privacy Mobile Responsive */
+            .terms-privacy {
+                max-width: 95%;
+                margin: 10px;
+            }
+
+            .terms-privacy-header {
+                padding: 15px 20px;
+            }
+
+            .terms-privacy-header h2 {
+                font-size: 24px;
+            }
+
+            .terms-privacy-content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -1323,11 +1439,12 @@
                 </ul>
             </nav>
             <div class="social-links">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="http://X.com/andalusimmigrat" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
             </div>
         </div>
     </header>
@@ -1466,7 +1583,7 @@
                 </div>
                 <div class="dest-card">
                     <!-- صورة فالنسيا -->
-                    <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
+                    <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w=800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
                         alt="بلنسية" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=بلنسية'">
                     <div class="dest-info">
                         <h3>فالنسيا.. جوهرة البحر المتوسط</h3>
@@ -1545,6 +1662,250 @@
             </div>
             <div class="service-details-content" id="serviceContent">
                 <!-- سيتم ملء المحتوى ديناميكيًا -->
+            </div>
+        </div>
+    </div>
+    <!-- Terms and Conditions Popup -->
+    <div class="terms-privacy-overlay" id="termsOverlay">
+        <div class="terms-privacy" id="termsContent">
+            <button class="close-popup" id="closeTerms">&times;</button>
+            <div class="terms-privacy-header">
+                <h2><i class="fas fa-file-contract"></i> الشروط والأحكام</h2>
+            </div>
+            <div class="terms-privacy-content">
+                <div class="terms-privacy-section">
+                    <h3>مقدمة</h3>
+                    <p>مرحباً بك في موقع الأندلس للهجرة. باستخدامك لموقعنا الإلكتروني، فإنك توافق على الالتزام بالشروط
+                        والأحكام التالية. يرجى قراءة هذه الشروط بعناية قبل استخدام موقعنا.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>القبول بالشروط</h3>
+                    <p>باستخدامك لموقع الأندلس للهجرة، فإنك تقر بأنك قرأت وفهمت وتوافق على الالتزام بهذه الشروط
+                        والأحكام. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام موقعنا.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الخدمات المقدمة</h3>
+                    <p>تقدم الأندلس للهجرة خدمات استشارية في مجال الهجرة والإقامة في إسبانيا. تشمل خدماتنا:</p>
+                    <ul>
+                        <li>الاستشارات القانونية المتعلقة بالإقامة الإسبانية</li>
+                        <li>مساعدة العملاء في إجراءات الحصول على التأشيرات والإقامات</li>
+                        <li>تقديم خدمات عقارية في إسبانيا</li>
+                        <li>مساعدة الطلاب في الحصول على قبول جامعي</li>
+                        <li>تقديم استشارات حول التأشيرات السياحية</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>مسؤوليات العميل</h3>
+                    <p>يلتزم العميل بالآتي:</p>
+                    <ul>
+                        <li>تقديم معلومات دقيقة وحقيقية وصحيحة</li>
+                        <li>توفير جميع المستندات المطلوبة في الوقت المحدد</li>
+                        <li>الالتزام بالدفع في الأوقات المتفق عليها</li>
+                        <li>التعاون مع فريق الأندلس للهجرة لإنجاز الإجراءات</li>
+                        <li>إبلاغ الشركة بأي تغييرات في المعلومات المقدمة</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الرسوم والدفع</h3>
+                    <p>تحدد الرسوم حسب الخدمة المطلوبة وسيتم إبلاغ العميل بها مسبقاً. تشمل سياسة الدفع:</p>
+                    <ul>
+                        <li>دفع مقدم لحجز الخدمة</li>
+                        <li>دفع باقي المبلغ حسب الاتفاق المبرم</li>
+                        <li>جميع الرسوم غير قابلة للاسترداد بعد بدء الخدمة</li>
+                        <li>الرسوم الإضافية الناتجة عن تغييرات يطلبها العميل</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>إلغاء الخدمات</h3>
+                    <p>يمكن للعميل إلغاء الخدمة مع مراعاة الشروط التالية:</p>
+                    <ul>
+                        <li>يجب الإبلاغ عن الإلغاء كتابياً قبل 7 أيام على الأقل</li>
+                        <li>يحق للشركة احتجاز جزء من المبلغ كرسوم إدارية</li>
+                        <li>في حال بدء الإجراءات، لا يتم استرداد أي مبالغ</li>
+                        <li>للشركة الحق في إلغاء الخدمة في حال عدم تعاون العميل</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الضمانات والمسؤولية</h3>
+                    <p>تلتزم الأندلس للهجرة بتقديم خدماتها بأقصى درجات الاحترافية، ولكن:</p>
+                    <ul>
+                        <li>لا تضمن الشركة قبول الطلبات من قبل السلطات الإسبانية</li>
+                        <li>لا تتحمل الشركة مسؤولية القرارات النهائية للجهات الرسمية</li>
+                        <li>تلتزم الشركة بتقديم المعلومات الصحيحة والمحدثة</li>
+                        <li>تتحمل الشركة مسؤولية الأخطاء المهنية فقط</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الملكية الفكرية</h3>
+                    <p>جميع المحتويات الموجودة على موقع الأندلس للهجرة هي ملكية محفوظة للشركة. يشمل ذلك:</p>
+                    <ul>
+                        <li>النصوص والصور والفيديوهات</li>
+                        <li>الشعارات والعلامات التجارية</li>
+                        <li>التصاميم والرسومات البيانية</li>
+                        <li>يحظر نسخ أو استخدام أي محتوى دون إذن كتابي</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>السرية</h3>
+                    <p>تلتزم الأندلس للهجرة بالحفاظ على سرية جميع المعلومات التي يقدمها العملاء. تشمل سياسة السرية:</p>
+                    <ul>
+                        <li>عدم مشاركة المعلومات الشخصية مع أطراف ثالثة</li>
+                        <li>استخدام المعلومات فقط لأغراض تقديم الخدمة</li>
+                        <li>تخزين المعلومات بشكل آمن</li>
+                        <li>الالتزام بالقوانين المعمول بها لحماية البيانات</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>تعديل الشروط</h3>
+                    <p>تحتفظ الأندلس للهجرة بالحق في تعديل هذه الشروط والأحكام في أي وقت. سيتم إبلاغ العملاء بأي تغييرات
+                        عبر الموقع الإلكتروني أو البريد الإلكتروني. استمرار استخدام الموقع بعد التعديلات يعتبر موافقة
+                        على الشروط الجديدة.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>القانون الواجب التطبيق</h3>
+                    <p>تخضع هذه الشروط والأحكام وتفسر وفقاً للقوانين المعمول بها في إسبانيا. أي نزاع ينشأ عن هذه الشروط
+                        يتم حله بالطرق الودية أولاً، وفي حال عدم التوصل إلى حل، يتم اللجوء إلى المحاكم المختصة في
+                        إسبانيا.</p>
+                </div>
+                <div class="terms-privacy-cta">
+                    <button class="btn" id="closeTermsBtn">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Privacy Policy Popup -->
+    <div class="terms-privacy-overlay" id="privacyOverlay">
+        <div class="terms-privacy" id="privacyContent">
+            <button class="close-popup" id="closePrivacy">&times;</button>
+            <div class="terms-privacy-header">
+                <h2><i class="fas fa-shield-alt"></i> سياسة الخصوصية</h2>
+            </div>
+            <div class="terms-privacy-content">
+                <div class="terms-privacy-section">
+                    <h3>مقدمة</h3>
+                    <p>تحترم الأندلس للهجرة خصوصيتك وتلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمعنا
+                        واستخدامنا وحمايتنا لمعلوماتك الشخصية عند استخدامك لموقعنا الإلكتروني وخدماتنا.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>المعلومات التي نجمعها</h3>
+                    <p>قد نجمع المعلومات التالية منك:</p>
+                    <ul>
+                        <li><strong>المعلومات الشخصية:</strong> الاسم الكامل، العنوان، رقم الهاتف، البريد الإلكتروني
+                        </li>
+                        <li><strong>معلومات الهوية:</strong> صورة من جواز السفر، بطاقة الهوية، رقم الإقامة</li>
+                        <li><strong>المعلومات المالية:</strong> معلومات الدفع، تفاصيل الحساب البنكي (لأغراض الدفع فقط)
+                        </li>
+                        <li><strong>المعلومات المهنية:</strong> المؤهلات، الخبرات العملية، الوظيفة الحالية</li>
+                        <li><strong>معلومات الاتصال:</strong> عنوان السكن، رقم الهاتف، البريد الإلكتروني</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>كيفية جمع المعلومات</h3>
+                    <p>نجمع المعلومات بالطرق التالية:</p>
+                    <ul>
+                        <li><strong>مباشرة منك:</strong> عند ملء استمارات الاتصال أو التقديم على الخدمات</li>
+                        <li><strong>عبر الموقع الإلكتروني:</strong> عند استخدام نماذج الاتصال أو الاشتراك في النشرة
+                            الإخبارية</li>
+                        <li><strong>عبر البريد الإلكتروني:</strong> عند مراسلتنا للاستفسارات أو طلب الخدمات</li>
+                        <li><strong>عبر الهاتف:</strong> خلال المحادثات الهاتفية لمناقشة احتياجاتك</li>
+                        <li><strong>شخصياً:</strong> خلال المقابلات الشخصية في مكاتبنا</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>استخدام المعلومات</h3>
+                    <p>نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
+                    <ul>
+                        <li>تقديم الخدمات الاستشارية التي طلبتها</li>
+                        <li>التواصل معك بشأن طلباتك واستفساراتك</li>
+                        <li>تحسين خدماتنا وتطويرها بناءً على احتياجات العملاء</li>
+                        <li>إرسال معلومات حول خدماتنا وعروضنا (بموافقتك)</li>
+                        <li>الامتثال للمتطلبات القانونية والتنظيمية</li>
+                        <li>حماية حقوقنا وممتلكاتنا وسلامة عملائنا</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>مشاركة المعلومات</h3>
+                    <p>نحن لا نبيع أو نتاجر بمعلوماتك الشخصية. قد نشارك معلوماتك فقط في الحالات التالية:</p>
+                    <ul>
+                        <li><strong>مع الجهات الرسمية:</strong> السلطات الإسبانية، السفارات، القنصليات عند الضرورة</li>
+                        <li><strong>مع الشركاء الموثوقين:</strong> المحامين، الوكلاء العقاريين، المؤسسات المالية
+                            المعتمدة</li>
+                        <li><strong>بموافقتك:</strong> عندما توافق صراحة على مشاركة معلوماتك مع طرف ثالث</li>
+                        <li><strong>لأغراض قانونية:</strong> عندما يتطلب القانون أو الإجراءات القانونية ذلك</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>حماية المعلومات</h3>
+                    <p>نتخذ إجراءات أمنية صارمة لحماية معلوماتك الشخصية:</p>
+                    <ul>
+                        <li>تشفير البيانات الحساسة أثناء التخزين والنقل</li>
+                        <li>الوصول المحدود للمعلومات للموظفين المصرح لهم فقط</li>
+                        <li>استخدام أنظمة أمان متقدمة لحماية قواعد البيانات</li>
+                        <li>تدريب الموظفين على أفضل ممارسات حماية البيانات</li>
+                        <li>مراجعة وتحديث إجراءات الأمان بشكل منتظم</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>حقوقك في خصوصيتك</h3>
+                    <p>لديك الحقوق التالية بشأن معلوماتك الشخصية:</p>
+                    <ul>
+                        <li><strong>الحق في الوصول:</strong> الحصول على نسخة من المعلومات التي نحتفظ بها عنك</li>
+                        <li><strong>الحق في التصحيح:</strong> طلب تصحيح أي معلومات غير دقيقة</li>
+                        <li><strong>الحق في الحذف:</strong> طلب حذف معلوماتك في ظروف معينة</li>
+                        <li><strong>الحق في تقييد المعالجة:</strong> طلب تقييد استخدام معلوماتك</li>
+                        <li><strong>الحق في الاعتراض:</strong> الاعتراض على معالجة معلوماتك</li>
+                        <li><strong>الحق في نقل البيانات:</strong> طلب نسخة من معلوماتك لنقلها إلى جهة أخرى</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الاحتفاظ بالمعلومات</h3>
+                    <p>نحتفظ بمعلوماتك الشخصية للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها:</p>
+                    <ul>
+                        <li>معلومات العملاء: حتى إتمام الخدمة و5 سنوات بعدها</li>
+                        <li>معلومات المرشحين: حتى انتهاء عملية التقديم وسنتين بعدها</li>
+                        <li>معلومات النشرة الإخبارية: حتى إلغاء الاشتراك</li>
+                        <li>معلومات التواصل: حتى الرد على استفسارك وسنة واحدة بعده</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>ملفات تعريف الارتباط (Cookies)</h3>
+                    <p>نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا:</p>
+                    <ul>
+                        <li><strong>ملفات تعريف الارتباط الضرورية:</strong> لتشغيل الموقع بشكل صحيح</li>
+                        <li><strong>ملفات تعريف الارتباط الوظيفية:</strong> لتذكر تفضيلاتك</li>
+                        <li><strong>ملفات تعريف الارتباط التحليلية:</strong> لفهم كيفية استخدامك للموقع</li>
+                        <li><strong>ملفات تعريف الارتباط التسويقية:</strong> لتقديم عروض ذات صلة باهتماماتك</li>
+                    </ul>
+                    <p>يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات متصفحك.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>روابط خارجية</h3>
+                    <p>قد يحتوي موقعنا على روابط لمواقع خارجية. نحن لسنا مسؤولين عن ممارسات الخصوصية لهذه المواقع. نشجعك
+                        على مراجعة سياسات الخصوصية الخاصة بهذه المواقع قبل استخدامها.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>الأطفال</h3>
+                    <p>لا نقوم بجمع معلومات شخصية من الأطفال دون سن 18 عاماً. إذا علمنا أننا جمعنا معلومات من طفل دون سن
+                        18 عاماً، سنقوم بإزالة هذه المعلومات فوراً.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>التغييرات على سياسة الخصوصية</h3>
+                    <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإشعارك بأي تغييرات عبر نشر السياسة المحدثة
+                        على موقعنا. نحثك على مراجعة سياسة الخصوصية بشكل دوري لتبقى على اطلاع على كيفية حمايتنا
+                        لمعلوماتك.</p>
+                </div>
+                <div class="terms-privacy-section">
+                    <h3>اتصل بنا</h3>
+                    <p>إذا كان لديك أي أسئلة أو استفسارات بشأن سياسة الخصوصية هذه، يرجى التواصل معنا عبر:</p>
+                    <ul>
+                        <li>البريد الإلكتروني: anasabdo704@gmail.com</li>
+                        <li>الهاتف: +34 604272482</li>
+                        <li>العنوان: [عنوان المكتب في إسبانيا]</li>
+                    </ul>
+                </div>
+                <div class="terms-privacy-cta">
+                    <button class="btn" id="closePrivacyBtn">إغلاق</button>
+                </div>
             </div>
         </div>
     </div>
@@ -1734,7 +2095,6 @@
                         <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png"
                             alt="الأندلس للهجرة">
                     </a>
-
                 </div>
                 <div class="footer-links">
                     <a href="#home">الرئيسية</a>
@@ -1744,16 +2104,17 @@
                     <a href="#contact">اتصل بنا</a>
                 </div>
                 <div class="footer-social-links">
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="http://X.com/andalusimmigrat" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
                 </div>
             </div>
             <div class="copyright">
                 <p>© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
-                <p><a href="#">الشروط والأحكام</a> | <a href="#">سياسة الخصوصية</a></p>
+                <p><a href="#" id="termsLink">الشروط والأحكام</a> | <a href="#" id="privacyLink">سياسة الخصوصية</a></p>
             </div>
         </div>
     </footer>
@@ -1958,7 +2319,6 @@
                 ]
             }
         };
-
         // Mobile Navigation
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -2232,7 +2592,6 @@
             const serviceIcon = document.getElementById('serviceIcon');
             const serviceName = document.getElementById('serviceName');
             const serviceContent = document.getElementById('serviceContent');
-
             // Open service details when clicking on a service card
             serviceDetailsBtns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
@@ -2240,12 +2599,10 @@
                     const serviceCard = this.closest('.service-card');
                     const serviceType = serviceCard.getAttribute('data-service');
                     const service = servicesData[serviceType];
-
                     if (service) {
                         // Update service details header
                         serviceIcon.className = service.icon;
                         serviceName.textContent = service.title;
-
                         // Build service details content
                         let contentHTML = `
                             <div class="service-details-section">
@@ -2253,7 +2610,6 @@
                                 <p>${service.description}</p>
                             </div>
                         `;
-
                         // Add sections
                         service.sections.forEach(section => {
                             contentHTML += `
@@ -2268,7 +2624,6 @@
                                 </div>
                             `;
                         });
-
                         // Add images
                         if (service.images && service.images.length > 0) {
                             contentHTML += `
@@ -2282,7 +2637,6 @@
                                 </div>
                             `;
                         }
-
                         // Add videos
                         if (service.videos && service.videos.length > 0) {
                             contentHTML += `
@@ -2298,7 +2652,6 @@
                                 </div>
                             `;
                         }
-
                         // Add CTA section
                         contentHTML += `
                             <div class="service-cta">
@@ -2306,21 +2659,17 @@
                                 <button class="btn" id="closeServiceDetailsBtn">إغلاق</button>
                             </div>
                         `;
-
                         // Update content
                         serviceContent.innerHTML = contentHTML;
-
                         // Show overlay
                         serviceDetailsOverlay.classList.add('active');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
                         // Add event listeners to the new buttons
                         document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
                             document.getElementById('consultationBtn').click();
                         });
-
                         document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
@@ -2328,17 +2677,71 @@
                     }
                 });
             });
-
             // Close popup when clicking the close button
             closeServiceDetails.addEventListener('click', function () {
                 serviceDetailsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             serviceDetailsOverlay.addEventListener('click', function (e) {
                 if (e.target === serviceDetailsOverlay) {
                     serviceDetailsOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+        });
+        // Terms and Privacy Popups
+        document.addEventListener('DOMContentLoaded', function () {
+            const termsLink = document.getElementById('termsLink');
+            const privacyLink = document.getElementById('privacyLink');
+            const termsOverlay = document.getElementById('termsOverlay');
+            const privacyOverlay = document.getElementById('privacyOverlay');
+            const closeTerms = document.getElementById('closeTerms');
+            const closePrivacy = document.getElementById('closePrivacy');
+            const closeTermsBtn = document.getElementById('closeTermsBtn');
+            const closePrivacyBtn = document.getElementById('closePrivacyBtn');
+            // Open terms popup
+            termsLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                termsOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+            // Open privacy popup
+            privacyLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                privacyOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+            // Close terms popup when clicking the close button
+            closeTerms.addEventListener('click', function () {
+                termsOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+            // Close privacy popup when clicking the close button
+            closePrivacy.addEventListener('click', function () {
+                privacyOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+            // Close terms popup when clicking the close button inside
+            closeTermsBtn.addEventListener('click', function () {
+                termsOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+            // Close privacy popup when clicking the close button inside
+            closePrivacyBtn.addEventListener('click', function () {
+                privacyOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+            // Close popup when clicking outside the popup content
+            termsOverlay.addEventListener('click', function (e) {
+                if (e.target === termsOverlay) {
+                    termsOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+            privacyOverlay.addEventListener('click', function (e) {
+                if (e.target === privacyOverlay) {
+                    privacyOverlay.classList.remove('active');
                     document.body.style.overflow = ''; // Enable scrolling
                 }
             });
