@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-ar="الأندلس للهجرة - خدمات الإقامة في إسبانيا"
-        data-en="Andalus Immigration - Residency Services in Spain">الأندلس للهجرة - خدمات الإقامة في إسبانيا</title>
+    <title>الأندلس للهجرة - خدمات الإقامة في إسبانيا</title>
     <link rel="icon" href="https://andalusimmigration.com/wp-content/uploads/2025/05/cropped-fiv-1-300x300.png"
         sizes="192x192">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
@@ -61,11 +60,6 @@
             align-items: center;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
         .logo {
             display: flex;
             align-items: center;
@@ -91,12 +85,6 @@
             transform: scale(1.1);
         }
 
-        .nav-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
         nav {
             flex: 1;
         }
@@ -118,13 +106,6 @@
 
         nav a:hover {
             color: var(--gold);
-        }
-
-        /* Header Actions Container */
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
         }
 
         /* Social Media Links in Header */
@@ -155,22 +136,30 @@
         /* Language Switcher */
         .language-switcher {
             display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+
+        .language-btn {
+            background: none;
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin: 0 3px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--black);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
             gap: 5px;
         }
 
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s;
+        .language-btn:hover {
+            background-color: rgba(138, 116, 47, 0.1);
         }
 
-        .lang-btn.active,
-        .lang-btn:hover {
+        .language-btn.active {
             background-color: var(--gold);
             color: white;
         }
@@ -1322,10 +1311,6 @@
                 display: block;
             }
 
-            .nav-container {
-                display: none;
-            }
-
             nav {
                 position: absolute;
                 top: 100%;
@@ -1525,30 +1510,18 @@
             }
         }
 
-        /* Adjustments for LTR direction */
-        html[dir="ltr"] .header-container {
-            flex-direction: row;
-        }
-
-        html[dir="ltr"] .logo-container {
-            order: 1;
-        }
-
-        html[dir="ltr"] .nav-container {
-            order: 2;
-        }
-
-        html[dir="ltr"] .header-actions {
-            order: 3;
+        /* Styles for LTR (English) */
+        html[dir="ltr"] body {
+            font-family: 'Tajawal', sans-serif;
         }
 
         html[dir="ltr"] .section-title h2::after {
-            left: 0;
             right: auto;
+            left: 0;
         }
 
         html[dir="ltr"] .value-card {
-            border-right: none;
+            border-bottom: none;
             border-left: 3px solid var(--gold);
         }
 
@@ -1557,48 +1530,25 @@
             border-left: 3px solid var(--gold);
         }
 
-        html[dir="ltr"] .form-group label {
-            text-align: left;
+        html[dir="ltr"] .contact-form h3::after,
+        html[dir="ltr"] .contact-info h3::after {
+            right: auto;
+            left: 0;
+        }
+
+        html[dir="ltr"] .city-details-section ul,
+        html[dir="ltr"] .service-details-section ul {
+            padding-right: 0;
+            padding-left: 20px;
         }
 
         html[dir="ltr"] .newsletter-form input {
             text-align: left;
         }
 
-        html[dir="ltr"] .footer-content {
-            flex-direction: row;
-        }
-
-        html[dir="ltr"] .footer-logo {
-            order: 1;
-        }
-
-        html[dir="ltr"] .footer-links {
-            order: 2;
-        }
-
-        html[dir="ltr"] .footer-social-links {
-            order: 3;
-        }
-
-        html[dir="ltr"] .city-details-section ul {
-            padding-right: 0;
-            padding-left: 20px;
-        }
-
-        html[dir="ltr"] .service-details-section ul {
-            padding-right: 0;
-            padding-left: 20px;
-        }
-
-        html[dir="ltr"] .contact-form h3::after {
-            left: 0;
-            right: auto;
-        }
-
-        html[dir="ltr"] .contact-info h3::after {
-            left: 0;
-            right: auto;
+        html[dir="ltr"] .close-popup {
+            left: auto;
+            right: 15px;
         }
     </style>
 </head>
@@ -1607,39 +1557,22 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo-container">
-                <a href="#home" class="logo">
-                    <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png"
-                        alt="الأندلس للهجرة">
-                </a>
-            </div>
-            <div class="nav-container">
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <nav id="mainNav">
-                    <ul>
-                        <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-                        <li><a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
-                        <li><a href="#destinations" data-ar="الوجهات" data-en="Destinations">الوجهات</a></li>
-                        <li><a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
-                        <li><a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
-                    </ul>
-                    <!-- Mobile Social Links -->
-                    <div class="mobile-social-links">
-                        <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="http://X.com/andalusimmigrat" target="_blank"><i
-                                class="fab fa-square-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i
-                                class="fab fa-snapchat-ghost"></i></a>
-                    </div>
-                </nav>
-            </div>
-            <div class="header-actions">
-                <div class="social-links">
+            <a href="#home" class="logo">
+                <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png" alt="الأندلس للهجرة">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" data-lang="nav-home">الرئيسية</a></li>
+                    <li><a href="#about" data-lang="nav-about">من نحن</a></li>
+                    <li><a href="#destinations" data-lang="nav-destinations">الوجهات</a></li>
+                    <li><a href="#services" data-lang="nav-services">الخدمات</a></li>
+                    <li><a href="#contact" data-lang="nav-contact">اتصل بنا</a></li>
+                </ul>
+                <!-- Mobile Social Links -->
+                <div class="mobile-social-links">
                     <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
                             class="fab fa-facebook-f"></i></a>
                     <a href="http://X.com/andalusimmigrat" target="_blank"><i class="fab fa-square-x-twitter"></i></a>
@@ -1647,10 +1580,22 @@
                             class="fab fa-instagram"></i></a>
                     <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
                 </div>
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="ar">عربي</button>
-                    <button class="lang-btn" data-lang="en">English</button>
-                </div>
+            </nav>
+            <div class="social-links">
+                <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="http://X.com/andalusimmigrat" target="_blank"><i class="fab fa-square-x-twitter"></i></a>
+                <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+            </div>
+            <div class="language-switcher">
+                <button class="language-btn active" id="langAr">
+                    <i class="fas fa-globe"></i> AR
+                </button>
+                <button class="language-btn" id="langEn">
+                    <i class="fas fa-globe"></i> EN
+                </button>
             </div>
         </div>
     </header>
@@ -1661,55 +1606,47 @@
             alt="إسبانيا">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h2 data-ar="الأندلس للهجرة" data-en="Andalus Immigration">الأندلس للهجرة</h2>
-            <p data-ar="الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل"
-                data-en="Transparency and Quality, Customization and Individual Attention, Innovation and Speed of Work">
-                الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل</p>
-            <button class="btn" id="consultationBtn" data-ar="احصل على استشارتك المجانية"
-                data-en="Get Your Free Consultation">احصل على استشارتك المجانية</button>
+            <h2 data-lang="hero-title">الأندلس للهجرة</h2>
+            <p data-lang="hero-subtitle">الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل</p>
+            <button class="btn" id="consultationBtn" data-lang="hero-btn">احصل على استشارتك المجانية</button>
         </div>
     </section>
     <!-- Consultation Popup -->
     <div class="popup-overlay" id="consultationPopup">
         <div class="popup">
             <button class="close-popup" id="closePopup">&times;</button>
-            <h3 data-ar="استشارة مجانية" data-en="Free Consultation">استشارة مجانية</h3>
-            <p data-ar="املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن"
-                data-en="Fill out the form below and we will contact you as soon as possible">املأ النموذج أدناه
-                وسنتواصل معك في أقرب وقت ممكن</p>
+            <h3 data-lang="consultation-title">استشارة مجانية</h3>
+            <p data-lang="consultation-subtitle">املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن</p>
             <div class="popup-message" id="popupMessage"></div>
             <form class="popup-form" id="consultationForm">
                 <div class="form-group">
-                    <label for="popupName" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
+                    <label for="popupName" data-lang="form-name">الاسم الكامل</label>
                     <input type="text" id="popupName" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="popupPhone" data-ar="رقم الهاتف" data-en="Phone Number">رقم الهاتف</label>
+                    <label for="popupPhone" data-lang="form-phone">رقم الهاتف</label>
                     <input type="tel" id="popupPhone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="popupEmail" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                    <label for="popupEmail" data-lang="form-email">البريد الإلكتروني</label>
                     <input type="email" id="popupEmail" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="popupService" data-ar="الخدمة المطلوبة" data-en="Required Service">الخدمة
-                        المطلوبة</label>
+                    <label for="popupService" data-lang="form-service">الخدمة المطلوبة</label>
                     <select id="popupService" name="service" required>
-                        <option value="" data-ar="اختر الخدمة" data-en="Select Service">اختر الخدمة</option>
-                        <option value="residency" data-ar="الإقامة" data-en="Residency">الإقامة</option>
-                        <option value="real-estate" data-ar="العقارات" data-en="Real Estate">العقارات</option>
-                        <option value="study" data-ar="الدراسة في إسبانيا" data-en="Study in Spain">الدراسة في إسبانيا
-                        </option>
-                        <option value="tourist" data-ar="تأشيرة سياحية" data-en="Tourist Visa">تأشيرة سياحية</option>
+                        <option value="" data-lang="form-select-service">اختر الخدمة</option>
+                        <option value="residency" data-lang="form-residency">الإقامة</option>
+                        <option value="real-estate" data-lang="form-real-estate">العقارات</option>
+                        <option value="study" data-lang="form-study">الدراسة في إسبانيا</option>
+                        <option value="tourist" data-lang="form-tourist">تأشيرة سياحية</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="popupMessageText" data-ar="رسالة إضافية" data-en="Additional Message">رسالة
-                        إضافية</label>
-                    <textarea id="popupMessageText" name="message" data-ar="اكتب أي معلومات إضافية تود مشاركتها..."
-                        data-en="Write any additional information you would like to share...">اكتب أي معلومات إضافية تود مشاركتها...</textarea>
+                    <label for="popupMessageText" data-lang="form-message">رسالة إضافية</label>
+                    <textarea id="popupMessageText" name="message"
+                        placeholder="اكتب أي معلومات إضافية تود مشاركتها..."></textarea>
                 </div>
-                <button type="submit" data-ar="إرسال الطلب" data-en="Submit Request">إرسال الطلب</button>
+                <button type="submit" data-lang="form-submit">إرسال الطلب</button>
             </form>
         </div>
     </div>
@@ -1717,30 +1654,26 @@
     <section class="values">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="قيمنا" data-en="Our Values">قيمنا</h2>
+                <h2 data-lang="values-title">قيمنا</h2>
             </div>
             <div class="values-grid">
                 <div class="value-card">
                     <i class="fas fa-eye"></i>
-                    <h3 data-ar="الشفافية والجودة" data-en="Transparency and Quality">الشفافية والجودة</h3>
-                    <p data-ar="نلتزم بأعلى معايير الشفافية والجودة في جميع خدماتنا المقدمة لعملائنا"
-                        data-en="We are committed to the highest standards of transparency and quality in all our services provided to clients">
-                        نلتزم بأعلى معايير الشفافية والجودة في جميع خدماتنا المقدمة لعملائنا</p>
+                    <h3 data-lang="values-transparency-title">الشفافية والجودة</h3>
+                    <p data-lang="values-transparency-desc">نلتزم بأعلى معايير الشفافية والجودة في جميع خدماتنا المقدمة
+                        لعملائنا</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-user-friends"></i>
-                    <h3 data-ar="التخصيص والاهتمام الفردي" data-en="Customization and Individual Attention">التخصيص
-                        والاهتمام الفردي</h3>
-                    <p data-ar="نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي فائق"
-                        data-en="We provide customized solutions that suit each client's needs with exceptional individual attention">
-                        نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي فائق</p>
+                    <h3 data-lang="values-customization-title">التخصيص والاهتمام الفردي</h3>
+                    <p data-lang="values-customization-desc">نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي
+                        فائق</p>
                 </div>
                 <div class="value-card">
                     <i class="fas fa-rocket"></i>
-                    <h3 data-ar="الابتكار وسرعة العمل" data-en="Innovation and Speed of Work">الابتكار وسرعة العمل</h3>
-                    <p data-ar="نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز معاملاتكم"
-                        data-en="We use the latest technologies and innovative methods to ensure the speed of completing your transactions">
-                        نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز معاملاتكم</p>
+                    <h3 data-lang="values-innovation-title">الابتكار وسرعة العمل</h3>
+                    <p data-lang="values-innovation-desc">نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز
+                        معاملاتكم</p>
                 </div>
             </div>
         </div>
@@ -1749,26 +1682,22 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+                <h2 data-lang="about-title">من نحن</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3 data-ar="الأندلس للهجرة" data-en="Andalus Immigration">الأندلس للهجرة</h3>
-                    <p data-ar="شركة متخصصة في تقديم خدمات الإقامة في إسبانيا. لدينا خبرة واسعة في الاستثمار والهجرة إلى إسبانيا، ونقدم حلولاً قانونية واستشارية مخصصة لمساعدة رجال الأعمال والأفراد الباحثين عن الحصول على الإقامة الإسبانية بسهولة وثقة."
-                        data-en="A company specialized in providing residency services in Spain. We have extensive experience in investment and immigration to Spain, and we offer customized legal and advisory solutions to help businessmen and individuals seeking to obtain Spanish residency with ease and confidence.">
-                        شركة متخصصة في تقديم خدمات الإقامة في إسبانيا. لدينا خبرة واسعة في الاستثمار والهجرة إلى
-                        إسبانيا، ونقدم حلولاً قانونية واستشارية مخصصة لمساعدة رجال الأعمال والأفراد الباحثين عن الحصول
-                        على الإقامة الإسبانية بسهولة وثقة.</p>
-                    <p data-ar="خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في إسبانيا. شبكة واسعة من الشراكات مع وكالات الخدمات ووكلاء العقارات والبنوك في إسبانيا."
-                        data-en="Reliable experience built by years of success in the field of residency and consulting in Spain. A wide network of partnerships with service agencies, real estate agents, and banks in Spain.">
-                        خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في إسبانيا. شبكة واسعة من الشراكات
+                    <h3 data-lang="about-company">الأندلس للهجرة</h3>
+                    <p data-lang="about-desc-1">شركة متخصصة في تقديم خدمات الإقامة في إسبانيا. لدينا خبرة واسعة في
+                        الاستثمار والهجرة إلى إسبانيا،
+                        ونقدم حلولاً قانونية واستشارية مخصصة لمساعدة رجال الأعمال والأفراد الباحثين عن الحصول على
+                        الإقامة الإسبانية بسهولة وثقة.</p>
+                    <p data-lang="about-desc-2">خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في
+                        إسبانيا. شبكة واسعة من الشراكات
                         مع وكالات الخدمات ووكلاء العقارات والبنوك في إسبانيا.</p>
-                    <p data-ar="نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة دائمة حتى بعد تنفيذ شروط الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات."
-                        data-en="Your success is our priority. We follow up on your request after residency approval. We strive to build a permanent relationship even after implementing the terms of the agreement, a relationship that develops into friendship that produces beneficial projects at all levels.">
-                        نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة دائمة حتى بعد تنفيذ
-                        شروط الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات.</p>
-                    <a href="#services" class="btn" data-ar="اكتشف خدماتنا" data-en="Discover Our Services">اكتشف
-                        خدماتنا</a>
+                    <p data-lang="about-desc-3">نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة
+                        دائمة حتى بعد تنفيذ شروط
+                        الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات.</p>
+                    <a href="#services" class="btn" data-lang="about-btn">اكتشف خدماتنا</a>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
@@ -1782,31 +1711,28 @@
     <section class="destinations" id="destinations">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="اختر وجهتك" data-en="Choose Your Destination">اختر وجهتك</h2>
+                <h2 data-lang="destinations-title">اختر وجهتك </h2>
             </div>
             <div class="dest-grid">
                 <div class="dest-card" data-city="madrid">
                     <img src="https://img.static-kl.com/images/media/65848EF5-2848-4EA7-BE113130180A0A55" alt="مدريد"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مدريد'">
                     <div class="dest-info">
-                        <h3 data-ar="مدريد... قلب إسبانيا" data-en="Madrid... The Heart of Spain">مدريد... قلب إسبانيا
-                        </h3>
+                        <h3 data-lang="dest-madrid">مدريد... قلب إسبانيا</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="barcelona">
                     <img src="https://media.timeout.com/images/106185654/750/562/image.jpg" alt="برشلونة"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=برشلونة'">
                     <div class="dest-info">
-                        <h3 data-ar="برشلونة.. أكثر من مجرد مدينة" data-en="Barcelona.. More Than Just a City">برشلونة..
-                            أكثر من مجرد مدينة</h3>
+                        <h3 data-lang="dest-barcelona">برشلونة.. أكثر من مجرد مدينة</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="valencia">
                     <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
                         alt="بلنسية" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=بلنسية'">
                     <div class="dest-info">
-                        <h3 data-ar="فالنسيا.. جوهرة البحر المتوسط" data-en="Valencia.. Jewel of the Mediterranean">
-                            فالنسيا.. جوهرة البحر المتوسط</h3>
+                        <h3 data-lang="dest-valencia">فالنسيا.. جوهرة البحر المتوسط</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="seville">
@@ -1814,15 +1740,14 @@
                         alt="إشبيلية"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=إشبيلية'">
                     <div class="dest-info">
-                        <h3 data-ar="إشبيلية.. روح الأندلس" data-en="Seville.. The Spirit of Andalusia">إشبيلية.. روح
-                            الأندلس</h3>
+                        <h3 data-lang="dest-seville">إشبيلية.. روح الأندلس</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="malaga">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ow1YV3XgwPeU7EzEC0KthPsu4lKhs3_2tw&s"
                         alt="مالقة" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مالقة'">
                     <div class="dest-info">
-                        <h3 data-ar="مالقة.. كوستا ديل سول" data-en="Malaga.. Costa del Sol">مالقة.. كوستا ديل سول</h3>
+                        <h3 data-lang="dest-malaga">مالقة.. كوستا ديل سول</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="alicante">
@@ -1830,8 +1755,7 @@
                         alt="أليكانتي"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=أليكانتي'">
                     <div class="dest-info">
-                        <h3 data-ar="أليكانتي.. مدينة التقاليد" data-en="Alicante.. City of Traditions">أليكانتي.. مدينة
-                            التقاليد</h3>
+                        <h3 data-lang="dest-alicante">أليكانتي.. مدينة التقاليد</h3>
                     </div>
                 </div>
             </div>
@@ -1853,41 +1777,37 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
+                <h2 data-lang="services-title">خدماتنا</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-service="residency">
                     <i class="fas fa-id-card"></i>
-                    <h3 data-ar="الإقامة" data-en="Residency">الإقامة</h3>
-                    <p data-ar="احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات اللازمة بسرعة وكفاءة."
-                        data-en="Get your visa now for new job and earning opportunities. We deliver the necessary documents to you quickly and efficiently.">
-                        احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات اللازمة بسرعة وكفاءة.</p>
-                    <a href="#" class="btn service-details-btn" data-ar="المزيد" data-en="More">المزيد</a>
+                    <h3 data-lang="service-residency-title">الإقامة</h3>
+                    <p data-lang="service-residency-desc">احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات
+                        اللازمة بسرعة وكفاءة.</p>
+                    <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="real-estate">
                     <i class="fas fa-home"></i>
-                    <h3 data-ar="العقارات" data-en="Real Estate">العقارات</h3>
-                    <p data-ar="إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار المناسب للاستثمار في إسبانيا."
-                        data-en="Expert guidance for a smooth immigration journey. We help you find the right property for investment in Spain.">
-                        إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار المناسب للاستثمار في إسبانيا.</p>
-                    <a href="#" class="btn service-details-btn" data-ar="المزيد" data-en="More">المزيد</a>
+                    <h3 data-lang="service-real-estate-title">العقارات</h3>
+                    <p data-lang="service-real-estate-desc">إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار
+                        المناسب للاستثمار في إسبانيا.</p>
+                    <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="study">
                     <i class="fas fa-graduation-cap"></i>
-                    <h3 data-ar="الدراسة في إسبانيا" data-en="Study in Spain">الدراسة في إسبانيا</h3>
-                    <p data-ar="الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل. نساعدك في الحصول على قبول جامعي."
-                        data-en="Embarking on a higher education journey in a foreign country opens doors to the future. We help you get university admission.">
-                        الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل. نساعدك في الحصول على قبول
+                    <h3 data-lang="service-study-title">الدراسة في إسبانيا</h3>
+                    <p data-lang="service-study-desc">الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل.
+                        نساعدك في الحصول على قبول
                         جامعي.</p>
-                    <a href="#" class="btn service-details-btn" data-ar="المزيد" data-en="More">المزيد</a>
+                    <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="tourist">
                     <i class="fas fa-plane"></i>
-                    <h3 data-ar="تأشيرة سياحية" data-en="Tourist Visa">تأشيرة سياحية</h3>
-                    <p data-ar="زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة."
-                        data-en="Visit new places to discover with a tourist visa. We deliver the necessary documents to you quickly and efficiently.">
-                        زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة.</p>
-                    <a href="#" class="btn service-details-btn" data-ar="المزيد" data-en="More">المزيد</a>
+                    <h3 data-lang="service-tourist-title">تأشيرة سياحية</h3>
+                    <p data-lang="service-tourist-desc">زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات
+                        اللازمة بسرعة وكفاءة.</p>
+                    <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
             </div>
         </div>
@@ -1908,44 +1828,37 @@
     <section class="why-spain">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="لماذا إسبانيا؟" data-en="Why Spain?">لماذا إسبانيا؟</h2>
-                <p data-ar="إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية"
-                    data-en="Spain is one of the most attractive countries for those looking for a high quality of life">
-                    إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية</p>
+                <h2 data-lang="why-spain-title">لماذا إسبانيا؟</h2>
+                <p data-lang="why-spain-subtitle">إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية</p>
             </div>
             <div class="why-grid">
                 <div class="why-card">
                     <i class="fas fa-sun"></i>
-                    <h3 data-ar="مناخ رائع وثقافة نابضة بالحياة" data-en="Wonderful Climate and Vibrant Culture">مناخ
-                        رائع وثقافة نابضة بالحياة</h3>
-                    <p data-ar="إسبانيا جنة لمحبي أشعة الشمس والمهرجات والأجواء الحية، حيث تقدم إسبانيا مزيجاً لا يضاهى من الطقس المثالي والثقافة الغنية."
-                        data-en="Spain is a paradise for sun, festivals, and lively atmosphere lovers, where Spain offers an unbeatable mix of perfect weather and rich culture.">
-                        إسبانيا جنة لمحبي أشعة الشمس والمهرجات والأجواء الحية، حيث تقدم إسبانيا مزيجاً لا يضاهى من الطقس
+                    <h3 data-lang="why-climate-title">مناخ رائع وثقافة نابضة بالحياة</h3>
+                    <p data-lang="why-climate-desc">إسبانيا جنة لمحبي أشعة الشمس والمهرجات والأجواء الحية، حيث تقدم
+                        إسبانيا مزيجاً لا يضاهى من الطقس
                         المثالي والثقافة الغنية.</p>
                 </div>
                 <div class="why-card">
                     <i class="fas fa-euro-sign"></i>
-                    <h3 data-ar="تكلفة معيشة معقولة" data-en="Affordable Cost of Living">تكلفة معيشة معقولة</h3>
-                    <p data-ar="توفر إسبانيا تكلفة معيشة أقل من معظم دول أوروبا الغربية (مثل المملكة المتحدة وفرنسا أو ألمانيا) مع الحفاظ على جودة حياة عالية."
-                        data-en="Spain offers a lower cost of living than most Western European countries (such as the UK, France or Germany) while maintaining a high quality of life.">
-                        توفر إسبانيا تكلفة معيشة أقل من معظم دول أوروبا الغربية (مثل المملكة المتحدة وفرنسا أو ألمانيا)
+                    <h3 data-lang="why-cost-title">تكلفة معيشة معقولة</h3>
+                    <p data-lang="why-cost-desc">توفر إسبانيا تكلفة معيشة أقل من معظم دول أوروبا الغربية (مثل المملكة
+                        المتحدة وفرنسا أو ألمانيا)
                         مع الحفاظ على جودة حياة عالية.</p>
                 </div>
                 <div class="why-card">
                     <i class="fas fa-users"></i>
-                    <h3 data-ar="شعب ودود ومترحب" data-en="Friendly and Welcoming People">شعب ودود ومترحب</h3>
-                    <p data-ar="العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور القوي بالانتماء للمجتمع، أصبحت إسبانيا مكاناً رائعاً لندعوه وطناً."
-                        data-en="Living in Spain means embracing a culture where people come first. Thanks to the strong sense of community, Spain has become a great place to call home.">
-                        العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور القوي بالانتماء للمجتمع،
+                    <h3 data-lang="why-people-title">شعب ودود ومترحب</h3>
+                    <p data-lang="why-people-desc">العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور
+                        القوي بالانتماء للمجتمع،
                         أصبحت إسبانيا مكاناً رائعاً لندعوه وطناً.</p>
                 </div>
                 <div class="why-card">
                     <i class="fas fa-train"></i>
-                    <h3 data-ar="بنية تحتية ممتازة" data-en="Excellent Infrastructure">بنية تحتية ممتازة</h3>
-                    <p data-ar="من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال الرقمي، فإن البنية التحتية لإسبانيا تجعل الحياة اليومية مريحة وسهلة."
-                        data-en="From high-speed trains to excellent healthcare and digital connectivity, Spain's infrastructure makes daily life comfortable and easy.">
-                        من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال الرقمي، فإن البنية التحتية لإسبانيا
-                        تجعل الحياة اليومية مريحة وسهلة.</p>
+                    <h3 data-lang="why-infrastructure-title">بنية تحتية ممتازة</h3>
+                    <p data-lang="why-infrastructure-desc">من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال
+                        الرقمي، فإن البنية التحتية لإسبانيا تجعل
+                        الحياة اليومية مريحة وسهلة.</p>
                 </div>
             </div>
         </div>
@@ -1954,112 +1867,81 @@
     <section class="faq">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2>
+                <h2 data-lang="faq-title">الأسئلة الشائعة</h2>
             </div>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-ar="كم من الوقت يستغرق معالجة طلب الإقامة الإسبانية؟"
-                            data-en="How long does it take to process a Spanish residency application?">كم من الوقت
-                            يستغرق معالجة طلب الإقامة الإسبانية؟</span>
+                        <span data-lang="faq-q1">كم من الوقت يستغرق معالجة طلب الإقامة الإسبانية؟</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p data-ar="تعتمد مدة معالجة طلب الإقامة الإسبانية على نوع الإقامة ومكان التقديم. إليك النقاط العامة:"
-                            data-en="The processing time for a Spanish residency application depends on the type of residency and place of application. Here are the general points:">
-                            تعتمد مدة معالجة طلب الإقامة الإسبانية على نوع الإقامة ومكان التقديم. إليك النقاط العامة:
-                        </p>
+                        <p data-lang="faq-a1">تعتمد مدة معالجة طلب الإقامة الإسبانية على نوع الإقامة ومكان التقديم. إليك
+                            النقاط العامة:</p>
                         <ul>
-                            <li data-ar="نوع التأشيرة: تعتمد مدة العملية على نوع التأشيرة، بعض التأشيرات تستغرق وقتاً أطول من غيرها، في معظم الحالات قد تستغرق بين 1 إلى 6 أشهر."
-                                data-en="Visa Type: The duration of the process depends on the type of visa, some visas take longer than others, in most cases it may take between 1 to 6 months.">
-                                نوع التأشيرة: تعتمد مدة العملية على نوع التأشيرة، بعض التأشيرات تستغرق وقتاً أطول من
-                                غيرها، في معظم الحالات قد تستغرق بين 1 إلى 6 أشهر.</li>
-                            <li data-ar="وقت السنة: فصل الصيف والعطلات (أغسطس/ديسمبر) قد تبطئ الأمور."
-                                data-en="Time of Year: Summer and holidays (August/December) may slow things down.">وقت
-                                السنة: فصل الصيف والعطلات (أغسطس/ديسمبر) قد تبطئ الأمور.</li>
-                            <li data-ar="أخطاء في الوثائق: الوثائق المفقودة يمكن أن تسبب تأخيرات، يجب أن تتأكد من أن الوثائق التي تقدمها هي المطلوبة لتجنب التأخيرات والرفض."
-                                data-en="Document Errors: Missing documents can cause delays, you should ensure that the documents you provide are the required ones to avoid delays and rejections.">
-                                أخطاء في الوثائق: الوثائق المفقودة يمكن أن تسبب تأخيرات، يجب أن تتأكد من أن الوثائق التي
-                                تقدمها هي المطلوبة لتجنب التأخيرات والرفض.</li>
+                            <li data-lang="faq-a1-1"><strong>نوع التأشيرة:</strong> تعتمد مدة العملية على نوع التأشيرة،
+                                بعض التأشيرات تستغرق
+                                وقتاً أطول من غيرها، في معظم الحالات قد تستغرق بين 1 إلى 6 أشهر.</li>
+                            <li data-lang="faq-a1-2"><strong>وقت السنة:</strong> فصل الصيف والعطلات (أغسطس/ديسمبر) قد
+                                تبطئ الأمور.</li>
+                            <li data-lang="faq-a1-3"><strong>أخطاء في الوثائق:</strong> الوثائق المفقودة يمكن أن تسبب
+                                تأخيرات، يجب أن تتأكد
+                                من أن الوثائق التي تقدمها هي المطلوبة لتجنب التأخيرات والرفض.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-ar="كم من الوقت يستغرق التقديم للحصول على الجنسية الإسبانية؟"
-                            data-en="How long does it take to apply for Spanish citizenship?">كم من الوقت يستغرق التقديم
-                            للحصول على الجنسية الإسبانية؟</span>
+                        <span data-lang="faq-q2">كم من الوقت يستغرق التقديم للحصول على الجنسية الإسبانية؟</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p data-ar="بشكل عام، يجب أن تكون مقيمًا في إسبانيا لمدة 10 سنوات قبل أن تتمكن من التقديم للحصول على الجنسية الإسبانية. ومع ذلك، هناك استثناءات لهذه القاعدة:"
-                            data-en="In general, you must be a resident in Spain for 10 years before you can apply for Spanish citizenship. However, there are exceptions to this rule:">
-                            بشكل عام، يجب أن تكون مقيمًا في إسبانيا لمدة 10 سنوات قبل أن تتمكن من التقديم للحصول على
+                        <p data-lang="faq-a2">بشكل عام، يجب أن تكون مقيمًا في إسبانيا لمدة 10 سنوات قبل أن تتمكن من
+                            التقديم للحصول على
                             الجنسية الإسبانية. ومع ذلك، هناك استثناءات لهذه القاعدة:</p>
                         <ul>
-                            <li data-ar="5 سنوات للاجئين" data-en="5 years for refugees">5 سنوات للاجئين</li>
-                            <li data-ar="سنتان للمواطنين من دول أمريكا اللاتينية أو دول أخرى ذات صلات تاريخية وثقافية مع إسبانيا"
-                                data-en="2 years for citizens of Latin American countries or other countries with historical and cultural ties to Spain">
-                                سنتان للمواطنين من دول أمريكا اللاتينية أو دول أخرى ذات صلات تاريخية وثقافية مع إسبانيا
+                            <li data-lang="faq-a2-1">5 سنوات للاجئين</li>
+                            <li data-lang="faq-a2-2">سنتان للمواطنين من دول أمريكا اللاتينية أو دول أخرى ذات صلات
+                                تاريخية وثقافية مع إسبانيا
                             </li>
-                            <li data-ar="سنة واحدة للأشخاص المتزوجين من مواطنين إسبان"
-                                data-en="1 year for people married to Spanish citizens">سنة واحدة للأشخاص المتزوجين من
-                                مواطنين إسبان</li>
-                            <li data-ar="سنة واحدة للأطفال المولودين في إسبانيا"
-                                data-en="1 year for children born in Spain">سنة واحدة للأطفال المولودين في إسبانيا</li>
+                            <li data-lang="faq-a2-3">سنة واحدة للأشخاص المتزوجين من مواطنين إسبان</li>
+                            <li data-lang="faq-a2-4">سنة واحدة للأطفال المولودين في إسبانيا</li>
                         </ul>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-ar="هل أحتاج إلى البقاء في إسبانيا للحفاظ على الإقامة؟"
-                            data-en="Do I need to stay in Spain to maintain my residency?">هل أحتاج إلى البقاء في
-                            إسبانيا للحفاظ على الإقامة؟</span>
+                        <span data-lang="faq-q3">هل أحتاج إلى البقاء في إسبانيا للحفاظ على الإقامة؟</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p data-ar="نعم، للاحتفاظ بإقامتك الإسبانية، يجب أن تقضي فترة محددة من الوقت في إسبانيا كل عام. تعتمد المدة الدقيقة على نوع الإقامة التي لديك:"
-                            data-en="Yes, to maintain your Spanish residency, you must spend a certain amount of time in Spain each year. The exact duration depends on the type of residency you have:">
-                            نعم، للاحتفاظ بإقامتك الإسبانية، يجب أن تقضي فترة محددة من الوقت في إسبانيا كل عام. تعتمد
+                        <p data-lang="faq-a3">نعم، للاحتفاظ بإقامتك الإسبانية، يجب أن تقضي فترة محددة من الوقت في
+                            إسبانيا كل عام. تعتمد
                             المدة الدقيقة على نوع الإقامة التي لديك:</p>
                         <ul>
-                            <li data-ar="الإقامة المؤقتة: يجب ألا تغادر إسبانيا لأكثر من 6 أشهر متتالية أو 10 أشهر إجمالاً في السنة."
-                                data-en="Temporary Residency: You must not leave Spain for more than 6 consecutive months or 10 months in total per year.">
-                                الإقامة المؤقتة: يجب ألا تغادر إسبانيا لأكثر من 6 أشهر متتالية أو 10 أشهر إجمالاً في
-                                السنة.</li>
-                            <li data-ar="الإقامة الدائمة: بعد الحصول على الإقامة الدائمة، يمكنك البقاء خارج إسبانيا لفترات أطول."
-                                data-en="Permanent Residency: After obtaining permanent residency, you can stay outside Spain for longer periods.">
-                                الإقامة الدائمة: بعد الحصول على الإقامة الدائمة، يمكنك البقاء خارج إسبانيا لفترات أطول.
-                            </li>
+                            <li data-lang="faq-a3-1"><strong>الإقامة المؤقتة:</strong> يجب ألا تغادر إسبانيا لأكثر من 6
+                                أشهر متتالية أو 10
+                                أشهر إجمالاً في السنة.</li>
+                            <li data-lang="faq-a3-2"><strong>الإقامة الدائمة:</strong> بعد الحصول على الإقامة الدائمة،
+                                يمكنك البقاء خارج
+                                إسبانيا لفترات أطول.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span data-ar="كيف أبدأ مع خدماتكم؟" data-en="How do I start with your services?">كيف أبدأ مع
-                            خدماتكم؟</span>
+                        <span data-lang="faq-q4">كيف أبدأ مع خدماتكم؟</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p data-ar="للبدء مع خدماتنا، يمكنك اتباع الخطوات التالية:"
-                            data-en="To start with our services, you can follow these steps:">للبدء مع خدماتنا، يمكنك
-                            اتباع الخطوات التالية:</p>
+                        <p data-lang="faq-a4">للبدء مع خدماتنا، يمكنك اتباع الخطوات التالية:</p>
                         <ol>
-                            <li data-ar="تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال على موقعنا."
-                                data-en="Contact us via phone, email, or the contact form on our website.">تواصل معنا
-                                عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال على موقعنا.</li>
-                            <li data-ar="سنقوم بتحديد استشارة أولية لفهم احتياجاتك وأهدافك."
-                                data-en="We will schedule an initial consultation to understand your needs and goals.">
-                                سنقوم بتحديد استشارة أولية لفهم احتياجاتك وأهدافك.</li>
-                            <li data-ar="سنقدم لك خطة عمل مخصصة وفقًا لوضعك."
-                                data-en="We will provide you with a customized work plan according to your situation.">
-                                سنقدم لك خطة عمل مخصصة وفقًا لوضعك.</li>
-                            <li data-ar="بعد موافقتك، سنبدأ في تقديم الخدمات المتفق عليها."
-                                data-en="After your approval, we will start providing the agreed-upon services.">بعد
-                                موافقتك، سنبدأ في تقديم الخدمات المتفق عليها.</li>
-                            <li data-ar="سنواصل معك طوال العملية حتى تحقيق أهدافك."
-                                data-en="We will follow up with you throughout the process until you achieve your goals.">
-                                سنواصل معك طوال العملية حتى تحقيق أهدافك.</li>
+                            <li data-lang="faq-a4-1">تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال على
+                                موقعنا.</li>
+                            <li data-lang="faq-a4-2">سنقوم بتحديد استشارة أولية لفهم احتياجاتك وأهدافك.</li>
+                            <li data-lang="faq-a4-3">سنقدم لك خطة عمل مخصصة وفقًا لوضعك.</li>
+                            <li data-lang="faq-a4-4">بعد موافقتك، سنبدأ في تقديم الخدمات المتفق عليها.</li>
+                            <li data-lang="faq-a4-5">سنواصل معك طوال العملية حتى تحقيق أهدافك.</li>
                         </ol>
                     </div>
                 </div>
@@ -2070,57 +1952,52 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+                <h2 data-lang="contact-title">اتصل بنا</h2>
             </div>
             <div class="contact-container">
                 <div class="contact-form">
-                    <h3 data-ar="ارسل لنا رسالة" data-en="Send Us a Message">ارسل لنا رسالة</h3>
-                    <p data-ar="نحن هنا لمساعدتك. املأ النموذج وسنتواصل معك في أقرب وقت ممكن"
-                        data-en="We are here to help you. Fill out the form and we will contact you as soon as possible">
-                        نحن هنا لمساعدتك. املأ النموذج وسنتواصل معك في أقرب وقت ممكن</p>
-                    <div class="success-message" id="successMessage"
-                        data-ar="تم إرسال رسالتك بنجاح! سنتواصل معك قريباً."
-                        data-en="Your message has been sent successfully! We will contact you soon.">تم إرسال رسالتك
-                        بنجاح! سنتواصل معك قريباً.</div>
-                    <div class="error-message" id="errorMessage"
-                        data-ar="حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى."
-                        data-en="An error occurred while sending the message. Please try again.">حدث خطأ أثناء إرسال
-                        الرسالة. يرجى المحاولة مرة أخرى.</div>
+                    <h3 data-lang="contact-form-title">ارسل لنا رسالة</h3>
+                    <p data-lang="contact-form-subtitle">نحن هنا لمساعدتك. املأ النموذج وسنتواصل معك في أقرب وقت ممكن
+                    </p>
+                    <div class="success-message" id="successMessage">
+                        <span data-lang="contact-success">تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.</span>
+                    </div>
+                    <div class="error-message" id="errorMessage">
+                        <span data-lang="contact-error">حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.</span>
+                    </div>
                     <form id="contactForm" action="https://formspree.io/f/mzzaglwo" method="POST">
                         <div class="form-group">
-                            <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
+                            <label for="name" data-lang="form-name">الاسم</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                            <label for="email" data-lang="form-email">البريد الإلكتروني</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject" data-ar="الموضوع" data-en="Subject">الموضوع</label>
+                            <label for="subject" data-lang="form-subject">الموضوع</label>
                             <input type="text" id="subject" name="subject">
                         </div>
                         <div class="form-group">
-                            <label for="message" data-ar="الرسالة" data-en="Message">الرسالة</label>
+                            <label for="message" data-lang="form-message">الرسالة</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn" data-ar="إرسال رسالة" data-en="Send Message">إرسال
-                            رسالة</button>
+                        <button type="submit" class="btn" data-lang="contact-form-submit">إرسال رسالة</button>
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h3 data-ar="هل لديك أسئلة؟" data-en="Do You Have Questions?">هل لديك أسئلة؟</h3>
-                    <p data-ar="اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق بالهجرة إلى إسبانيا أو خدماتنا."
-                        data-en="Contact us now and we will be happy to help you with any inquiries related to immigration to Spain or our services.">
-                        اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق بالهجرة إلى إسبانيا أو خدماتنا.</p>
+                    <h3 data-lang="contact-info-title">هل لديك أسئلة؟</h3>
+                    <p data-lang="contact-info-subtitle">اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق
+                        بالهجرة إلى إسبانيا أو خدماتنا.</p>
                     <div class="contact-items">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <h4 data-ar="الهاتف" data-en="Phone">الهاتف</h4>
+                            <h4 data-lang="contact-phone-title">الهاتف</h4>
                             <p>+34 604272482</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <h4 data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</h4>
+                            <h4 data-lang="contact-email-title">البريد الإلكتروني</h4>
                             <p>info@andalusimmigration.com</p>
                         </div>
                     </div>
@@ -2131,15 +2008,12 @@
     <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
-            <h3 data-ar="النشرة الإخبارية" data-en="Newsletter">النشرة الإخبارية</h3>
-            <p data-ar="انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!"
-                data-en="Subscribe to our newsletter to follow the latest news!">انتظر إعلان النشرة الإخبارية لمتابعة
-                أحدث الأخبار!</p>
+            <h3 data-lang="newsletter-title">النشرة الإخبارية</h3>
+            <p data-lang="newsletter-subtitle">انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!</p>
             <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/xjvqyvqj" method="POST">
-                <input type="email" name="email" data-ar="بريدك الإلكتروني" data-en="Your Email"
-                    placeholder="بريدك الإلكتروني" required>
+                <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
                 <input type="hidden" name="_subject" value="اشتراك في النشرة الإخبارية - الأندلس للهجرة">
-                <button type="submit" data-ar="اشترك" data-en="Subscribe">اشترك</button>
+                <button type="submit" data-lang="newsletter-submit">اشترك</button>
             </form>
         </div>
     </section>
@@ -2152,14 +2026,13 @@
                         <img src="https://andalusimmigration.com/wp-content/uploads/2023/12/logonew7.png"
                             alt="الأندلس للهجرة">
                     </a>
-                    <h2 data-ar="الأندلس للهجرة" data-en="Andalus Immigration">الأندلس للهجرة</h2>
                 </div>
                 <div class="footer-links">
-                    <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-                    <a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a>
-                    <a href="#destinations" data-ar="الوجهات" data-en="Destinations">الوجهات</a>
-                    <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
-                    <a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+                    <a href="#home" data-lang="nav-home">الرئيسية</a>
+                    <a href="#about" data-lang="nav-about">من نحن</a>
+                    <a href="#destinations" data-lang="nav-destinations">الوجهات</a>
+                    <a href="#services" data-lang="nav-services">الخدمات</a>
+                    <a href="#contact" data-lang="nav-contact">اتصل بنا</a>
                 </div>
                 <div class="footer-social-links">
                     <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
@@ -2171,13 +2044,289 @@
                 </div>
             </div>
             <div class="copyright">
-                <p data-ar="© 2025 الأندلس للهجرة. جميع الحقوق محفوظة."
-                    data-en="© 2025 Andalus Immigration. All Rights Reserved.">© 2025 الأندلس للهجرة. جميع الحقوق
-                    محفوظة.</p>
+                <p>© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
     <script>
+        // بيانات الترجمة
+        const translations = {
+            ar: {
+                // Hero Section
+                "hero-title": "الأندلس للهجرة",
+                "hero-subtitle": "الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل",
+                "hero-btn": "احصل على استشارتك المجانية",
+
+                // Navigation
+                "nav-home": "الرئيسية",
+                "nav-about": "من نحن",
+                "nav-destinations": "الوجهات",
+                "nav-services": "الخدمات",
+                "nav-contact": "اتصل بنا",
+
+                // Values Section
+                "values-title": "قيمنا",
+                "values-transparency-title": "الشفافية والجودة",
+                "values-transparency-desc": "نلتزم بأعلى معايير الشفافية والجودة في جميع خدماتنا المقدمة لعملائنا",
+                "values-customization-title": "التخصيص والاهتمام الفردي",
+                "values-customization-desc": "نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي فائق",
+                "values-innovation-title": "الابتكار وسرعة العمل",
+                "values-innovation-desc": "نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز معاملاتكم",
+
+                // About Section
+                "about-title": "من نحن",
+                "about-company": "الأندلس للهجرة",
+                "about-desc-1": "شركة متخصصة في تقديم خدمات الإقامة في إسبانيا. لدينا خبرة واسعة في الاستثمار والهجرة إلى إسبانيا، ونقدم حلولاً قانونية واستشارية مخصصة لمساعدة رجال الأعمال والأفراد الباحثين عن الحصول على الإقامة الإسبانية بسهولة وثقة.",
+                "about-desc-2": "خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في إسبانيا. شبكة واسعة من الشراكات مع وكالات الخدمات ووكلاء العقارات والبنوك في إسبانيا.",
+                "about-desc-3": "نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة دائمة حتى بعد تنفيذ شروط الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات.",
+                "about-btn": "اكتشف خدماتنا",
+
+                // Destinations Section
+                "destinations-title": "اختر وجهتك",
+                "dest-madrid": "مدريد... قلب إسبانيا",
+                "dest-barcelona": "برشلونة.. أكثر من مجرد مدينة",
+                "dest-valencia": "فالنسيا.. جوهرة البحر المتوسط",
+                "dest-seville": "إشبيلية.. روح الأندلس",
+                "dest-malaga": "مالقة.. كوستا ديل سول",
+                "dest-alicante": "أليكانتي.. مدينة التقاليد",
+
+                // Services Section
+                "services-title": "خدماتنا",
+                "service-residency-title": "الإقامة",
+                "service-residency-desc": "احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات اللازمة بسرعة وكفاءة.",
+                "service-real-estate-title": "العقارات",
+                "service-real-estate-desc": "إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار المناسب للاستثمار في إسبانيا.",
+                "service-study-title": "الدراسة في إسبانيا",
+                "service-study-desc": "الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل. نساعدك في الحصول على قبول جامعي.",
+                "service-tourist-title": "تأشيرة سياحية",
+                "service-tourist-desc": "زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة.",
+                "service-more": "المزيد",
+
+                // Why Spain Section
+                "why-spain-title": "لماذا إسبانيا؟",
+                "why-spain-subtitle": "إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية",
+                "why-climate-title": "مناخ رائع وثقافة نابضة بالحياة",
+                "why-climate-desc": "إسبانيا جنة لمحبي أشعة الشمس والمهرجات والأجواء الحية، حيث تقدم إسبانيا مزيجاً لا يضاهى من الطقس المثالي والثقافة الغنية.",
+                "why-cost-title": "تكلفة معيشة معقولة",
+                "why-cost-desc": "توفر إسبانيا تكلفة معيشة أقل من معظم دول أوروبا الغربية (مثل المملكة المتحدة وفرنسا أو ألمانيا) مع الحفاظ على جودة حياة عالية.",
+                "why-people-title": "شعب ودود ومترحب",
+                "why-people-desc": "العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور القوي بالانتماء للمجتمع، أصبحت إسبانيا مكاناً رائعاً لندعوه وطناً.",
+                "why-infrastructure-title": "بنية تحتية ممتازة",
+                "why-infrastructure-desc": "من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال الرقمي، فإن البنية التحتية لإسبانيا تجعل الحياة اليومية مريحة وسهلة.",
+
+                // FAQ Section
+                "faq-title": "الأسئلة الشائعة",
+                "faq-q1": "كم من الوقت يستغرق معالجة طلب الإقامة الإسبانية؟",
+                "faq-a1": "تعتمد مدة معالجة طلب الإقامة الإسبانية على نوع الإقامة ومكان التقديم. إليك النقاط العامة:",
+                "faq-a1-1": "نوع التأشيرة: تعتمد مدة العملية على نوع التأشيرة، بعض التأشيرات تستغرق وقتاً أطول من غيرها، في معظم الحالات قد تستغرق بين 1 إلى 6 أشهر.",
+                "faq-a1-2": "وقت السنة: فصل الصيف والعطلات (أغسطس/ديسمبر) قد تبطئ الأمور.",
+                "faq-a1-3": "أخطاء في الوثائق: الوثائق المفقودة يمكن أن تسبب تأخيرات، يجب أن تتأكد من أن الوثائق التي تقدمها هي المطلوبة لتجنب التأخيرات والرفض.",
+                "faq-q2": "كم من الوقت يستغرق التقديم للحصول على الجنسية الإسبانية؟",
+                "faq-a2": "بشكل عام، يجب أن تكون مقيمًا في إسبانيا لمدة 10 سنوات قبل أن تتمكن من التقديم للحصول على الجنسية الإسبانية. ومع ذلك، هناك استثناءات لهذه القاعدة:",
+                "faq-a2-1": "5 سنوات للاجئين",
+                "faq-a2-2": "سنتان للمواطنين من دول أمريكا اللاتينية أو دول أخرى ذات صلات تاريخية وثقافية مع إسبانيا",
+                "faq-a2-3": "سنة واحدة للأشخاص المتزوجين من مواطنين إسبان",
+                "faq-a2-4": "سنة واحدة للأطفال المولودين في إسبانيا",
+                "faq-q3": "هل أحتاج إلى البقاء في إسبانيا للحفاظ على الإقامة؟",
+                "faq-a3": "نعم، للاحتفاظ بإقامتك الإسبانية، يجب أن تقضي فترة محددة من الوقت في إسبانيا كل عام. تعتمد المدة الدقيقة على نوع الإقامة التي لديك:",
+                "faq-a3-1": "الإقامة المؤقتة: يجب ألا تغادر إسبانيا لأكثر من 6 أشهر متتالية أو 10 أشهر إجمالاً في السنة.",
+                "faq-a3-2": "الإقامة الدائمة: بعد الحصول على الإقامة الدائمة، يمكنك البقاء خارج إسبانيا لفترات أطول.",
+                "faq-q4": "كيف أبدأ مع خدماتكم؟",
+                "faq-a4": "للبدء مع خدماتنا، يمكنك اتباع الخطوات التالية:",
+                "faq-a4-1": "تواصل معنا عبر الهاتف أو البريد الإلكتروني أو نموذج الاتصال على موقعنا.",
+                "faq-a4-2": "سنقوم بتحديد استشارة أولية لفهم احتياجاتك وأهدافك.",
+                "faq-a4-3": "سنقدم لك خطة عمل مخصصة وفقًا لوضعك.",
+                "faq-a4-4": "بعد موافقتك، سنبدأ في تقديم الخدمات المتفق عليها.",
+                "faq-a4-5": "سنواصل معك طوال العملية حتى تحقيق أهدافك.",
+
+                // Contact Section
+                "contact-title": "اتصل بنا",
+                "contact-form-title": "ارسل لنا رسالة",
+                "contact-form-subtitle": "نحن هنا لمساعدتك. املأ النموذج وسنتواصل معك في أقرب وقت ممكن",
+                "contact-success": "تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.",
+                "contact-error": "حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.",
+                "contact-form-submit": "إرسال رسالة",
+                "contact-info-title": "هل لديك أسئلة؟",
+                "contact-info-subtitle": "اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق بالهجرة إلى إسبانيا أو خدماتنا.",
+                "contact-phone-title": "الهاتف",
+                "contact-email-title": "البريد الإلكتروني",
+
+                // Form Fields
+                "form-name": "الاسم",
+                "form-phone": "رقم الهاتف",
+                "form-email": "البريد الإلكتروني",
+                "form-subject": "الموضوع",
+                "form-message": "رسالة إضافية",
+                "form-service": "الخدمة المطلوبة",
+                "form-select-service": "اختر الخدمة",
+                "form-residency": "الإقامة",
+                "form-real-estate": "العقارات",
+                "form-study": "الدراسة في إسبانيا",
+                "form-tourist": "تأشيرة سياحية",
+                "form-submit": "إرسال الطلب",
+
+                // Consultation Popup
+                "consultation-title": "استشارة مجانية",
+                "consultation-subtitle": "املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن",
+
+                // Newsletter Section
+                "newsletter-title": "النشرة الإخبارية",
+                "newsletter-subtitle": "انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!",
+                "newsletter-submit": "اشترك",
+
+                // City Details
+                "city-overview": "نظرة عامة",
+                "city-images": "صور المدينة",
+                "city-videos": "فيديوهات توضيحية",
+                "city-consultation": "احصل على استشارة مجانية",
+                "city-close": "إغلاق",
+
+                // Service Details
+                "service-overview": "نظرة عامة",
+                "service-images": "صور الخدمة",
+                "service-videos": "فيديوهات توضيحية",
+                "service-consultation": "احصل على استشارة مجانية",
+                "service-close": "إغلاق"
+            },
+            en: {
+                // Hero Section
+                "hero-title": "Andalusia Immigration",
+                "hero-subtitle": "Transparency and Quality, Customization and Individual Attention, Innovation and Speed",
+                "hero-btn": "Get Your Free Consultation",
+
+                // Navigation
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-destinations": "Destinations",
+                "nav-services": "Services",
+                "nav-contact": "Contact Us",
+
+                // Values Section
+                "values-title": "Our Values",
+                "values-transparency-title": "Transparency and Quality",
+                "values-transparency-desc": "We are committed to the highest standards of transparency and quality in all our services provided to clients",
+                "values-customization-title": "Customization and Individual Attention",
+                "values-customization-desc": "We offer customized solutions to suit each client's needs with exceptional individual attention",
+                "values-innovation-title": "Innovation and Speed",
+                "values-innovation-desc": "We use the latest technologies and innovative methods to ensure the speed of processing your transactions",
+
+                // About Section
+                "about-title": "About Us",
+                "about-company": "Andalusia Immigration",
+                "about-desc-1": "A company specialized in providing residency services in Spain. We have extensive experience in investment and immigration to Spain, and we offer customized legal and advisory solutions to help businessmen and individuals seeking to obtain Spanish residency with ease and confidence.",
+                "about-desc-2": "Reliable experience built by years of success in the field of residency and consultations in Spain. A wide network of partnerships with service agencies, real estate agents, and banks in Spain.",
+                "about-desc-3": "Your success is our priority. We follow up on your request after the residency is approved. We seek to build a permanent relationship even after implementing the terms of the agreement, a relationship that develops into friendship that produces beneficial projects at all levels.",
+                "about-btn": "Discover Our Services",
+
+                // Destinations Section
+                "destinations-title": "Choose Your Destination",
+                "dest-madrid": "Madrid... The Heart of Spain",
+                "dest-barcelona": "Barcelona.. More Than Just a City",
+                "dest-valencia": "Valencia.. Jewel of the Mediterranean",
+                "dest-seville": "Seville.. The Spirit of Andalusia",
+                "dest-malaga": "Malaga.. Costa del Sol",
+                "dest-alicante": "Alicante.. City of Traditions",
+
+                // Services Section
+                "services-title": "Our Services",
+                "service-residency-title": "Residency",
+                "service-residency-desc": "Get your visa now for new work and earning opportunities. We deliver the necessary documents to you quickly and efficiently.",
+                "service-real-estate-title": "Real Estate",
+                "service-real-estate-desc": "Expert guidance for a smooth immigration journey. We help you find the right property for investment in Spain.",
+                "service-study-title": "Study in Spain",
+                "service-study-desc": "Embark on a higher education journey in a foreign country that opens the doors to the future. We help you get university admission.",
+                "service-tourist-title": "Tourist Visa",
+                "service-tourist-desc": "Visit new places to discover with a tourist visa. We deliver the necessary documents to you quickly and efficiently.",
+                "service-more": "More",
+
+                // Why Spain Section
+                "why-spain-title": "Why Spain?",
+                "why-spain-subtitle": "Spain is one of the most attractive countries for those looking for a high quality of life",
+                "why-climate-title": "Wonderful Climate and Vibrant Culture",
+                "why-climate-desc": "Spain is a paradise for sun lovers, festivals and lively atmospheres, where Spain offers an unparalleled mix of ideal weather and rich culture.",
+                "why-cost-title": "Affordable Cost of Living",
+                "why-cost-desc": "Spain offers a lower cost of living than most Western European countries (such as the UK, France or Germany) while maintaining a high quality of life.",
+                "why-people-title": "Friendly and Welcoming People",
+                "why-people-desc": "Living in Spain means embracing a culture where people come first. Thanks to the strong sense of community, Spain has become a great place to call home.",
+                "why-infrastructure-title": "Excellent Infrastructure",
+                "why-infrastructure-desc": "From high-speed trains to excellent healthcare and digital connectivity, Spain's infrastructure makes daily life comfortable and easy.",
+
+                // FAQ Section
+                "faq-title": "Frequently Asked Questions",
+                "faq-q1": "How long does it take to process a Spanish residency application?",
+                "faq-a1": "The processing time for a Spanish residency application depends on the type of residency and the place of submission. Here are the general points:",
+                "faq-a1-1": "Visa Type: The processing time depends on the type of visa, some visas take longer than others, in most cases it may take between 1 to 6 months.",
+                "faq-a1-2": "Time of Year: Summer and holidays (August/December) may slow things down.",
+                "faq-a1-3": "Document Errors: Missing documents can cause delays, you should make sure that the documents you provide are the required ones to avoid delays and rejections.",
+                "faq-q2": "How long does it take to apply for Spanish citizenship?",
+                "faq-a2": "In general, you must be a resident in Spain for 10 years before you can apply for Spanish citizenship. However, there are exceptions to this rule:",
+                "faq-a2-1": "5 years for refugees",
+                "faq-a2-2": "2 years for citizens of Latin American countries or other countries with historical and cultural ties to Spain",
+                "faq-a2-3": "1 year for people married to Spanish citizens",
+                "faq-a2-4": "1 year for children born in Spain",
+                "faq-q3": "Do I need to stay in Spain to maintain my residency?",
+                "faq-a3": "Yes, to maintain your Spanish residency, you must spend a certain period of time in Spain each year. The exact duration depends on the type of residency you have:",
+                "faq-a3-1": "Temporary Residency: You must not leave Spain for more than 6 consecutive months or 10 months in total per year.",
+                "faq-a3-2": "Permanent Residency: After obtaining permanent residency, you can stay outside Spain for longer periods.",
+                "faq-q4": "How do I start with your services?",
+                "faq-a4": "To start with our services, you can follow these steps:",
+                "faq-a4-1": "Contact us by phone, email or through the contact form on our website.",
+                "faq-a4-2": "We will arrange an initial consultation to understand your needs and goals.",
+                "faq-a4-3": "We will provide you with a customized work plan according to your situation.",
+                "faq-a4-4": "After your approval, we will start providing the agreed services.",
+                "faq-a4-5": "We will follow up with you throughout the process until your goals are achieved.",
+
+                // Contact Section
+                "contact-title": "Contact Us",
+                "contact-form-title": "Send us a message",
+                "contact-form-subtitle": "We are here to help you. Fill out the form and we will contact you as soon as possible",
+                "contact-success": "Your message has been sent successfully! We will contact you soon.",
+                "contact-error": "An error occurred while sending the message. Please try again.",
+                "contact-form-submit": "Send Message",
+                "contact-info-title": "Do you have questions?",
+                "contact-info-subtitle": "Contact us now and we will be happy to help you with any inquiries related to immigration to Spain or our services.",
+                "contact-phone-title": "Phone",
+                "contact-email-title": "Email",
+
+                // Form Fields
+                "form-name": "Full Name",
+                "form-phone": "Phone Number",
+                "form-email": "Email Address",
+                "form-subject": "Subject",
+                "form-message": "Additional Message",
+                "form-service": "Required Service",
+                "form-select-service": "Select Service",
+                "form-residency": "Residency",
+                "form-real-estate": "Real Estate",
+                "form-study": "Study in Spain",
+                "form-tourist": "Tourist Visa",
+                "form-submit": "Submit Request",
+
+                // Consultation Popup
+                "consultation-title": "Free Consultation",
+                "consultation-subtitle": "Fill out the form below and we will contact you as soon as possible",
+
+                // Newsletter Section
+                "newsletter-title": "Newsletter",
+                "newsletter-subtitle": "Stay tuned for the newsletter announcement to follow the latest news!",
+                "newsletter-submit": "Subscribe",
+
+                // City Details
+                "city-overview": "Overview",
+                "city-images": "City Images",
+                "city-videos": "Informational Videos",
+                "city-consultation": "Get a Free Consultation",
+                "city-close": "Close",
+
+                // Service Details
+                "service-overview": "Overview",
+                "service-images": "Service Images",
+                "service-videos": "Informational Videos",
+                "service-consultation": "Get a Free Consultation",
+                "service-close": "Close"
+            }
+        };
+
         // بيانات المدن التفصيلية
         const citiesData = {
             madrid: {
@@ -2188,7 +2337,7 @@
                 icon: "fas fa-city",
                 description: {
                     ar: "مدريد، عاصمة إسبانيا، هي مدينة نابضة بالحياة تجمع بين التاريخ العريق والحداثة. تقع في قلب البلاد وتعتبر مركزاً ثقافياً واقتصادياً مهماً.",
-                    en: "Madrid, the capital of Spain, is a vibrant city that combines ancient history with modernity. It is located in the heart of the country and is considered an important cultural and economic center."
+                    en: "Madrid, the capital of Spain, is a vibrant city that combines ancient history with modernity. Located in the heart of the country, it is considered an important cultural and economic center."
                 },
                 sections: [
                     {
@@ -2198,7 +2347,7 @@
                         },
                         content: {
                             ar: "مدريد هي أكبر مدينة في إسبانيا والعاصمة السياسية والاقتصادية للبلاد. تأسست في القرن التاسع الميلادي وتطورت لتصبح واحدة من أهم المدن الأوروبية.",
-                            en: "Madrid is the largest city in Spain and the political and economic capital of the country. It was founded in the 9th century and has evolved to become one of the most important European cities."
+                            en: "Madrid is the largest city in Spain and the political and economic capital of the country. Founded in the 9th century, it has evolved to become one of the most important European cities."
                         },
                         list: {
                             ar: [
@@ -2209,11 +2358,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 3.3 million people",
+                                "Population: Over 3.3 million inhabitants",
                                 "Area: 604.3 km²",
                                 "Official Language: Spanish",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2239,7 +2388,7 @@
                                 "Royal Palace of Madrid: Residence of the Spanish Royal Family",
                                 "Plaza Mayor: The vibrant heart of the city",
                                 "Retiro Park: A beautiful historic park in the heart of the city",
-                                "Alcalá Gate: One of the historical symbols of the city"
+                                "Alcalá Gate: One of the city's historic symbols"
                             ]
                         }
                     },
@@ -2265,7 +2414,7 @@
                                 "Winter: December - February (2-10°C)",
                                 "Spring and Autumn: Moderate and ideal for tourism",
                                 "Average rainfall: About 400 mm annually",
-                                "Sunny hours: More than 2500 hours of sun annually"
+                                "Sunny hours: Over 2500 hours of sun per year"
                             ]
                         }
                     },
@@ -2315,7 +2464,7 @@
                             en: [
                                 "Real Estate: Active real estate market especially in central areas",
                                 "Technology: Business incubators and innovation centers",
-                                "Tourism: Hotels, restaurants and tourism services",
+                                "Tourism: Hotels, restaurants and tourist services",
                                 "Education: Private schools and universities",
                                 "Healthcare: Specialized clinics and hospitals"
                             ]
@@ -2340,7 +2489,7 @@
                 icon: "fas fa-landmark",
                 description: {
                     ar: "برشلونة، عاصمة كاتالونيا، هي مدينة ساحلية خلابة تجمع بين الفن والهندسة المعمارية الفريدة والثقافة الغنية والشواطئ الجميلة.",
-                    en: "Barcelona, the capital of Catalonia, is a stunning coastal city that combines art, unique architecture, rich culture, and beautiful beaches."
+                    en: "Barcelona, the capital of Catalonia, is a stunning coastal city that combines art, unique architecture, rich culture and beautiful beaches."
                 },
                 sections: [
                     {
@@ -2361,11 +2510,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 1.6 million people",
+                                "Population: Over 1.6 million inhabitants",
                                 "Area: 101.9 km²",
                                 "Official Languages: Spanish and Catalan",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2389,9 +2538,9 @@
                             en: [
                                 "Sagrada Familia: An unfinished architectural masterpiece",
                                 "Park Güell: A unique artistic garden",
-                                "Casa Batlló: A residential building with creative design",
+                                "Casa Batlló: A creatively designed residential building",
                                 "Las Ramblas: A famous pedestrian street",
-                                "Gothic Quarter: An old neighborhood with historical walls"
+                                "Gothic Quarter: An old neighborhood with historic walls"
                             ]
                         }
                     },
@@ -2402,7 +2551,7 @@
                         },
                         content: {
                             ar: "يتميز مناخ برشلونة بأنه متوسطي مع صيف دافئ وجاف وشتاء معتدل.",
-                            en: "Barcelona's climate is Mediterranean with warm, dry summers and moderate winters."
+                            en: "Barcelona's climate is Mediterranean with warm, dry summers and mild winters."
                         },
                         list: {
                             ar: [
@@ -2417,7 +2566,7 @@
                                 "Winter: December - February (8-15°C)",
                                 "Spring and Autumn: Ideal for tourism",
                                 "Average rainfall: About 600 mm annually",
-                                "Sunny hours: More than 2400 hours of sun annually"
+                                "Sunny hours: Over 2400 hours of sun per year"
                             ]
                         }
                     },
@@ -2442,7 +2591,7 @@
                                 "University of Barcelona: One of the oldest universities in the world",
                                 "Pompeu Fabra University: Specialized in social sciences",
                                 "Polytechnic University of Catalonia: Specialized in engineering",
-                                "ESADE Business School: One of the best business schools in Europe",
+                                "ESADE: One of the best business schools in Europe",
                                 "Many multilingual international schools"
                             ]
                         }
@@ -2467,7 +2616,7 @@
                             en: [
                                 "Real Estate: Residential apartments and hotels in tourist areas",
                                 "Technology: Startups in the technology sector",
-                                "Tourism: Restaurants, shops and tourism services",
+                                "Tourism: Restaurants, shops and tourist services",
                                 "Design and Fashion: Fashion and design companies",
                                 "Sports: Sports facilities and clubs"
                             ]
@@ -2513,11 +2662,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 800,000 people",
+                                "Population: Over 800,000 inhabitants",
                                 "Area: 134.6 km²",
                                 "Official Languages: Spanish and Valencian",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2540,9 +2689,9 @@
                             ],
                             en: [
                                 "City of Arts and Sciences: A modern architectural complex",
-                                "Valencia Historical City Center: With its old walls",
+                                "Valencia City Center Historic: With its ancient walls",
                                 "Central Market: A beautiful historic market",
-                                "Turia Gardens: A huge garden in a dry riverbed",
+                                "Turia Gardens: A huge park in a dry riverbed",
                                 "Malvarrosa Beach: One of the best beaches on the Mediterranean"
                             ]
                         }
@@ -2554,7 +2703,7 @@
                         },
                         content: {
                             ar: "يتميز مناخ فالنسيا بأنه متوسطي مع صيف حار وجاف وشتاء معتدل.",
-                            en: "Valencia's climate is Mediterranean with hot, dry summers and moderate winters."
+                            en: "Valencia's climate is Mediterranean with hot, dry summers and mild winters."
                         },
                         list: {
                             ar: [
@@ -2569,7 +2718,7 @@
                                 "Winter: December - February (10-17°C)",
                                 "Spring and Autumn: Warm and sunny",
                                 "Average rainfall: About 450 mm annually",
-                                "Sunny hours: More than 2700 hours of sun annually"
+                                "Sunny hours: Over 2700 hours of sun per year"
                             ]
                         }
                     },
@@ -2619,8 +2768,8 @@
                             en: [
                                 "Real Estate: Coastal apartments and tourist hotels",
                                 "Agriculture: Citrus and rice cultivation",
-                                "Technology: Information technology companies",
-                                "Tourism: Various restaurants and tourism services",
+                                "Technology: IT technology companies",
+                                "Tourism: Various restaurants and tourist services",
                                 "Creative Industries: Design, fashion and arts"
                             ]
                         }
@@ -2665,11 +2814,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 690,000 people",
+                                "Population: Over 690,000 inhabitants",
                                 "Area: 140.8 km²",
                                 "Official Language: Spanish",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2691,11 +2840,11 @@
                                 "ساحة إسبانيا: ساحة تاريخية بتصميم رائع"
                             ],
                             en: [
-                                "Alcázar of Seville: A royal palace with unique Islamic design",
+                                "Alcázar Palace: A royal palace with unique Islamic design",
                                 "Seville Cathedral: The third largest cathedral in the world",
                                 "Giralda Tower: A historic minaret with panoramic views",
                                 "Santa Cruz Quarter: An old neighborhood with narrow, beautiful streets",
-                                "Plaza de España: A historic square with a magnificent design"
+                                "Plaza de España: A historic square with beautiful design"
                             ]
                         }
                     },
@@ -2706,7 +2855,7 @@
                         },
                         content: {
                             ar: "يتميز مناخ إشبيلية بأنه شبه استوائي مع صيف حار جداً وشتاء معتدل.",
-                            en: "Seville's climate is subtropical with very hot summers and moderate winters."
+                            en: "Seville's climate is subtropical with very hot summers and mild winters."
                         },
                         list: {
                             ar: [
@@ -2721,7 +2870,7 @@
                                 "Winter: December - February (8-16°C)",
                                 "Spring and Autumn: Ideal for visiting",
                                 "Average rainfall: About 500 mm annually",
-                                "Sunny hours: More than 2900 hours of sun annually"
+                                "Sunny hours: Over 2900 hours of sun per year"
                             ]
                         }
                     },
@@ -2770,9 +2919,9 @@
                             ],
                             en: [
                                 "Real Estate: Traditional houses and heritage hotels",
-                                "Cultural Tourism: Museums and tourism services",
+                                "Cultural Tourism: Museums and tourist services",
                                 "Agriculture: Olive and fruit cultivation",
-                                "Handicrafts: Traditional products and handicrafts",
+                                "Handicrafts: Traditional products and crafts",
                                 "Renewable Energy: Solar energy projects"
                             ]
                         }
@@ -2796,7 +2945,7 @@
                 icon: "fas fa-umbrella-beach",
                 description: {
                     ar: "مالقة، مدينة ساحلية جميلة على البحر المتوسط، هي عاصمة كوستا ديل سول. تشتهر بشواطئها الرملية ومناخها المثالي وتراثها الثقافي الغني.",
-                    en: "Malaga, a beautiful coastal city on the Mediterranean Sea, is the capital of Costa del Sol. It is famous for its sandy beaches, ideal climate, and rich cultural heritage."
+                    en: "Malaga, a beautiful coastal city on the Mediterranean Sea, is the capital of the Costa del Sol. It is famous for its sandy beaches, ideal climate and rich cultural heritage."
                 },
                 sections: [
                     {
@@ -2817,11 +2966,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 570,000 people",
+                                "Population: Over 570,000 inhabitants",
                                 "Area: 395 km²",
                                 "Official Language: Spanish",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2843,9 +2992,9 @@
                                 "شاطئ لا مالاغويتا: شاطئ شهير في قلب المدينة"
                             ],
                             en: [
-                                "Alcazaba: A historic fortress with panoramic views",
+                                "Alcazaba Fortress: A historic fortress with panoramic views",
                                 "Picasso Museum: Dedicated to the famous artist Pablo Picasso",
-                                "Malaga Cathedral: A historic cathedral with a unique architectural style",
+                                "Malaga Cathedral: A historic cathedral with unique architectural style",
                                 "Port of Malaga: A vibrant tourist area",
                                 "La Malagueta Beach: A famous beach in the heart of the city"
                             ]
@@ -2858,7 +3007,7 @@
                         },
                         content: {
                             ar: "يتميز مناخ مالقة بأنه متوسطي دافئ مع صيف حار وجاف وشتاء معتدل.",
-                            en: "Malaga's climate is warm Mediterranean with hot, dry summers and moderate winters."
+                            en: "Malaga's climate is warm Mediterranean with hot, dry summers and mild winters."
                         },
                         list: {
                             ar: [
@@ -2873,7 +3022,7 @@
                                 "Winter: December - February (12-18°C)",
                                 "Spring and Autumn: Warm and sunny",
                                 "Average rainfall: About 500 mm annually",
-                                "Sunny hours: More than 3000 hours of sun annually"
+                                "Sunny hours: Over 3000 hours of sun per year"
                             ]
                         }
                     },
@@ -2922,7 +3071,7 @@
                             ],
                             en: [
                                 "Real Estate: Coastal apartments and tourist hotels",
-                                "Tourism: Various restaurants and tourism services",
+                                "Tourism: Various restaurants and tourist services",
                                 "Technology: Technology companies in the tourism sector",
                                 "Agriculture: Tropical fruit and vegetable cultivation",
                                 "Food Industries: Organic food products"
@@ -2948,7 +3097,7 @@
                 icon: "fas fa-umbrella-beach",
                 description: {
                     ar: "أليكانتي، مدينة ساحلية ساحرة على البحر المتوسط، تجمع بين التاريخ العريق والحداثة. تشتهر بشواطئها الذهبية وقصرها التاريخي وحياتها الليلية النابضة.",
-                    en: "Alicante, a charming coastal city on the Mediterranean Sea, combines ancient history with modernity. It is famous for its golden beaches, historic castle, and vibrant nightlife."
+                    en: "Alicante, a charming coastal city on the Mediterranean Sea, combines ancient history with modernity. It is famous for its golden beaches, historic castle and vibrant nightlife."
                 },
                 sections: [
                     {
@@ -2969,11 +3118,11 @@
                                 "التوقيت: توقيت وسط أوروبا (CET)"
                             ],
                             en: [
-                                "Population: Over 330,000 people",
+                                "Population: Over 330,000 inhabitants",
                                 "Area: 201.3 km²",
                                 "Official Languages: Spanish and Valencian",
                                 "Currency: Euro (EUR)",
-                                "Time Zone: Central European Time (CET)"
+                                "Time: Central European Time (CET)"
                             ]
                         }
                     },
@@ -2995,10 +3144,10 @@
                                 "شاطئ بوستيجويت: شاطئ شهير في قلب المدينة"
                             ],
                             en: [
-                                "Santa Barbara Castle: A historic castle on top of a mountain",
+                                "Santa Barbara Castle: A historic castle on a mountaintop",
                                 "Explanada de España: A pedestrian street with beautiful marble tiles",
                                 "Santa Maria Cathedral: A historic cathedral",
-                                "Museum of Contemporary Art (MACA): A modern art museum",
+                                "Museo de Arte Contemporáneo: A modern art museum",
                                 "Postiguet Beach: A famous beach in the heart of the city"
                             ]
                         }
@@ -3010,7 +3159,7 @@
                         },
                         content: {
                             ar: "يتميز مناخ أليكانتي بأنه متوسطي مع صيف حار وجاف وشتاء معتدل.",
-                            en: "Alicante's climate is Mediterranean with hot, dry summers and moderate winters."
+                            en: "Alicante's climate is Mediterranean with hot, dry summers and mild winters."
                         },
                         list: {
                             ar: [
@@ -3025,7 +3174,7 @@
                                 "Winter: December - February (10-17°C)",
                                 "Spring and Autumn: Warm and sunny",
                                 "Average rainfall: About 300 mm annually",
-                                "Sunny hours: More than 3200 hours of sun annually"
+                                "Sunny hours: Over 3200 hours of sun per year"
                             ]
                         }
                     },
@@ -3074,8 +3223,8 @@
                             ],
                             en: [
                                 "Real Estate: Coastal apartments and tourist hotels",
-                                "Tourism: Various restaurants and tourism services",
-                                "Technology: Information technology companies",
+                                "Tourism: Various restaurants and tourist services",
+                                "Technology: IT technology companies",
                                 "Agriculture: Fruit and vegetable cultivation",
                                 "Food Industries: Organic food products"
                             ]
@@ -3103,7 +3252,7 @@
                 icon: "fas fa-id-card",
                 description: {
                     ar: "نقدم خدمات شاملة للحصول على الإقامة الإسبانية بأنواعها المختلفة. فريقنا من الخبراء يرشدك خطوة بخطوة لتحقيق حلمك بالإقامة في إسبانيا.",
-                    en: "We offer comprehensive services for obtaining Spanish residency of various types. Our team of experts guides you step by step to achieve your dream of residing in Spain."
+                    en: "We offer comprehensive services for obtaining Spanish residency of all types. Our team of experts guides you step by step to achieve your dream of residing in Spain."
                 },
                 sections: [
                     {
@@ -3113,7 +3262,7 @@
                         },
                         content: {
                             ar: "نحن متخصصون في تقديم خدمات الإقامة بأنواعها المختلفة:",
-                            en: "We specialize in providing various types of residency services:"
+                            en: "We are specialized in providing various types of residency services:"
                         },
                         list: {
                             ar: [
@@ -3124,11 +3273,11 @@
                                 "الإقامة للرياديين وأصحاب المشاريع"
                             ],
                             en: [
-                                "Golden Residency through Investment",
-                                "Work Residency",
-                                "Family Residency",
-                                "Study Residency",
-                                "Residency for Entrepreneurs and Business Owners"
+                                "Golden Residence through Investment",
+                                "Residence through Work",
+                                "Family Residence",
+                                "Residence through Study",
+                                "Residence for Entrepreneurs and Business Owners"
                             ]
                         }
                     },
@@ -3139,7 +3288,7 @@
                         },
                         content: {
                             ar: "الحصول على الإقامة الإسبانية يوفر لك العديد من المزايا:",
-                            en: "Obtaining Spanish residency provides you with many advantages:"
+                            en: "Obtaining Spanish residency offers you many advantages:"
                         },
                         list: {
                             ar: [
@@ -3152,7 +3301,7 @@
                             en: [
                                 "Free movement within the Schengen area",
                                 "Possibility of family reunification",
-                                "Access to high-quality healthcare and education systems",
+                                "Access to high-quality health and education systems",
                                 "Safe and stable investment environment",
                                 "High quality of life in one of the best European countries"
                             ]
@@ -3165,7 +3314,7 @@
                         },
                         content: {
                             ar: "نساعدك في جميع مراحل الحصول على الإقامة:",
-                            en: "We help you in all stages of obtaining residency:"
+                            en: "We assist you in all stages of obtaining residency:"
                         },
                         list: {
                             ar: [
@@ -3176,7 +3325,7 @@
                                 "المساعدة في استخراج بطاقة الإقامة بعد الموافقة"
                             ],
                             en: [
-                                "Evaluating your case and determining the best type of residency for you",
+                                "Evaluating your situation and determining the best type of residency for you",
                                 "Preparing the required documents accurately",
                                 "Submitting the application and following up with the concerned authorities",
                                 "Support during interviews if necessary",
@@ -3225,7 +3374,7 @@
                             ],
                             en: [
                                 "Searching for investment properties in the best Spanish cities",
-                                "Property evaluation and investment opportunities",
+                                "Property valuation and investment opportunities",
                                 "Assistance in purchase and registration procedures",
                                 "Property management after purchase",
                                 "Property rental and tenant management"
@@ -3261,11 +3410,11 @@
                     {
                         title: {
                             ar: "أنواع العقارات المتاحة",
-                            en: "Types of Available Properties"
+                            en: "Types of Properties Available"
                         },
                         content: {
                             ar: "نساعدك في الاستثمار في مختلف أنواع العقارات:",
-                            en: "We help you invest in different types of properties:"
+                            en: "We help you invest in various types of properties:"
                         },
                         list: {
                             ar: [
@@ -3353,7 +3502,7 @@
                                 "High-quality education system recognized worldwide",
                                 "Reasonable tuition fees compared to other European countries",
                                 "Opportunities to learn Spanish and English",
-                                "Diverse international environment and rich culture",
+                                "Diverse international and culturally rich environment",
                                 "Job opportunities after graduation in Spain and Europe"
                             ]
                         }
@@ -3376,11 +3525,11 @@
                                 "الفنون والتصميم والعمارة"
                             ],
                             en: [
-                                "Business, Economics, and Management",
+                                "Business, Economics and Management",
                                 "Engineering and Technology",
                                 "Medicine and Health Sciences",
                                 "Humanities and Social Sciences",
-                                "Arts, Design, and Architecture"
+                                "Arts, Design and Architecture"
                             ]
                         }
                     }
@@ -3403,7 +3552,7 @@
                 icon: "fas fa-plane",
                 description: {
                     ar: "نساعدك في الحصول على تأشيرة سياحية لإسبانيا بسهولة ويسر. نقدم إرشادات دقيقة وإعداد المستندات المطلوبة لضمان قبول طلبك.",
-                    en: "We help you obtain a tourist visa for Spain with ease. We provide precise guidance and preparation of the required documents to ensure the acceptance of your application."
+                    en: "We help you obtain a tourist visa for Spain easily and smoothly. We provide precise guidance and preparation of the required documents to ensure your application is accepted."
                 },
                 sections: [
                     {
@@ -3426,7 +3575,7 @@
                             en: [
                                 "Evaluating your eligibility for the visa",
                                 "Preparing the required documents accurately",
-                                "Filling out application forms correctly",
+                                "Filling out the application forms correctly",
                                 "Scheduling appointments and booking interviews",
                                 "Following up on the application status until the visa is issued"
                             ]
@@ -3527,58 +3676,6 @@
             });
         });
 
-        // Language Switcher
-        document.addEventListener('DOMContentLoaded', function () {
-            const langBtns = document.querySelectorAll('.lang-btn');
-            const html = document.documentElement;
-
-            // Check if there's a saved language preference
-            const savedLang = localStorage.getItem('preferredLang') || 'ar';
-            setLanguage(savedLang);
-
-            langBtns.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const lang = this.getAttribute('data-lang');
-                    setLanguage(lang);
-                    localStorage.setItem('preferredLang', lang);
-                });
-            });
-
-            function setLanguage(lang) {
-                // Update HTML attributes
-                html.setAttribute('lang', lang);
-                html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-                // Update active button
-                langBtns.forEach(btn => {
-                    if (btn.getAttribute('data-lang') === lang) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
-                    }
-                });
-
-                // Update all text content
-                document.querySelectorAll('[data-ar][data-en]').forEach(element => {
-                    element.textContent = element.getAttribute(`data-${lang}`);
-                });
-
-                // Update placeholders
-                document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(element => {
-                    const placeholderAr = element.getAttribute('data-ar');
-                    const placeholderEn = element.getAttribute('data-en');
-                    if (placeholderAr && placeholderEn) {
-                        element.placeholder = lang === 'ar' ? placeholderAr : placeholderEn;
-                    }
-                });
-
-                // Update select options
-                document.querySelectorAll('option[data-ar][data-en]').forEach(option => {
-                    option.textContent = option.getAttribute(`data-${lang}`);
-                });
-            }
-        });
-
         // FAQ Accordion
         document.addEventListener('DOMContentLoaded', function () {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -3605,13 +3702,11 @@
             const consultationForm = document.getElementById('consultationForm');
             const popupMessage = document.getElementById('popupMessage');
             const submitButton = consultationForm.querySelector('button[type="submit"]');
-
             // Open popup when clicking the consultation button
             consultationBtn.addEventListener('click', function () {
                 consultationPopup.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
-
             // Close popup when clicking the close button
             closePopup.addEventListener('click', function () {
                 consultationPopup.classList.remove('active');
@@ -3619,7 +3714,6 @@
                 popupMessage.style.display = 'none';
                 consultationForm.reset();
             });
-
             // Close popup when clicking outside the popup content
             consultationPopup.addEventListener('click', function (e) {
                 if (e.target === consultationPopup) {
@@ -3629,20 +3723,17 @@
                     consultationForm.reset();
                 }
             });
-
             // Handle form submission
             consultationForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
-                submitButton.textContent = document.documentElement.lang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
-
+                submitButton.textContent = 'جاري الإرسال...';
                 // Get form data
                 const formData = new FormData(consultationForm);
                 // Add additional data
-                formData.append('_subject', document.documentElement.lang === 'ar' ? 'طلب استشارة مجانية من الأندلس للهجرة' : 'Free Consultation Request from Andalus Immigration');
+                formData.append('_subject', 'طلب استشارة مجانية من الأندلس للهجرة');
                 formData.append('_template', 'table');
-
                 // Send form data using fetch
                 fetch('https://formspree.io/f/xjvqyvqj', {
                     method: 'POST',
@@ -3654,7 +3745,7 @@
                     .then(response => {
                         if (response.ok) {
                             // Show success message
-                            popupMessage.textContent = document.documentElement.lang === 'ar' ? 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.' : 'Your request has been sent successfully! We will contact you soon.';
+                            popupMessage.textContent = 'تم إرسال طلبك بنجاح! سنتواصل معك قريباً.';
                             popupMessage.className = 'popup-message success';
                             popupMessage.style.display = 'block';
                             // Reset form
@@ -3672,14 +3763,14 @@
                     .catch(error => {
                         console.error('Error:', error);
                         // Show error message
-                        popupMessage.textContent = document.documentElement.lang === 'ar' ? 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.' : 'An error occurred while sending. Please try again.';
+                        popupMessage.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
                         popupMessage.className = 'popup-message error';
                         popupMessage.style.display = 'block';
                     })
                     .finally(() => {
                         // Re-enable submit button
                         submitButton.disabled = false;
-                        submitButton.textContent = document.documentElement.lang === 'ar' ? 'إرسال الطلب' : 'Submit Request';
+                        submitButton.textContent = 'إرسال الطلب';
                     });
             });
         });
@@ -3693,26 +3784,24 @@
             const cityIcon = document.getElementById('cityIcon');
             const cityName = document.getElementById('cityName');
             const cityContent = document.getElementById('cityContent');
-            const currentLang = document.documentElement.lang;
-
             // Open city details when clicking on a destination card
             destCards.forEach(card => {
                 card.addEventListener('click', function () {
                     const cityType = this.getAttribute('data-city');
                     const city = citiesData[cityType];
                     if (city) {
+                        // Get current language
+                        const currentLang = document.documentElement.lang || 'ar';
                         // Update city details header
                         cityIcon.className = city.icon;
                         cityName.textContent = city.title[currentLang];
-
                         // Build city details content
                         let contentHTML = `
                             <div class="city-details-section">
-                                <h3>${currentLang === 'ar' ? 'نظرة عامة' : 'Overview'}</h3>
+                                <h3>${translations[currentLang]['city-overview']}</h3>
                                 <p>${city.description[currentLang]}</p>
                             </div>
                         `;
-
                         // Add sections
                         city.sections.forEach(section => {
                             contentHTML += `
@@ -3727,12 +3816,11 @@
                                 </div>
                             `;
                         });
-
                         // Add images
                         if (city.images && city.images.length > 0) {
                             contentHTML += `
                                 <div class="city-details-section">
-                                    <h3>${currentLang === 'ar' ? 'صور المدينة' : 'City Images'}</h3>
+                                    <h3>${translations[currentLang]['city-images']}</h3>
                                     <div class="city-media">
                                         ${city.images.map(img => `
                                             <img src="${img}" alt="${city.title[currentLang]}" loading="lazy">
@@ -3741,12 +3829,11 @@
                                 </div>
                             `;
                         }
-
                         // Add videos
                         if (city.videos && city.videos.length > 0) {
                             contentHTML += `
                                 <div class="city-details-section">
-                                    <h3>${currentLang === 'ar' ? 'فيديوهات توضيحية' : 'Informative Videos'}</h3>
+                                    <h3>${translations[currentLang]['city-videos']}</h3>
                                     <div class="city-videos">
                                         ${city.videos.map(video => `
                                             <div class="city-video">
@@ -3757,29 +3844,24 @@
                                 </div>
                             `;
                         }
-
                         // Add CTA section
                         contentHTML += `
                             <div class="city-cta">
-                                <button class="btn" id="cityConsultationBtn">${currentLang === 'ar' ? 'احصل على استشارة مجانية' : 'Get a Free Consultation'}</button>
-                                <button class="btn" id="closeCityDetailsBtn">${currentLang === 'ar' ? 'إغلاق' : 'Close'}</button>
+                                <button class="btn" id="cityConsultationBtn">${translations[currentLang]['city-consultation']}</button>
+                                <button class="btn" id="closeCityDetailsBtn">${translations[currentLang]['city-close']}</button>
                             </div>
                         `;
-
                         // Update content
                         cityContent.innerHTML = contentHTML;
-
                         // Show overlay
                         cityDetailsOverlay.classList.add('active');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
                         // Add event listeners to the new buttons
                         document.getElementById('cityConsultationBtn').addEventListener('click', function () {
                             cityDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
                             document.getElementById('consultationBtn').click();
                         });
-
                         document.getElementById('closeCityDetailsBtn').addEventListener('click', function () {
                             cityDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
@@ -3787,13 +3869,11 @@
                     }
                 });
             });
-
             // Close popup when clicking the close button
             closeCityDetails.addEventListener('click', function () {
                 cityDetailsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             cityDetailsOverlay.addEventListener('click', function (e) {
                 if (e.target === cityDetailsOverlay) {
@@ -3812,8 +3892,6 @@
             const serviceIcon = document.getElementById('serviceIcon');
             const serviceName = document.getElementById('serviceName');
             const serviceContent = document.getElementById('serviceContent');
-            const currentLang = document.documentElement.lang;
-
             // Open service details when clicking on a service card
             serviceDetailsBtns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
@@ -3822,18 +3900,18 @@
                     const serviceType = serviceCard.getAttribute('data-service');
                     const service = servicesData[serviceType];
                     if (service) {
+                        // Get current language
+                        const currentLang = document.documentElement.lang || 'ar';
                         // Update service details header
                         serviceIcon.className = service.icon;
                         serviceName.textContent = service.title[currentLang];
-
                         // Build service details content
                         let contentHTML = `
                             <div class="service-details-section">
-                                <h3>${currentLang === 'ar' ? 'نظرة عامة' : 'Overview'}</h3>
+                                <h3>${translations[currentLang]['service-overview']}</h3>
                                 <p>${service.description[currentLang]}</p>
                             </div>
                         `;
-
                         // Add sections
                         service.sections.forEach(section => {
                             contentHTML += `
@@ -3848,12 +3926,11 @@
                                 </div>
                             `;
                         });
-
                         // Add images
                         if (service.images && service.images.length > 0) {
                             contentHTML += `
                                 <div class="service-details-section">
-                                    <h3>${currentLang === 'ar' ? 'صور الخدمة' : 'Service Images'}</h3>
+                                    <h3>${translations[currentLang]['service-images']}</h3>
                                     <div class="service-media">
                                         ${service.images.map(img => `
                                             <img src="${img}" alt="${service.title[currentLang]}" loading="lazy">
@@ -3862,12 +3939,11 @@
                                 </div>
                             `;
                         }
-
                         // Add videos
                         if (service.videos && service.videos.length > 0) {
                             contentHTML += `
                                 <div class="service-details-section">
-                                    <h3>${currentLang === 'ar' ? 'فيديوهات توضيحية' : 'Informative Videos'}</h3>
+                                    <h3>${translations[currentLang]['service-videos']}</h3>
                                     <div class="service-videos">
                                         ${service.videos.map(video => `
                                             <div class="service-video">
@@ -3878,29 +3954,24 @@
                                 </div>
                             `;
                         }
-
                         // Add CTA section
                         contentHTML += `
                             <div class="service-cta">
-                                <button class="btn" id="serviceConsultationBtn">${currentLang === 'ar' ? 'احصل على استشارة مجانية' : 'Get a Free Consultation'}</button>
-                                <button class="btn" id="closeServiceDetailsBtn">${currentLang === 'ar' ? 'إغلاق' : 'Close'}</button>
+                                <button class="btn" id="serviceConsultationBtn">${translations[currentLang]['service-consultation']}</button>
+                                <button class="btn" id="closeServiceDetailsBtn">${translations[currentLang]['service-close']}</button>
                             </div>
                         `;
-
                         // Update content
                         serviceContent.innerHTML = contentHTML;
-
                         // Show overlay
                         serviceDetailsOverlay.classList.add('active');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
                         // Add event listeners to the new buttons
                         document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
                             document.getElementById('consultationBtn').click();
                         });
-
                         document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
@@ -3908,13 +3979,11 @@
                     }
                 });
             });
-
             // Close popup when clicking the close button
             closeServiceDetails.addEventListener('click', function () {
                 serviceDetailsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             serviceDetailsOverlay.addEventListener('click', function (e) {
                 if (e.target === serviceDetailsOverlay) {
@@ -3930,16 +3999,13 @@
             const successMessage = document.getElementById('successMessage');
             const errorMessage = document.getElementById('errorMessage');
             const submitButton = contactForm.querySelector('button[type="submit"]');
-
             contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
-                submitButton.textContent = document.documentElement.lang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
-
+                submitButton.textContent = 'جاري الإرسال...';
                 // Get form data
                 const formData = new FormData(contactForm);
-
                 // Send form data using fetch
                 fetch(contactForm.action, {
                     method: 'POST',
@@ -3972,7 +4038,7 @@
                     .finally(() => {
                         // Re-enable submit button
                         submitButton.disabled = false;
-                        submitButton.textContent = document.documentElement.lang === 'ar' ? 'إرسال رسالة' : 'Send Message';
+                        submitButton.textContent = 'إرسال رسالة';
                     });
             });
         });
@@ -3981,16 +4047,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const newsletterForm = document.getElementById('newsletterForm');
             const submitButton = newsletterForm.querySelector('button[type="submit"]');
-
             newsletterForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
-                submitButton.textContent = document.documentElement.lang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
-
+                submitButton.textContent = 'جاري الإرسال...';
                 // Get form data
                 const formData = new FormData(newsletterForm);
-
                 // Send form data using fetch
                 fetch(newsletterForm.action, {
                     method: 'POST',
@@ -4005,7 +4068,7 @@
                             newsletterForm.reset();
                             // Show success message (create a temporary one)
                             const successMsg = document.createElement('div');
-                            successMsg.textContent = document.documentElement.lang === 'ar' ? 'تم إرسال طلب الاشتراك بنجاح!' : 'Subscription request sent successfully!';
+                            successMsg.textContent = 'تم إرسال طلب الاشتراك بنجاح!';
                             successMsg.style.cssText = `
                                 background-color: #4CAF50;
                                 color: white;
@@ -4027,7 +4090,7 @@
                         console.error('Error:', error);
                         // Show error message
                         const errorMsg = document.createElement('div');
-                        errorMsg.textContent = document.documentElement.lang === 'ar' ? 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.' : 'An error occurred while sending. Please try again.';
+                        errorMsg.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
                         errorMsg.style.cssText = `
                             background-color: #f44336;
                             color: white;
@@ -4045,7 +4108,7 @@
                     .finally(() => {
                         // Re-enable submit button
                         submitButton.disabled = false;
-                        submitButton.textContent = document.documentElement.lang === 'ar' ? 'اشترك' : 'Subscribe';
+                        submitButton.textContent = 'اشترك';
                     });
             });
         });
@@ -4072,6 +4135,77 @@
                     }
                 });
             });
+        });
+
+        // Language Switcher
+        document.addEventListener('DOMContentLoaded', function () {
+            const langAr = document.getElementById('langAr');
+            const langEn = document.getElementById('langEn');
+            const html = document.documentElement;
+
+            // Check if there's a saved language preference
+            const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
+            setLanguage(savedLang);
+
+            // Set active language button
+            if (savedLang === 'ar') {
+                langAr.classList.add('active');
+                langEn.classList.remove('active');
+            } else {
+                langEn.classList.add('active');
+                langAr.classList.remove('active');
+            }
+
+            // Add event listeners to language buttons
+            langAr.addEventListener('click', function () {
+                setLanguage('ar');
+                langAr.classList.add('active');
+                langEn.classList.remove('active');
+                localStorage.setItem('preferredLanguage', 'ar');
+            });
+
+            langEn.addEventListener('click', function () {
+                setLanguage('en');
+                langEn.classList.add('active');
+                langAr.classList.remove('active');
+                localStorage.setItem('preferredLanguage', 'en');
+            });
+
+            function setLanguage(lang) {
+                // Set HTML attributes
+                html.setAttribute('lang', lang);
+                html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+                // Update all elements with data-lang attribute
+                const elements = document.querySelectorAll('[data-lang]');
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-lang');
+                    if (translations[lang] && translations[lang][key]) {
+                        // For input placeholders
+                        if (element.tagName === 'INPUT' && element.getAttribute('placeholder')) {
+                            element.setAttribute('placeholder', translations[lang][key]);
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                });
+
+                // Update form placeholders
+                const placeholders = document.querySelectorAll('input[placeholder], textarea[placeholder]');
+                placeholders.forEach(element => {
+                    const placeholder = element.getAttribute('placeholder');
+                    if (placeholder && translations[lang][placeholder]) {
+                        element.setAttribute('placeholder', translations[lang][placeholder]);
+                    }
+                });
+
+                // Update page title
+                if (lang === 'en') {
+                    document.title = "Andalusia Immigration - Spain Residency Services";
+                } else {
+                    document.title = "الأندلس للهجرة - خدمات الإقامة في إسبانيا";
+                }
+            }
         });
     </script>
 </body>
