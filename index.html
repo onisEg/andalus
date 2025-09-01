@@ -18,7 +18,6 @@
             --light-gold: #c4a758;
             --dark-gold: #5d4f1f;
             --header-footer-bg: #f9f6f0;
-            /* لون خلفية فاتح للهيدر والفوتر */
         }
 
         * {
@@ -46,16 +45,13 @@
         /* Header Styles */
         header {
             background-color: var(--header-footer-bg);
-            /* تغيير لون خلفية الهيدر */
             color: var(--black);
-            /* تغيير لون النص */
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             border-bottom: 1px solid rgba(138, 116, 47, 0.2);
-            /* إضافة حدود فاصلة */
         }
 
         .header-container {
@@ -68,12 +64,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* width: 50px; */
             height: 50px;
             background-color: transparent;
-            border-radius: 50%;
             color: var(--black);
-            /* تغيير لون النص */
             font-weight: 700;
             font-size: 18px;
             text-decoration: none;
@@ -105,7 +98,6 @@
 
         nav a {
             color: var(--black);
-            /* تغيير لون الروابط */
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -130,9 +122,7 @@
             height: 36px;
             border-radius: 50%;
             background-color: rgba(138, 116, 47, 0.1);
-            /* تغيير لون الخلفية */
             color: var(--gold);
-            /* تغيير لون الأيقونات */
             transition: all 0.3s;
             text-decoration: none;
         }
@@ -149,7 +139,6 @@
             background: none;
             border: none;
             color: var(--black);
-            /* تغيير لون الزر */
             font-size: 24px;
             cursor: pointer;
             padding: 5px;
@@ -183,7 +172,6 @@
             left: 50%;
             width: 100vw;
             height: 56.25vw;
-            /* 16:9 Aspect Ratio */
             min-width: 100%;
             min-height: 100%;
             transform: translate(-50%, -50%);
@@ -646,7 +634,6 @@
         .city-video {
             position: relative;
             padding-bottom: 56.25%;
-            /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
             border-radius: 10px;
@@ -834,7 +821,6 @@
         .service-video {
             position: relative;
             padding-bottom: 56.25%;
-            /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
             border-radius: 10px;
@@ -859,104 +845,6 @@
         }
 
         .service-cta .btn {
-            margin: 0 10px;
-        }
-
-        /* Terms and Privacy Popup */
-        .terms-privacy-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 5000;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .terms-privacy-overlay.active {
-            display: flex;
-        }
-
-        .terms-privacy {
-            background-color: white;
-            border-radius: 15px;
-            width: 100%;
-            max-width: 900px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            animation: popupFadeIn 0.3s ease-out;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .terms-privacy-header {
-            background-color: var(--gold);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 15px 15px 0 0;
-            position: relative;
-        }
-
-        .terms-privacy-header h2 {
-            font-size: 28px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .terms-privacy-header i {
-            font-size: 32px;
-        }
-
-        .terms-privacy-content {
-            padding: 30px;
-        }
-
-        .terms-privacy-section {
-            margin-bottom: 30px;
-        }
-
-        .terms-privacy-section h3 {
-            font-size: 22px;
-            color: var(--gold);
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--beige);
-            padding-bottom: 10px;
-        }
-
-        .terms-privacy-section p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .terms-privacy-section ul {
-            padding-right: 20px;
-            margin-bottom: 15px;
-        }
-
-        .terms-privacy-section li {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .terms-privacy-cta {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .terms-privacy-cta .btn {
             margin: 0 10px;
         }
 
@@ -1049,7 +937,7 @@
             transform: rotate(180deg);
         }
 
-        /* Contact Section - Updated Design */
+        /* Contact Section */
         .contact {
             padding: 80px 0;
             background-color: white;
@@ -1155,7 +1043,6 @@
             font-size: 32px;
             margin-bottom: 20px;
             color: var(--dark-gold);
-            /* تغيير اللون إلى ذهبي غامق */
             position: relative;
             display: inline-block;
         }
@@ -1168,7 +1055,6 @@
             width: 60px;
             height: 3px;
             background-color: var(--dark-gold);
-            /* تغيير اللون إلى ذهبي غامق */
         }
 
         .contact-info p {
@@ -1176,7 +1062,6 @@
             font-size: 18px;
             line-height: 1.8;
             color: var(--black);
-            /* تغيير اللون إلى أسود */
             max-width: 90%;
         }
 
@@ -1205,7 +1090,6 @@
         .contact-item i {
             font-size: 28px;
             color: var(--gold);
-            /* تغيير اللون إلى ذهبي */
             margin-bottom: 15px;
             display: block;
         }
@@ -1214,7 +1098,6 @@
             font-size: 18px;
             margin-bottom: 8px;
             color: var(--black);
-            /* تغيير اللون إلى أسود */
             font-weight: 600;
         }
 
@@ -1222,7 +1105,6 @@
             margin: 0;
             font-size: 16px;
             color: #333;
-            /* تغيير اللون إلى رمادي داكن */
         }
 
         .success-message {
@@ -1304,13 +1186,10 @@
         /* Footer */
         footer {
             background-color: var(--header-footer-bg);
-            /* تغيير لون خلفية الفوتر */
             color: var(--black);
-            /* تغيير لون النص */
             padding: 40px 0;
             text-align: center;
             border-top: 1px solid rgba(138, 116, 47, 0.2);
-            /* إضافة حدود فاصلة */
         }
 
         .footer-content {
@@ -1346,7 +1225,6 @@
 
         .footer-links a {
             color: var(--black);
-            /* تغيير لون الروابط */
             text-decoration: none;
             transition: color 0.3s;
             font-size: 16px;
@@ -1369,9 +1247,7 @@
             height: 45px;
             border-radius: 50%;
             background-color: rgba(138, 116, 47, 0.1);
-            /* تغيير لون الخلفية */
             color: var(--gold);
-            /* تغيير لون الأيقونات */
             transition: all 0.3s;
         }
 
@@ -1385,10 +1261,8 @@
             margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid rgba(138, 116, 47, 0.2);
-            /* تغيير لون الحد */
             font-size: 14px;
             color: #666;
-            /* تغيير لون النص */
         }
 
         .copyright a {
@@ -1412,7 +1286,6 @@
                 left: 0;
                 right: 0;
                 background-color: var(--header-footer-bg);
-                /* تغيير لون خلفية القائمة المتنقلة */
                 padding: 20px;
                 display: none;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -1481,7 +1354,6 @@
                 flex-direction: column;
             }
 
-            /* Contact Section Mobile Responsive */
             .contact::before {
                 width: 100%;
                 height: 30%;
@@ -1553,6 +1425,29 @@
                 border-radius: 30px;
             }
 
+            /* City Details Mobile Responsive */
+            .city-details {
+                max-width: 95%;
+                margin: 10px;
+            }
+
+            .city-details-header {
+                padding: 15px 20px;
+            }
+
+            .city-details-header h2 {
+                font-size: 24px;
+            }
+
+            .city-details-content {
+                padding: 20px;
+            }
+
+            .city-media,
+            .city-videos {
+                grid-template-columns: 1fr;
+            }
+
             /* Service Details Mobile Responsive */
             .service-details {
                 max-width: 95%;
@@ -1575,46 +1470,12 @@
             .service-videos {
                 grid-template-columns: 1fr;
             }
+        }
 
-            /* Terms and Privacy Mobile Responsive */
-            .terms-privacy {
-                max-width: 95%;
-                margin: 10px;
-            }
-
-            .terms-privacy-header {
-                padding: 15px 20px;
-            }
-
-            .terms-privacy-header h2 {
-                font-size: 24px;
-            }
-
-            .terms-privacy-content {
-                padding: 20px;
-            }
-
-            /* City Details Mobile Responsive */
-            .city-details {
-                max-width: 95%;
-                margin: 10px;
-            }
-
-            .city-details-header {
-                padding: 15px 20px;
-            }
-
-            .city-details-header h2 {
-                font-size: 24px;
-            }
-
-            .city-details-content {
-                padding: 20px;
-            }
-
-            .city-media,
-            .city-videos {
-                grid-template-columns: 1fr;
+        /* إخفاء أيقونات الموبايل في سطح المكتب */
+        @media (min-width: 769px) {
+            .mobile-social-links {
+                display: none !important;
             }
         }
     </style>
@@ -1658,18 +1519,12 @@
             </div>
         </div>
     </header>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <!-- صورة خلفية جذابة لإسبانيا -->
         <img class="hero-image"
             src="https://plus.unsplash.com/premium_photo-1716138192476-f34e85ad43c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="إسبانيا">
-        <!-- فيديو من يوتيوب عن إسبانيا (مخفي افتراضياً) -->
-        <iframe class="hero-video"
-            src="https://www.youtube.com/embed/H-Y7Mds_gnw?autoplay=1&mute=1&loop=1&playlist=H-Y7Mds_gnw&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h2>الأندلس للهجرة</h2>
@@ -1677,6 +1532,7 @@
             <button class="btn" id="consultationBtn">احصل على استشارتك المجانية</button>
         </div>
     </section>
+
     <!-- Consultation Popup -->
     <div class="popup-overlay" id="consultationPopup">
         <div class="popup">
@@ -1716,6 +1572,7 @@
             </form>
         </div>
     </div>
+
     <!-- Values Section -->
     <section class="values">
         <div class="container">
@@ -1741,6 +1598,7 @@
             </div>
         </div>
     </section>
+
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -1760,7 +1618,6 @@
                     <a href="#services" class="btn">اكتشف خدماتنا</a>
                 </div>
                 <div class="about-image">
-                    <!-- صورة فريق العمل - يمكن استبدال الرابط -->
                     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                         alt="فريق الأندلس للهجرة"
                         onerror="this.src='https://via.placeholder.com/500x300/8a742f/ffffff?text=فريق+الأندلس+للهجرة'">
@@ -1768,6 +1625,7 @@
             </div>
         </div>
     </section>
+
     <!-- Destinations Section -->
     <section class="destinations" id="destinations">
         <div class="container">
@@ -1776,7 +1634,6 @@
             </div>
             <div class="dest-grid">
                 <div class="dest-card" data-city="madrid">
-                    <!-- صورة مدريد -->
                     <img src="https://img.static-kl.com/images/media/65848EF5-2848-4EA7-BE113130180A0A55" alt="مدريد"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مدريد'">
                     <div class="dest-info">
@@ -1784,7 +1641,6 @@
                     </div>
                 </div>
                 <div class="dest-card" data-city="barcelona">
-                    <!-- صورة برشلونة -->
                     <img src="https://media.timeout.com/images/106185654/750/562/image.jpg" alt="برشلونة"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=برشلونة'">
                     <div class="dest-info">
@@ -1792,15 +1648,13 @@
                     </div>
                 </div>
                 <div class="dest-card" data-city="valencia">
-                    <!-- صورة فالنسيا -->
-                    <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w=800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
+                    <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_fit,f_auto,h_800,q_35,w_800/v1/gvv/prod/ukliz4szn1hscy2er6ul"
                         alt="بلنسية" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=بلنسية'">
                     <div class="dest-info">
                         <h3>فالنسيا.. جوهرة البحر المتوسط</h3>
                     </div>
                 </div>
                 <div class="dest-card" data-city="seville">
-                    <!-- صورة إشبيلية -->
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2hOosZz76fcoKfbXfd9Cx-tM5pwhiKZxtw&s"
                         alt="إشبيلية"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=إشبيلية'">
@@ -1809,7 +1663,6 @@
                     </div>
                 </div>
                 <div class="dest-card" data-city="malaga">
-                    <!-- صورة مالقة -->
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4ow1YV3XgwPeU7EzEC0KthPsu4lKhs3_2tw&s"
                         alt="مالقة" onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=مالقة'">
                     <div class="dest-info">
@@ -1817,7 +1670,6 @@
                     </div>
                 </div>
                 <div class="dest-card" data-city="alicante">
-                    <!-- صورة أليكانتي -->
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB8Eaa1oZy5mNaaSBzKLcqjD_Rix6_FzigOQ&s"
                         alt="أليكانتي"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=أليكانتي'">
@@ -1828,6 +1680,7 @@
             </div>
         </div>
     </section>
+
     <!-- City Details Popup -->
     <div class="city-details-overlay" id="cityDetailsOverlay">
         <div class="city-details" id="cityDetails">
@@ -1840,6 +1693,7 @@
             </div>
         </div>
     </div>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -1875,6 +1729,7 @@
             </div>
         </div>
     </section>
+
     <!-- Service Details Popup -->
     <div class="service-details-overlay" id="serviceDetailsOverlay">
         <div class="service-details" id="serviceDetails">
@@ -1887,250 +1742,7 @@
             </div>
         </div>
     </div>
-    <!-- Terms and Conditions Popup -->
-    <div class="terms-privacy-overlay" id="termsOverlay">
-        <div class="terms-privacy" id="termsContent">
-            <button class="close-popup" id="closeTerms">&times;</button>
-            <div class="terms-privacy-header">
-                <h2><i class="fas fa-file-contract"></i> الشروط والأحكام</h2>
-            </div>
-            <div class="terms-privacy-content">
-                <div class="terms-privacy-section">
-                    <h3>مقدمة</h3>
-                    <p>مرحباً بك في موقع الأندلس للهجرة. باستخدامك لموقعنا الإلكتروني، فإنك توافق على الالتزام بالشروط
-                        والأحكام التالية. يرجى قراءة هذه الشروط بعناية قبل استخدام موقعنا.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>القبول بالشروط</h3>
-                    <p>باستخدامك لموقع الأندلس للهجرة، فإنك تقر بأنك قرأت وفهمت وتوافق على الالتزام بهذه الشروط
-                        والأحكام. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام موقعنا.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الخدمات المقدمة</h3>
-                    <p>تقدم الأندلس للهجرة خدمات استشارية في مجال الهجرة والإقامة في إسبانيا. تشمل خدماتنا:</p>
-                    <ul>
-                        <li>الاستشارات القانونية المتعلقة بالإقامة الإسبانية</li>
-                        <li>مساعدة العملاء في إجراءات الحصول على التأشيرات والإقامات</li>
-                        <li>تقديم خدمات عقارية في إسبانيا</li>
-                        <li>مساعدة الطلاب في الحصول على قبول جامعي</li>
-                        <li>تقديم استشارات حول التأشيرات السياحية</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>مسؤوليات العميل</h3>
-                    <p>يلتزم العميل بالآتي:</p>
-                    <ul>
-                        <li>تقديم معلومات دقيقة وحقيقية وصحيحة</li>
-                        <li>توفير جميع المستندات المطلوبة في الوقت المحدد</li>
-                        <li>الالتزام بالدفع في الأوقات المتفق عليها</li>
-                        <li>التعاون مع فريق الأندلس للهجرة لإنجاز الإجراءات</li>
-                        <li>إبلاغ الشركة بأي تغييرات في المعلومات المقدمة</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الرسوم والدفع</h3>
-                    <p>تحدد الرسوم حسب الخدمة المطلوبة وسيتم إبلاغ العميل بها مسبقاً. تشمل سياسة الدفع:</p>
-                    <ul>
-                        <li>دفع مقدم لحجز الخدمة</li>
-                        <li>دفع باقي المبلغ حسب الاتفاق المبرم</li>
-                        <li>جميع الرسوم غير قابلة للاسترداد بعد بدء الخدمة</li>
-                        <li>الرسوم الإضافية الناتجة عن تغييرات يطلبها العميل</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>إلغاء الخدمات</h3>
-                    <p>يمكن للعميل إلغاء الخدمة مع مراعاة الشروط التالية:</p>
-                    <ul>
-                        <li>يجب الإبلاغ عن الإلغاء كتابياً قبل 7 أيام على الأقل</li>
-                        <li>يحق للشركة احتجاز جزء من المبلغ كرسوم إدارية</li>
-                        <li>في حال بدء الإجراءات، لا يتم استرداد أي مبالغ</li>
-                        <li>للشركة الحق في إلغاء الخدمة في حال عدم تعاون العميل</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الضمانات والمسؤولية</h3>
-                    <p>تلتزم الأندلس للهجرة بتقديم خدماتها بأقصى درجات الاحترافية، ولكن:</p>
-                    <ul>
-                        <li>لا تضمن الشركة قبول الطلبات من قبل السلطات الإسبانية</li>
-                        <li>لا تتحمل الشركة مسؤولية القرارات النهائية للجهات الرسمية</li>
-                        <li>تلتزم الشركة بتقديم المعلومات الصحيحة والمحدثة</li>
-                        <li>تتحمل الشركة مسؤولية الأخطاء المهنية فقط</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الملكية الفكرية</h3>
-                    <p>جميع المحتويات الموجودة على موقع الأندلس للهجرة هي ملكية محفوظة للشركة. يشمل ذلك:</p>
-                    <ul>
-                        <li>النصوص والصور والفيديوهات</li>
-                        <li>الشعارات والعلامات التجارية</li>
-                        <li>التصاميم والرسومات البيانية</li>
-                        <li>يحظر نسخ أو استخدام أي محتوى دون إذن كتابي</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>السرية</h3>
-                    <p>تلتزم الأندلس للهجرة بالحفاظ على سرية جميع المعلومات التي يقدمها العملاء. تشمل سياسة السرية:</p>
-                    <ul>
-                        <li>عدم مشاركة المعلومات الشخصية مع أطراف ثالثة</li>
-                        <li>استخدام المعلومات فقط لأغراض تقديم الخدمة</li>
-                        <li>تخزين المعلومات بشكل آمن</li>
-                        <li>الالتزام بالقوانين المعمول بها لحماية البيانات</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>تعديل الشروط</h3>
-                    <p>تحتفظ الأندلس للهجرة بالحق في تعديل هذه الشروط والأحكام في أي وقت. سيتم إبلاغ العملاء بأي تغييرات
-                        عبر الموقع الإلكتروني أو البريد الإلكتروني. استمرار استخدام الموقع بعد التعديلات يعتبر موافقة
-                        على الشروط الجديدة.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>القانون الواجب التطبيق</h3>
-                    <p>تخضع هذه الشروط والأحكام وتفسر وفقاً للقوانين المعمول بها في إسبانيا. أي نزاع ينشأ عن هذه الشروط
-                        يتم حله بالطرق الودية أولاً، وفي حال عدم التوصل إلى حل، يتم اللجوء إلى المحاكم المختصة في
-                        إسبانيا.</p>
-                </div>
-                <div class="terms-privacy-cta">
-                    <button class="btn" id="closeTermsBtn">إغلاق</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Privacy Policy Popup -->
-    <div class="terms-privacy-overlay" id="privacyOverlay">
-        <div class="terms-privacy" id="privacyContent">
-            <button class="close-popup" id="closePrivacy">&times;</button>
-            <div class="terms-privacy-header">
-                <h2><i class="fas fa-shield-alt"></i> سياسة الخصوصية</h2>
-            </div>
-            <div class="terms-privacy-content">
-                <div class="terms-privacy-section">
-                    <h3>مقدمة</h3>
-                    <p>تحترم الأندلس للهجرة خصوصيتك وتلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمعنا
-                        واستخدامنا وحمايتنا لمعلوماتك الشخصية عند استخدامك لموقعنا الإلكتروني وخدماتنا.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>المعلومات التي نجمعها</h3>
-                    <p>قد نجمع المعلومات التالية منك:</p>
-                    <ul>
-                        <li><strong>المعلومات الشخصية:</strong> الاسم الكامل، العنوان، رقم الهاتف، البريد الإلكتروني
-                        </li>
-                        <li><strong>معلومات الهوية:</strong> صورة من جواز السفر، بطاقة الهوية، رقم الإقامة</li>
-                        <li><strong>المعلومات المالية:</strong> معلومات الدفع، تفاصيل الحساب البنكي (لأغراض الدفع فقط)
-                        </li>
-                        <li><strong>المعلومات المهنية:</strong> المؤهلات، الخبرات العملية، الوظيفة الحالية</li>
-                        <li><strong>معلومات الاتصال:</strong> عنوان السكن، رقم الهاتف، البريد الإلكتروني</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>كيفية جمع المعلومات</h3>
-                    <p>نجمع المعلومات بالطرق التالية:</p>
-                    <ul>
-                        <li><strong>مباشرة منك:</strong> عند ملء استمارات الاتصال أو التقديم على الخدمات</li>
-                        <li><strong>عبر الموقع الإلكتروني:</strong> عند استخدام نماذج الاتصال أو الاشتراك في النشرة
-                            الإخبارية</li>
-                        <li><strong>عبر البريد الإلكتروني:</strong> عند مراسلتنا للاستفسارات أو طلب الخدمات</li>
-                        <li><strong>عبر الهاتف:</strong> خلال المحادثات الهاتفية لمناقشة احتياجاتك</li>
-                        <li><strong>شخصياً:</strong> خلال المقابلات الشخصية في مكاتبنا</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>استخدام المعلومات</h3>
-                    <p>نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
-                    <ul>
-                        <li>تقديم الخدمات الاستشارية التي طلبتها</li>
-                        <li>التواصل معك بشأن طلباتك واستفساراتك</li>
-                        <li>تحسين خدماتنا وتطويرها بناءً على احتياجات العملاء</li>
-                        <li>إرسال معلومات حول خدماتنا وعروضنا (بموافقتك)</li>
-                        <li>الامتثال للمتطلبات القانونية والتنظيمية</li>
-                        <li>حماية حقوقنا وممتلكاتنا وسلامة عملائنا</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>مشاركة المعلومات</h3>
-                    <p>نحن لا نبيع أو نتاجر بمعلوماتك الشخصية. قد نشارك معلوماتك فقط في الحالات التالية:</p>
-                    <ul>
-                        <li><strong>مع الجهات الرسمية:</strong> السلطات الإسبانية، السفارات، القنصليات عند الضرورة</li>
-                        <li><strong>مع الشركاء الموثوقين:</strong> المحامين، الوكلاء العقاريين، المؤسسات المالية
-                            المعتمدة</li>
-                        <li><strong>بموافقتك:</strong> عندما توافق صراحة على مشاركة معلوماتك مع طرف ثالث</li>
-                        <li><strong>لأغراض قانونية:</strong> عندما يتطلب القانون أو الإجراءات القانونية ذلك</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>حماية المعلومات</h3>
-                    <p>نتخذ إجراءات أمنية صارمة لحماية معلوماتك الشخصية:</p>
-                    <ul>
-                        <li>تشفير البيانات الحساسة أثناء التخزين والنقل</li>
-                        <li>الوصول المحدود للمعلومات للموظفين المصرح لهم فقط</li>
-                        <li>استخدام أنظمة أمان متقدمة لحماية قواعد البيانات</li>
-                        <li>تدريب الموظفين على أفضل ممارسات حماية البيانات</li>
-                        <li>مراجعة وتحديث إجراءات الأمان بشكل منتظم</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>حقوقك في خصوصيتك</h3>
-                    <p>لديك الحقوق التالية بشأن معلوماتك الشخصية:</p>
-                    <ul>
-                        <li><strong>الحق في الوصول:</strong> الحصول على نسخة من المعلومات التي نحتفظ بها عنك</li>
-                        <li><strong>الحق في التصحيح:</strong> طلب تصحيح أي معلومات غير دقيقة</li>
-                        <li><strong>الحق في الحذف:</strong> طلب حذف معلوماتك في ظروف معينة</li>
-                        <li><strong>الحق في تقييد المعالجة:</strong> طلب تقييد استخدام معلوماتك</li>
-                        <li><strong>الحق في الاعتراض:</strong> الاعتراض على معالجة معلوماتك</li>
-                        <li><strong>الحق في نقل البيانات:</strong> طلب نسخة من معلوماتك لنقلها إلى جهة أخرى</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الاحتفاظ بالمعلومات</h3>
-                    <p>نحتفظ بمعلوماتك الشخصية للمدة اللازمة لتحقيق الأغراض التي تم جمعها من أجلها:</p>
-                    <ul>
-                        <li>معلومات العملاء: حتى إتمام الخدمة و5 سنوات بعدها</li>
-                        <li>معلومات المرشحين: حتى انتهاء عملية التقديم وسنتين بعدها</li>
-                        <li>معلومات النشرة الإخبارية: حتى إلغاء الاشتراك</li>
-                        <li>معلومات التواصل: حتى الرد على استفسارك وسنة واحدة بعده</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>ملفات تعريف الارتباط (Cookies)</h3>
-                    <p>نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا:</p>
-                    <ul>
-                        <li><strong>ملفات تعريف الارتباط الضرورية:</strong> لتشغيل الموقع بشكل صحيح</li>
-                        <li><strong>ملفات تعريف الارتباط الوظيفية:</strong> لتذكر تفضيلاتك</li>
-                        <li><strong>ملفات تعريف الارتباط التحليلية:</strong> لفهم كيفية استخدامك للموقع</li>
-                        <li><strong>ملفات تعريف الارتباط التسويقية:</strong> لتقديم عروض ذات صلة باهتماماتك</li>
-                    </ul>
-                    <p>يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات متصفحك.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>روابط خارجية</h3>
-                    <p>قد يحتوي موقعنا على روابط لمواقع خارجية. نحن لسنا مسؤولين عن ممارسات الخصوصية لهذه المواقع. نشجعك
-                        على مراجعة سياسات الخصوصية الخاصة بهذه المواقع قبل استخدامها.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>الأطفال</h3>
-                    <p>لا نقوم بجمع معلومات شخصية من الأطفال دون سن 18 عاماً. إذا علمنا أننا جمعنا معلومات من طفل دون سن
-                        18 عاماً، سنقوم بإزالة هذه المعلومات فوراً.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>التغييرات على سياسة الخصوصية</h3>
-                    <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإشعارك بأي تغييرات عبر نشر السياسة المحدثة
-                        على موقعنا. نحثك على مراجعة سياسة الخصوصية بشكل دوري لتبقى على اطلاع على كيفية حمايتنا
-                        لمعلوماتك.</p>
-                </div>
-                <div class="terms-privacy-section">
-                    <h3>اتصل بنا</h3>
-                    <p>إذا كان لديك أي أسئلة أو استفسارات بشأن سياسة الخصوصية هذه، يرجى التواصل معنا عبر:</p>
-                    <ul>
-                        <li>البريد الإلكتروني: info@andalusimmigration.com</li>
-                        <li>الهاتف: +34 604272482</li>
-                        <li>العنوان: [عنوان المكتب في إسبانيا]</li>
-                    </ul>
-                </div>
-                <div class="terms-privacy-cta">
-                    <button class="btn" id="closePrivacyBtn">إغلاق</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Why Spain Section -->
     <section class="why-spain">
         <div class="container">
@@ -2166,6 +1778,7 @@
             </div>
         </div>
     </section>
+
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
@@ -2241,7 +1854,8 @@
             </div>
         </div>
     </section>
-    <!-- Contact Section - Updated Design -->
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -2296,6 +1910,7 @@
             </div>
         </div>
     </section>
+
     <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
@@ -2308,6 +1923,7 @@
             </form>
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -2336,10 +1952,10 @@
             </div>
             <div class="copyright">
                 <p>© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
-                <p><a href="#" id="termsLink">الشروط والأحكام</a> | <a href="#" id="privacyLink">سياسة الخصوصية</a></p>
             </div>
         </div>
     </footer>
+
     <script>
         // بيانات المدن التفصيلية
         const citiesData = {
@@ -2770,6 +2386,7 @@
                 ]
             }
         };
+
         // بيانات الخدمات التفصيلية
         const servicesData = {
             residency: {
@@ -2970,6 +2587,7 @@
                 ]
             }
         };
+
         // Mobile Navigation
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -2997,28 +2615,7 @@
                 });
             });
         });
-        // Hero Image/Video Handling
-        document.addEventListener('DOMContentLoaded', function () {
-            const heroImage = document.querySelector('.hero-image');
-            const heroVideo = document.querySelector('.hero-video');
-            // Initially show image, hide video
-            heroImage.style.display = 'block';
-            heroVideo.style.display = 'none';
-            // Function to switch to video after a delay
-            function switchToVideo() {
-                heroImage.style.display = 'none';
-                heroVideo.style.display = 'block';
-            }
-            // Add error event listener to video
-            heroVideo.addEventListener('error', function () {
-                console.log('Video failed to load, showing image instead');
-                heroImage.style.display = 'block';
-                heroVideo.style.display = 'none';
-            });
-            // Auto-switch to video after 3 seconds (optional)
-            // Uncomment the line below if you want to auto-switch to video
-            // setTimeout(switchToVideo, 3000);
-        });
+
         // FAQ Accordion
         document.addEventListener('DOMContentLoaded', function () {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -3036,6 +2633,7 @@
                 });
             });
         });
+
         // Consultation Popup Form
         document.addEventListener('DOMContentLoaded', function () {
             const consultationBtn = document.getElementById('consultationBtn');
@@ -3044,11 +2642,13 @@
             const consultationForm = document.getElementById('consultationForm');
             const popupMessage = document.getElementById('popupMessage');
             const submitButton = consultationForm.querySelector('button[type="submit"]');
+
             // Open popup when clicking the consultation button
             consultationBtn.addEventListener('click', function () {
                 consultationPopup.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
+
             // Close popup when clicking the close button
             closePopup.addEventListener('click', function () {
                 consultationPopup.classList.remove('active');
@@ -3056,6 +2656,7 @@
                 popupMessage.style.display = 'none';
                 consultationForm.reset();
             });
+
             // Close popup when clicking outside the popup content
             consultationPopup.addEventListener('click', function (e) {
                 if (e.target === consultationPopup) {
@@ -3065,17 +2666,20 @@
                     consultationForm.reset();
                 }
             });
+
             // Handle form submission
             consultationForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
                 submitButton.textContent = 'جاري الإرسال...';
+
                 // Get form data
                 const formData = new FormData(consultationForm);
                 // Add additional data
                 formData.append('_subject', 'طلب استشارة مجانية من الأندلس للهجرة');
                 formData.append('_template', 'table');
+
                 // Send form data using fetch
                 fetch('https://formspree.io/f/xjvqyvqj', {
                     method: 'POST',
@@ -3116,19 +2720,261 @@
                     });
             });
         });
+
+        // City Details Popup
+        document.addEventListener('DOMContentLoaded', function () {
+            const destCards = document.querySelectorAll('.dest-card');
+            const cityDetailsOverlay = document.getElementById('cityDetailsOverlay');
+            const closeCityDetails = document.getElementById('closeCityDetails');
+            const cityTitle = document.getElementById('cityTitle');
+            const cityIcon = document.getElementById('cityIcon');
+            const cityName = document.getElementById('cityName');
+            const cityContent = document.getElementById('cityContent');
+
+            // Open city details when clicking on a destination card
+            destCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const cityType = this.getAttribute('data-city');
+                    const city = citiesData[cityType];
+                    if (city) {
+                        // Update city details header
+                        cityIcon.className = city.icon;
+                        cityName.textContent = city.title;
+
+                        // Build city details content
+                        let contentHTML = `
+                            <div class="city-details-section">
+                                <h3>نظرة عامة</h3>
+                                <p>${city.description}</p>
+                            </div>
+                        `;
+
+                        // Add sections
+                        city.sections.forEach(section => {
+                            contentHTML += `
+                                <div class="city-details-section">
+                                    <h3>${section.title}</h3>
+                                    <p>${section.content}</p>
+                                    ${section.list ? `
+                                        <ul>
+                                            ${section.list.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    ` : ''}
+                                </div>
+                            `;
+                        });
+
+                        // Add images
+                        if (city.images && city.images.length > 0) {
+                            contentHTML += `
+                                <div class="city-details-section">
+                                    <h3>صور المدينة</h3>
+                                    <div class="city-media">
+                                        ${city.images.map(img => `
+                                            <img src="${img}" alt="${city.title}" loading="lazy">
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add videos
+                        if (city.videos && city.videos.length > 0) {
+                            contentHTML += `
+                                <div class="city-details-section">
+                                    <h3>فيديوهات توضيحية</h3>
+                                    <div class="city-videos">
+                                        ${city.videos.map(video => `
+                                            <div class="city-video">
+                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add CTA section
+                        contentHTML += `
+                            <div class="city-cta">
+                                <button class="btn" id="cityConsultationBtn">احصل على استشارة مجانية</button>
+                                <button class="btn" id="closeCityDetailsBtn">إغلاق</button>
+                            </div>
+                        `;
+
+                        // Update content
+                        cityContent.innerHTML = contentHTML;
+
+                        // Show overlay
+                        cityDetailsOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+                        // Add event listeners to the new buttons
+                        document.getElementById('cityConsultationBtn').addEventListener('click', function () {
+                            cityDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                            document.getElementById('consultationBtn').click();
+                        });
+
+                        document.getElementById('closeCityDetailsBtn').addEventListener('click', function () {
+                            cityDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    }
+                });
+            });
+
+            // Close popup when clicking the close button
+            closeCityDetails.addEventListener('click', function () {
+                cityDetailsOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+
+            // Close popup when clicking outside the popup content
+            cityDetailsOverlay.addEventListener('click', function (e) {
+                if (e.target === cityDetailsOverlay) {
+                    cityDetailsOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+        });
+
+        // Service Details Popup
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceDetailsBtns = document.querySelectorAll('.service-details-btn');
+            const serviceDetailsOverlay = document.getElementById('serviceDetailsOverlay');
+            const closeServiceDetails = document.getElementById('closeServiceDetails');
+            const serviceTitle = document.getElementById('serviceTitle');
+            const serviceIcon = document.getElementById('serviceIcon');
+            const serviceName = document.getElementById('serviceName');
+            const serviceContent = document.getElementById('serviceContent');
+
+            // Open service details when clicking on a service card
+            serviceDetailsBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const serviceCard = this.closest('.service-card');
+                    const serviceType = serviceCard.getAttribute('data-service');
+                    const service = servicesData[serviceType];
+                    if (service) {
+                        // Update service details header
+                        serviceIcon.className = service.icon;
+                        serviceName.textContent = service.title;
+
+                        // Build service details content
+                        let contentHTML = `
+                            <div class="service-details-section">
+                                <h3>نظرة عامة</h3>
+                                <p>${service.description}</p>
+                            </div>
+                        `;
+
+                        // Add sections
+                        service.sections.forEach(section => {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>${section.title}</h3>
+                                    <p>${section.content}</p>
+                                    ${section.list ? `
+                                        <ul>
+                                            ${section.list.map(item => `<li>${item}</li>`).join('')}
+                                        </ul>
+                                    ` : ''}
+                                </div>
+                            `;
+                        });
+
+                        // Add images
+                        if (service.images && service.images.length > 0) {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>صور الخدمة</h3>
+                                    <div class="service-media">
+                                        ${service.images.map(img => `
+                                            <img src="${img}" alt="${service.title}" loading="lazy">
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add videos
+                        if (service.videos && service.videos.length > 0) {
+                            contentHTML += `
+                                <div class="service-details-section">
+                                    <h3>فيديوهات توضيحية</h3>
+                                    <div class="service-videos">
+                                        ${service.videos.map(video => `
+                                            <div class="service-video">
+                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // Add CTA section
+                        contentHTML += `
+                            <div class="service-cta">
+                                <button class="btn" id="serviceConsultationBtn">احصل على استشارة مجانية</button>
+                                <button class="btn" id="closeServiceDetailsBtn">إغلاق</button>
+                            </div>
+                        `;
+
+                        // Update content
+                        serviceContent.innerHTML = contentHTML;
+
+                        // Show overlay
+                        serviceDetailsOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+                        // Add event listeners to the new buttons
+                        document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
+                            serviceDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                            document.getElementById('consultationBtn').click();
+                        });
+
+                        document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
+                            serviceDetailsOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    }
+                });
+            });
+
+            // Close popup when clicking the close button
+            closeServiceDetails.addEventListener('click', function () {
+                serviceDetailsOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Enable scrolling
+            });
+
+            // Close popup when clicking outside the popup content
+            serviceDetailsOverlay.addEventListener('click', function (e) {
+                if (e.target === serviceDetailsOverlay) {
+                    serviceDetailsOverlay.classList.remove('active');
+                    document.body.style.overflow = ''; // Enable scrolling
+                }
+            });
+        });
+
         // Contact Form
         document.addEventListener('DOMContentLoaded', function () {
             const contactForm = document.getElementById('contactForm');
             const successMessage = document.getElementById('successMessage');
             const errorMessage = document.getElementById('errorMessage');
             const submitButton = contactForm.querySelector('button[type="submit"]');
+
             contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
                 submitButton.textContent = 'جاري الإرسال...';
+
                 // Get form data
                 const formData = new FormData(contactForm);
+
                 // Send form data using fetch
                 fetch(contactForm.action, {
                     method: 'POST',
@@ -3165,17 +3011,21 @@
                     });
             });
         });
+
         // Newsletter Form
         document.addEventListener('DOMContentLoaded', function () {
             const newsletterForm = document.getElementById('newsletterForm');
             const submitButton = newsletterForm.querySelector('button[type="submit"]');
+
             newsletterForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 // Disable submit button
                 submitButton.disabled = true;
                 submitButton.textContent = 'جاري الإرسال...';
+
                 // Get form data
                 const formData = new FormData(newsletterForm);
+
                 // Send form data using fetch
                 fetch(newsletterForm.action, {
                     method: 'POST',
@@ -3192,13 +3042,13 @@
                             const successMsg = document.createElement('div');
                             successMsg.textContent = 'تم إرسال طلب الاشتراك بنجاح!';
                             successMsg.style.cssText = `
-                            background-color: #4CAF50;
-                            color: white;
-                            padding: 10px;
-                            border-radius: 5px;
-                            margin-top: 10px;
-                            text-align: center;
-                        `;
+                                background-color: #4CAF50;
+                                color: white;
+                                padding: 10px;
+                                border-radius: 5px;
+                                margin-top: 10px;
+                                text-align: center;
+                            `;
                             newsletterForm.appendChild(successMsg);
                             // Remove message after 3 seconds
                             setTimeout(() => {
@@ -3214,13 +3064,13 @@
                         const errorMsg = document.createElement('div');
                         errorMsg.textContent = 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.';
                         errorMsg.style.cssText = `
-                        background-color: #f44336;
-                        color: white;
-                        padding: 10px;
-                        border-radius: 5px;
-                        margin-top: 10px;
-                        text-align: center;
-                    `;
+                            background-color: #f44336;
+                            color: white;
+                            padding: 10px;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                            text-align: center;
+                        `;
                         newsletterForm.appendChild(errorMsg);
                         // Remove message after 3 seconds
                         setTimeout(() => {
@@ -3234,274 +3084,7 @@
                     });
             });
         });
-        // City Details Popup
-        document.addEventListener('DOMContentLoaded', function () {
-            const destCards = document.querySelectorAll('.dest-card');
-            const cityDetailsOverlay = document.getElementById('cityDetailsOverlay');
-            const closeCityDetails = document.getElementById('closeCityDetails');
-            const cityTitle = document.getElementById('cityTitle');
-            const cityIcon = document.getElementById('cityIcon');
-            const cityName = document.getElementById('cityName');
-            const cityContent = document.getElementById('cityContent');
-            // Open city details when clicking on a destination card
-            destCards.forEach(card => {
-                card.addEventListener('click', function () {
-                    const cityType = this.getAttribute('data-city');
-                    const city = citiesData[cityType];
-                    if (city) {
-                        // Update city details header
-                        cityIcon.className = city.icon;
-                        cityName.textContent = city.title;
-                        // Build city details content
-                        let contentHTML = `
-                            <div class="city-details-section">
-                                <h3>نظرة عامة</h3>
-                                <p>${city.description}</p>
-                            </div>
-                        `;
-                        // Add sections
-                        city.sections.forEach(section => {
-                            contentHTML += `
-                                <div class="city-details-section">
-                                    <h3>${section.title}</h3>
-                                    <p>${section.content}</p>
-                                    ${section.list ? `
-                                        <ul>
-                                            ${section.list.map(item => `<li>${item}</li>`).join('')}
-                                        </ul>
-                                    ` : ''}
-                                </div>
-                            `;
-                        });
-                        // Add images
-                        if (city.images && city.images.length > 0) {
-                            contentHTML += `
-                                <div class="city-details-section">
-                                    <h3>صور المدينة</h3>
-                                    <div class="city-media">
-                                        ${city.images.map(img => `
-                                            <img src="${img}" alt="${city.title}" loading="lazy">
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        // Add videos
-                        if (city.videos && city.videos.length > 0) {
-                            contentHTML += `
-                                <div class="city-details-section">
-                                    <h3>فيديوهات توضيحية</h3>
-                                    <div class="city-videos">
-                                        ${city.videos.map(video => `
-                                            <div class="city-video">
-                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        // Add CTA section
-                        contentHTML += `
-                            <div class="city-cta">
-                                <button class="btn" id="cityConsultationBtn">احصل على استشارة مجانية</button>
-                                <button class="btn" id="closeCityDetailsBtn">إغلاق</button>
-                            </div>
-                        `;
-                        // Update content
-                        cityContent.innerHTML = contentHTML;
-                        // Show overlay
-                        cityDetailsOverlay.classList.add('active');
-                        document.body.style.overflow = 'hidden'; // Prevent scrolling
-                        // Add event listeners to the new buttons
-                        document.getElementById('cityConsultationBtn').addEventListener('click', function () {
-                            cityDetailsOverlay.classList.remove('active');
-                            document.body.style.overflow = '';
-                            document.getElementById('consultationBtn').click();
-                        });
-                        document.getElementById('closeCityDetailsBtn').addEventListener('click', function () {
-                            cityDetailsOverlay.classList.remove('active');
-                            document.body.style.overflow = '';
-                        });
-                    }
-                });
-            });
-            // Close popup when clicking the close button
-            closeCityDetails.addEventListener('click', function () {
-                cityDetailsOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close popup when clicking outside the popup content
-            cityDetailsOverlay.addEventListener('click', function (e) {
-                if (e.target === cityDetailsOverlay) {
-                    cityDetailsOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                }
-            });
-        });
-        // Service Details Popup
-        document.addEventListener('DOMContentLoaded', function () {
-            const serviceDetailsBtns = document.querySelectorAll('.service-details-btn');
-            const serviceDetailsOverlay = document.getElementById('serviceDetailsOverlay');
-            const closeServiceDetails = document.getElementById('closeServiceDetails');
-            const serviceTitle = document.getElementById('serviceTitle');
-            const serviceIcon = document.getElementById('serviceIcon');
-            const serviceName = document.getElementById('serviceName');
-            const serviceContent = document.getElementById('serviceContent');
-            // Open service details when clicking on a service card
-            serviceDetailsBtns.forEach(btn => {
-                btn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const serviceCard = this.closest('.service-card');
-                    const serviceType = serviceCard.getAttribute('data-service');
-                    const service = servicesData[serviceType];
-                    if (service) {
-                        // Update service details header
-                        serviceIcon.className = service.icon;
-                        serviceName.textContent = service.title;
-                        // Build service details content
-                        let contentHTML = `
-                            <div class="service-details-section">
-                                <h3>نظرة عامة</h3>
-                                <p>${service.description}</p>
-                            </div>
-                        `;
-                        // Add sections
-                        service.sections.forEach(section => {
-                            contentHTML += `
-                                <div class="service-details-section">
-                                    <h3>${section.title}</h3>
-                                    <p>${section.content}</p>
-                                    ${section.list ? `
-                                        <ul>
-                                            ${section.list.map(item => `<li>${item}</li>`).join('')}
-                                        </ul>
-                                    ` : ''}
-                                </div>
-                            `;
-                        });
-                        // Add images
-                        if (service.images && service.images.length > 0) {
-                            contentHTML += `
-                                <div class="service-details-section">
-                                    <h3>صور الخدمة</h3>
-                                    <div class="service-media">
-                                        ${service.images.map(img => `
-                                            <img src="${img}" alt="${service.title}" loading="lazy">
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        // Add videos
-                        if (service.videos && service.videos.length > 0) {
-                            contentHTML += `
-                                <div class="service-details-section">
-                                    <h3>فيديوهات توضيحية</h3>
-                                    <div class="service-videos">
-                                        ${service.videos.map(video => `
-                                            <div class="service-video">
-                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        // Add CTA section
-                        contentHTML += `
-                            <div class="service-cta">
-                                <button class="btn" id="serviceConsultationBtn">احصل على استشارة مجانية</button>
-                                <button class="btn" id="closeServiceDetailsBtn">إغلاق</button>
-                            </div>
-                        `;
-                        // Update content
-                        serviceContent.innerHTML = contentHTML;
-                        // Show overlay
-                        serviceDetailsOverlay.classList.add('active');
-                        document.body.style.overflow = 'hidden'; // Prevent scrolling
-                        // Add event listeners to the new buttons
-                        document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
-                            serviceDetailsOverlay.classList.remove('active');
-                            document.body.style.overflow = '';
-                            document.getElementById('consultationBtn').click();
-                        });
-                        document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
-                            serviceDetailsOverlay.classList.remove('active');
-                            document.body.style.overflow = '';
-                        });
-                    }
-                });
-            });
-            // Close popup when clicking the close button
-            closeServiceDetails.addEventListener('click', function () {
-                serviceDetailsOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close popup when clicking outside the popup content
-            serviceDetailsOverlay.addEventListener('click', function (e) {
-                if (e.target === serviceDetailsOverlay) {
-                    serviceDetailsOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                }
-            });
-        });
-        // Terms and Privacy Popups
-        document.addEventListener('DOMContentLoaded', function () {
-            const termsLink = document.getElementById('termsLink');
-            const privacyLink = document.getElementById('privacyLink');
-            const termsOverlay = document.getElementById('termsOverlay');
-            const privacyOverlay = document.getElementById('privacyOverlay');
-            const closeTerms = document.getElementById('closeTerms');
-            const closePrivacy = document.getElementById('closePrivacy');
-            const closeTermsBtn = document.getElementById('closeTermsBtn');
-            const closePrivacyBtn = document.getElementById('closePrivacyBtn');
-            // Open terms popup
-            termsLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                termsOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-            // Open privacy popup
-            privacyLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                privacyOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            });
-            // Close terms popup when clicking the close button
-            closeTerms.addEventListener('click', function () {
-                termsOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close privacy popup when clicking the close button
-            closePrivacy.addEventListener('click', function () {
-                privacyOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close terms popup when clicking the close button inside
-            closeTermsBtn.addEventListener('click', function () {
-                termsOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close privacy popup when clicking the close button inside
-            closePrivacyBtn.addEventListener('click', function () {
-                privacyOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Enable scrolling
-            });
-            // Close popup when clicking outside the popup content
-            termsOverlay.addEventListener('click', function (e) {
-                if (e.target === termsOverlay) {
-                    termsOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                }
-            });
-            privacyOverlay.addEventListener('click', function (e) {
-                if (e.target === privacyOverlay) {
-                    privacyOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Enable scrolling
-                }
-            });
-        });
+
         // Smooth scrolling for all anchor links
         document.addEventListener('DOMContentLoaded', function () {
             // Get all anchor links
