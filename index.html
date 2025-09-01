@@ -1425,10 +1425,39 @@
             nav ul {
                 flex-direction: column;
                 gap: 15px;
+                margin-bottom: 20px;
             }
 
             .social-links {
                 display: none;
+            }
+
+            .mobile-social-links {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid rgba(138, 116, 47, 0.2);
+            }
+
+            .mobile-social-links a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: rgba(138, 116, 47, 0.1);
+                color: var(--gold);
+                transition: all 0.3s;
+                text-decoration: none;
+            }
+
+            .mobile-social-links a:hover {
+                background-color: var(--gold);
+                transform: translateY(-3px);
+                color: white;
             }
 
             .hero {
@@ -1609,6 +1638,15 @@
                     <li><a href="#services">الخدمات</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
+                <!-- Mobile Social Links -->
+                <div class="mobile-social-links">
+                    <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="http://X.com/andalusimmigrat" target="_blank"><i class="fab fa-square-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
             </nav>
             <div class="social-links">
                 <a href="https://www.facebook.com/andalusimmigration" target="_blank"><i
@@ -2082,7 +2120,7 @@
                     <h3>اتصل بنا</h3>
                     <p>إذا كان لديك أي أسئلة أو استفسارات بشأن سياسة الخصوصية هذه، يرجى التواصل معنا عبر:</p>
                     <ul>
-                        <li>البريد الإلكتروني: anasabdo704@gmail.com</li>
+                        <li>البريد الإلكتروني: info@andalusimmigration.com</li>
                         <li>الهاتف: +34 604272482</li>
                         <li>العنوان: [عنوان المكتب في إسبانيا]</li>
                     </ul>
@@ -2251,7 +2289,7 @@
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <h4>البريد الإلكتروني</h4>
-                            <p>anasabdo704@gmail.com</p>
+                            <p>info@andalusimmigration.com</p>
                         </div>
                     </div>
                 </div>
@@ -2732,7 +2770,6 @@
                 ]
             }
         };
-
         // بيانات الخدمات التفصيلية
         const servicesData = {
             residency: {
@@ -2875,7 +2912,7 @@
                 images: [
                     "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                    "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 ],
                 videos: [
                     "https://www.youtube.com/embed/H-Y7Mds_gnw",
@@ -3206,18 +3243,15 @@
             const cityIcon = document.getElementById('cityIcon');
             const cityName = document.getElementById('cityName');
             const cityContent = document.getElementById('cityContent');
-
             // Open city details when clicking on a destination card
             destCards.forEach(card => {
                 card.addEventListener('click', function () {
                     const cityType = this.getAttribute('data-city');
                     const city = citiesData[cityType];
-
                     if (city) {
                         // Update city details header
                         cityIcon.className = city.icon;
                         cityName.textContent = city.title;
-
                         // Build city details content
                         let contentHTML = `
                             <div class="city-details-section">
@@ -3225,7 +3259,6 @@
                                 <p>${city.description}</p>
                             </div>
                         `;
-
                         // Add sections
                         city.sections.forEach(section => {
                             contentHTML += `
@@ -3240,7 +3273,6 @@
                                 </div>
                             `;
                         });
-
                         // Add images
                         if (city.images && city.images.length > 0) {
                             contentHTML += `
@@ -3254,7 +3286,6 @@
                                 </div>
                             `;
                         }
-
                         // Add videos
                         if (city.videos && city.videos.length > 0) {
                             contentHTML += `
@@ -3270,7 +3301,6 @@
                                 </div>
                             `;
                         }
-
                         // Add CTA section
                         contentHTML += `
                             <div class="city-cta">
@@ -3278,21 +3308,17 @@
                                 <button class="btn" id="closeCityDetailsBtn">إغلاق</button>
                             </div>
                         `;
-
                         // Update content
                         cityContent.innerHTML = contentHTML;
-
                         // Show overlay
                         cityDetailsOverlay.classList.add('active');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
                         // Add event listeners to the new buttons
                         document.getElementById('cityConsultationBtn').addEventListener('click', function () {
                             cityDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
                             document.getElementById('consultationBtn').click();
                         });
-
                         document.getElementById('closeCityDetailsBtn').addEventListener('click', function () {
                             cityDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
@@ -3300,13 +3326,11 @@
                     }
                 });
             });
-
             // Close popup when clicking the close button
             closeCityDetails.addEventListener('click', function () {
                 cityDetailsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             cityDetailsOverlay.addEventListener('click', function (e) {
                 if (e.target === cityDetailsOverlay) {
@@ -3324,7 +3348,6 @@
             const serviceIcon = document.getElementById('serviceIcon');
             const serviceName = document.getElementById('serviceName');
             const serviceContent = document.getElementById('serviceContent');
-
             // Open service details when clicking on a service card
             serviceDetailsBtns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
@@ -3332,12 +3355,10 @@
                     const serviceCard = this.closest('.service-card');
                     const serviceType = serviceCard.getAttribute('data-service');
                     const service = servicesData[serviceType];
-
                     if (service) {
                         // Update service details header
                         serviceIcon.className = service.icon;
                         serviceName.textContent = service.title;
-
                         // Build service details content
                         let contentHTML = `
                             <div class="service-details-section">
@@ -3345,7 +3366,6 @@
                                 <p>${service.description}</p>
                             </div>
                         `;
-
                         // Add sections
                         service.sections.forEach(section => {
                             contentHTML += `
@@ -3360,7 +3380,6 @@
                                 </div>
                             `;
                         });
-
                         // Add images
                         if (service.images && service.images.length > 0) {
                             contentHTML += `
@@ -3374,7 +3393,6 @@
                                 </div>
                             `;
                         }
-
                         // Add videos
                         if (service.videos && service.videos.length > 0) {
                             contentHTML += `
@@ -3390,7 +3408,6 @@
                                 </div>
                             `;
                         }
-
                         // Add CTA section
                         contentHTML += `
                             <div class="service-cta">
@@ -3398,21 +3415,17 @@
                                 <button class="btn" id="closeServiceDetailsBtn">إغلاق</button>
                             </div>
                         `;
-
                         // Update content
                         serviceContent.innerHTML = contentHTML;
-
                         // Show overlay
                         serviceDetailsOverlay.classList.add('active');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling
-
                         // Add event listeners to the new buttons
                         document.getElementById('serviceConsultationBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
                             document.getElementById('consultationBtn').click();
                         });
-
                         document.getElementById('closeServiceDetailsBtn').addEventListener('click', function () {
                             serviceDetailsOverlay.classList.remove('active');
                             document.body.style.overflow = '';
@@ -3420,13 +3433,11 @@
                     }
                 });
             });
-
             // Close popup when clicking the close button
             closeServiceDetails.addEventListener('click', function () {
                 serviceDetailsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             serviceDetailsOverlay.addEventListener('click', function (e) {
                 if (e.target === serviceDetailsOverlay) {
@@ -3445,45 +3456,38 @@
             const closePrivacy = document.getElementById('closePrivacy');
             const closeTermsBtn = document.getElementById('closeTermsBtn');
             const closePrivacyBtn = document.getElementById('closePrivacyBtn');
-
             // Open terms popup
             termsLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 termsOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
-
             // Open privacy popup
             privacyLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 privacyOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
-
             // Close terms popup when clicking the close button
             closeTerms.addEventListener('click', function () {
                 termsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close privacy popup when clicking the close button
             closePrivacy.addEventListener('click', function () {
                 privacyOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close terms popup when clicking the close button inside
             closeTermsBtn.addEventListener('click', function () {
                 termsOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close privacy popup when clicking the close button inside
             closePrivacyBtn.addEventListener('click', function () {
                 privacyOverlay.classList.remove('active');
                 document.body.style.overflow = ''; // Enable scrolling
             });
-
             // Close popup when clicking outside the popup content
             termsOverlay.addEventListener('click', function (e) {
                 if (e.target === termsOverlay) {
@@ -3491,7 +3495,6 @@
                     document.body.style.overflow = ''; // Enable scrolling
                 }
             });
-
             privacyOverlay.addEventListener('click', function (e) {
                 if (e.target === privacyOverlay) {
                     privacyOverlay.classList.remove('active');
