@@ -1138,6 +1138,16 @@
             color: #333;
         }
 
+        .contact-item p a {
+            color: var(--black);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item p a:hover {
+            color: var(--gold);
+        }
+
         .success-message {
             background-color: #4CAF50;
             color: white;
@@ -1626,7 +1636,7 @@
                 <!-- Mobile Language Switcher -->
                 <div class="mobile-language-switcher">
                     <button class="language-btn" id="mobileLangAr">
-                        <i class="fas fa-globe"></i> AR
+                        <i class="fas fa-globe"></i> عربي
                     </button>
                     <button class="language-btn" id="mobileLangEn">
                         <i class="fas fa-globe"></i> EN
@@ -1643,7 +1653,7 @@
             </div>
             <div class="language-switcher">
                 <button class="language-btn active" id="langAr">
-                    <i class="fas fa-globe"></i> AR
+                    <i class="fas fa-globe"></i> عربي
                 </button>
                 <button class="language-btn" id="langEn">
                     <i class="fas fa-globe"></i> EN
@@ -1788,7 +1798,7 @@
                     </div>
                 </div>
                 <div class="dest-card" data-city="seville">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2hOosZz76fcoKfbXfd9Cx-tM5pwhiKZxtw&s"
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                         alt="إشبيلية"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=إشبيلية'">
                     <div class="dest-info">
@@ -1835,30 +1845,29 @@
                 <div class="service-card" data-service="residency">
                     <i class="fas fa-id-card"></i>
                     <h3 data-lang="service-residency-title">الإقامة</h3>
-                    <p data-lang="service-residency-desc">احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات
-                        اللازمة بسرعة وكفاءة.</p>
+                    <p data-lang="service-residency-desc">استكشف خياراتك للعيش بشكل قانوني في إسبانيا — سواء كنت
+                        مستثمراً، متقاعداً، عاملاً عن بعد، أو طالباً.</p>
                     <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="real-estate">
                     <i class="fas fa-home"></i>
                     <h3 data-lang="service-real-estate-title">العقارات</h3>
-                    <p data-lang="service-real-estate-desc">إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار
-                        المناسب للاستثمار في إسبانيا.</p>
+                    <p data-lang="service-real-estate-desc">فرص استثمارية ممتازة في سوق العقارات الإسباني. استثمر في
+                        واحدة من أجمل دول أوروبا.</p>
                     <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="study">
                     <i class="fas fa-graduation-cap"></i>
                     <h3 data-lang="service-study-title">الدراسة في إسبانيا</h3>
-                    <p data-lang="service-study-desc">الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل.
-                        نساعدك في الحصول على قبول
-                        جامعي.</p>
+                    <p data-lang="service-study-desc">مع جامعات مرموقة وحياة طلابية نابضة بالحياة، إسبانيا هي الوجهة
+                        المثالية للطلاب الدوليين.</p>
                     <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
                 <div class="service-card" data-service="tourist">
                     <i class="fas fa-plane"></i>
                     <h3 data-lang="service-tourist-title">تأشيرة سياحية</h3>
-                    <p data-lang="service-tourist-desc">زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات
-                        اللازمة بسرعة وكفاءة.</p>
+                    <p data-lang="service-tourist-desc">نحن نبسط عملية التقديم للحصول على التأشيرة، ونقدم مساعدة سريعة
+                        وموثوقة للمسافرين.</p>
                     <a href="#" class="btn service-details-btn" data-lang="service-more">المزيد</a>
                 </div>
             </div>
@@ -2045,12 +2054,12 @@
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <h4 data-lang="contact-phone-title">الهاتف</h4>
-                            <p>+34 604272482</p>
+                            <p><a href="tel:+34604272482">+34 604272482</a></p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <h4 data-lang="contact-email-title">البريد الإلكتروني</h4>
-                            <p>info@andalusimmigration.com</p>
+                            <p><a href="mailto:info@andalusimmigration.com">info@andalusimmigration.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -2063,7 +2072,7 @@
             <h3 data-lang="newsletter-title">النشرة الإخبارية</h3>
             <p data-lang="newsletter-subtitle">انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!</p>
             <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/xjvqyvqj" method="POST">
-                <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+                <input type="email" name="email" data-lang="form-email-placeholder" required>
                 <input type="hidden" name="_subject" value="اشتراك في النشرة الإخبارية - الأندلس للهجرة">
                 <button type="submit" data-lang="newsletter-submit">اشترك</button>
             </form>
@@ -2096,7 +2105,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
+                <p data-lang="copyright">© 2025 الأندلس للهجرة. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -2140,13 +2149,13 @@
                 // Services Section
                 "services-title": "خدماتنا",
                 "service-residency-title": "الإقامة",
-                "service-residency-desc": "احصل على تأشيرتك الآن لفرص عمل وكسب جديدة. نسلم لك المستندات اللازمة بسرعة وكفاءة.",
+                "service-residency-desc": "استكشف خياراتك للعيش بشكل قانوني في إسبانيا — سواء كنت مستثمراً، متقاعداً، عاملاً عن بعد، أو طالباً.",
                 "service-real-estate-title": "العقارات",
-                "service-real-estate-desc": "إرشاد الخبراء لرحلة هجرة سلسة. نساعدك في العثور على العقار المناسب للاستثمار في إسبانيا.",
+                "service-real-estate-desc": "فرص استثمارية ممتازة في سوق العقارات الإسباني. استثمر في واحدة من أجمل دول أوروبا.",
                 "service-study-title": "الدراسة في إسبانيا",
-                "service-study-desc": "الانطلاق في رحلة التعليم العالي في بلد أجنبي يفتح أبواب المستقبل. نساعدك في الحصول على قبول جامعي.",
+                "service-study-desc": "مع جامعات مرموقة وحياة طلابية نابضة بالحياة، إسبانيا هي الوجهة المثالية للطلاب الدوليين.",
                 "service-tourist-title": "تأشيرة سياحية",
-                "service-tourist-desc": "زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة.",
+                "service-tourist-desc": "نحن نبسط عملية التقديم للحصول على التأشيرة، ونقدم مساعدة سريعة وموثوقة للمسافرين.",
                 "service-more": "المزيد",
                 // Why Spain Section
                 "why-spain-title": "لماذا إسبانيا؟",
@@ -2214,6 +2223,7 @@
                 "newsletter-title": "النشرة الإخبارية",
                 "newsletter-subtitle": "انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!",
                 "newsletter-submit": "اشترك",
+                "form-email-placeholder": "بريدك الإلكتروني",
                 // City Details
                 "city-overview": "نظرة عامة",
                 "city-images": "صور المدينة",
@@ -2225,7 +2235,9 @@
                 "service-images": "صور الخدمة",
                 "service-videos": "فيديوهات توضيحية",
                 "service-consultation": "احصل على استشارة مجانية",
-                "service-close": "إغلاق"
+                "service-close": "إغلاق",
+                // Copyright
+                "copyright": "© 2025 الأندلس للهجرة. جميع الحقوق محفوظة."
             },
             en: {
                 // Hero Section
@@ -2264,13 +2276,13 @@
                 // Services Section
                 "services-title": "Our Services",
                 "service-residency-title": "Residency",
-                "service-residency-desc": "Get your visa now for new work and earning opportunities. We deliver the necessary documents to you quickly and efficiently.",
+                "service-residency-desc": "Explore your options to live legally in Spain — whether you're an investor, retiree, remote worker, or student.",
                 "service-real-estate-title": "Real Estate",
-                "service-real-estate-desc": "Expert guidance for a smooth immigration journey. We help you find the right property for investment in Spain.",
+                "service-real-estate-desc": "Excellent investment opportunities in the Spanish real estate market. Invest in one of Europe's most beautiful countries.",
                 "service-study-title": "Study in Spain",
-                "service-study-desc": "Embark on a higher education journey in a foreign country that opens the doors to the future. We help you get university admission.",
+                "service-study-desc": "With prestigious universities and vibrant student life, Spain is the perfect destination for international students.",
                 "service-tourist-title": "Tourist Visa",
-                "service-tourist-desc": "Visit new places to discover with a tourist visa. We deliver the necessary documents to you quickly and efficiently.",
+                "service-tourist-desc": "We simplify the visa application process, offering fast, reliable assistance for travelers.",
                 "service-more": "More",
                 // Why Spain Section
                 "why-spain-title": "Why Spain?",
@@ -2338,6 +2350,7 @@
                 "newsletter-title": "Newsletter",
                 "newsletter-subtitle": "Stay tuned for the newsletter announcement to follow the latest news!",
                 "newsletter-submit": "Subscribe",
+                "form-email-placeholder": "Your email",
                 // City Details
                 "city-overview": "Overview",
                 "city-images": "City Images",
@@ -2349,7 +2362,9 @@
                 "service-images": "Service Images",
                 "service-videos": "Informational Videos",
                 "service-consultation": "Get a Free Consultation",
-                "service-close": "Close"
+                "service-close": "Close",
+                // Copyright
+                "copyright": "© 2025 Andalusia Immigration. All rights reserved."
             }
         };
         // بيانات المدن التفصيلية
@@ -3276,8 +3291,8 @@
                 },
                 icon: "fas fa-id-card",
                 description: {
-                    ar: "نقدم خدمات شاملة للحصول على الإقامة الإسبانية بأنواعها المختلفة. فريقنا من الخبراء يرشدك خطوة بخطوة لتحقيق حلمك بالإقامة في إسبانيا.",
-                    en: "We offer comprehensive services for obtaining Spanish residency of all types. Our team of experts guides you step by step to achieve your dream of residing in Spain."
+                    ar: "إسبانيا هي دولة نابضة بالحياة في جنوب غرب أوروبا، تشتهر بثقافتها الغنية ومناظرها الطبيعية الخلابة ومدنها الحيوية. تشترك في الحدود مع البرتغال وفرنسا وأندورا وتحيط بها البحر الأبيض المتوسط والمحيط الأطلسي. استمتع بكل هذا وأكثر بالحصول على الإقامة في إسبانيا.",
+                    en: "Spain is a vibrant country in southwestern Europe, known for its rich culture, stunning landscapes, and lively cities. It shares borders with Portugal, France, and Andorra and is surrounded by the Mediterranean Sea and the Atlantic Ocean. Enjoy all this and more obtaining the residency in Spain."
                 },
                 sections: [
                     {
@@ -3286,75 +3301,191 @@
                             en: "Types of Residency We Offer"
                         },
                         content: {
-                            ar: "نحن متخصصون في تقديم خدمات الإقامة بأنواعها المختلفة:",
-                            en: "We are specialized in providing various types of residency services:"
+                            ar: "تقدم إسبانيا عدة أنواع من تصاريح الإقامة للأجانب، اعتمادًا على غرض الإقامة:",
+                            en: "Spain offers several types of residencies permits for foreigners, depending on their purpose of stay:"
                         },
                         list: {
                             ar: [
                                 "الإقامة الذهبية عبر الاستثمار",
-                                "الإقامة عن طريق العمل",
-                                "الإقامة العائلية",
-                                "الإقامة عن طريق الدراسة",
-                                "الإقامة للرياديين وأصحاب المشاريع"
+                                "الإقامة غير الربحية",
+                                "تأشيرة الرحل الرقميين",
+                                "تأشيرة الطالب"
                             ],
                             en: [
-                                "Golden Residence through Investment",
-                                "Residence through Work",
-                                "Family Residence",
-                                "Residence through Study",
-                                "Residence for Entrepreneurs and Business Owners"
+                                "Investment Residency",
+                                "Non-Lucrative Residency",
+                                "Digital Nomad Visa",
+                                "Student Visa"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "مزايا الإقامة الإسبانية",
-                            en: "Advantages of Spanish Residency"
+                            ar: "أ. الإقامة الذهبية (ريادة الأعمال والاستثمار)",
+                            en: "A. Investment Residency (Entrepreneurship and Investment)"
                         },
                         content: {
-                            ar: "الحصول على الإقامة الإسبانية يوفر لك العديد من المزايا:",
-                            en: "Obtaining Spanish residency offers you many advantages:"
+                            ar: "هل ترغب في تأسيس شركة أو الاستثمار في إسبانيا؟ تسمح لك هذه التأشيرة بالعيش والعمل بشكل قانوني أثناء نمو عملك في السوق الأوروبية.",
+                            en: "Want to launch a company or invest in Spain? This visa allows you to live and work legally while growing your business in the European market."
                         },
                         list: {
                             ar: [
-                                "التنقل بحرية في منطقة شنغن",
-                                "إمكانية لم شمل العائلة",
-                                "الوصول إلى نظام صحي وتعليمي عالي الجودة",
-                                "بيئة استثمارية آمنة ومستقرة",
-                                "جودة حياة عالية في واحدة من أفضل الدول الأوروبية"
+                                "لماذا تختار هذه التأشيرة؟",
+                                "طريق سريع للحصول على الإقامة الدائمة",
+                                "بنية تحتية إسبانية رائعة للأعمال",
+                                "طريق للحصول على الجنسية الإسبانية بعد 10 سنوات",
+                                "وصول إلى السوق الأوروبي",
+                                "مثالية ل:",
+                                "رواد الأعمال بدء مشروع",
+                                "المستثمرين التوسع في أوروبا",
+                                "الأفراد أصحاب التفكير التجاري",
+                                "الشركات التي ترغب في التوسع في السوق الأوروبي",
+                                "المتطلبات:",
+                                "خلفية مهنية وتعليمية",
+                                "تأمين صحي خاص",
+                                "مشروع تجاري",
+                                "أموال كافية لدعم نفسك وعملك"
                             ],
                             en: [
-                                "Free movement within the Schengen area",
-                                "Possibility of family reunification",
-                                "Access to high-quality health and education systems",
-                                "Safe and stable investment environment",
-                                "High quality of life in one of the best European countries"
+                                "Why choose this visa?",
+                                "Fast-track to permanent residency",
+                                "Magnificent Spanish infrastructure for Business",
+                                "Path to Spanish citizenship after 10 years",
+                                "Business access to the EU",
+                                "Ideal For:",
+                                "Entrepreneurs starting a project",
+                                "Investors expanding to Europe",
+                                "Business-minded individuals",
+                                "Companies want to extend in the European market",
+                                "Requirements:",
+                                "Professional & Educational Background",
+                                "Private health insurance",
+                                "Business Project",
+                                "Sufficient funds to support yourself and your business"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "خطوات الحصول على الإقامة",
-                            en: "Steps to Obtain Residency"
+                            ar: "ب. الإقامة غير الربحية",
+                            en: "B. Non-Lucrative Residency"
                         },
                         content: {
-                            ar: "نساعدك في جميع مراحل الحصول على الإقامة:",
-                            en: "We assist you in all stages of obtaining residency:"
+                            ar: "تأشيرة لأولئك الذين يرغبون في العيش في إسبانيا دون العمل. مثالية للمتقاعدين وأصحاب الدخل السلبي وأولئك الذين يريدون حياة هادئة في إسبانيا.",
+                            en: "A visa for those who want to live in Spain without working. Ideal for retirees, passive income earners, and those who want a peaceful life in Spain."
                         },
                         list: {
                             ar: [
-                                "تقييم حالتك وتحديد أفضل نوع إقامة يناسبك",
-                                "إعداد المستندات المطلوبة بدقة",
-                                "تقديم الطلب ومتابعته مع الجهات المختصة",
-                                "الدعم خلال المقابلات إن لزم الأمر",
-                                "المساعدة في استخراج بطاقة الإقامة بعد الموافقة"
+                                "لماذا تختار هذه التأشيرة؟",
+                                "لم شمل الأسرة مسموح",
+                                "قابلة للتجديد لمدة تصل إلى 5 سنوات",
+                                "إقامة دائمة بعد 5 سنوات",
+                                "مثالية ل:",
+                                "المتقاعدين",
+                                "الأشخاص المدخرين",
+                                "أصحاب الدخل السلبي",
+                                "المتطلبات:",
+                                "جواز سفر ساري المفعول (سنة واحدة)",
+                                "تأمين صحي خاص",
+                                "لا سجل جنائي",
+                                "إثبات الوسائل المالية"
                             ],
                             en: [
-                                "Evaluating your situation and determining the best type of residency for you",
-                                "Preparing the required documents accurately",
-                                "Submitting the application and following up with the concerned authorities",
-                                "Support during interviews if necessary",
-                                "Assistance in obtaining the residence card after approval"
+                                "Why choose this visa?",
+                                "Family reunification allowed",
+                                "Renewable up to 5 years",
+                                "Permanent residency after 5 years",
+                                "Ideal for:",
+                                "Retirees",
+                                "People with savings",
+                                "Passive income individuals",
+                                "Requirements:",
+                                "Valid passport (1 year)",
+                                "Private health insurance",
+                                "No criminal record",
+                                "Proof of financial means"
+                            ]
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "ج. تأشيرة الرحل الرقميين",
+                            en: "C. Digital Nomad Visa"
+                        },
+                        content: {
+                            ar: "اعمل لعملائك أو شركتك في الخارج أثناء العيش بشكل قانوني في إسبانيا مع هذه التأشيرة الجديدة.",
+                            en: "Work for your clients or company abroad while living legally in Spain with this new visa."
+                        },
+                        list: {
+                            ar: [
+                                "مثالية ل:",
+                                "العاملين عن بعد",
+                                "المصممين والمطورين والمسوقين",
+                                "المستقلين والمستشارين عبر الإنترنت",
+                                "المزايا:",
+                                "العيش في إسبانيا بشكل قانوني",
+                                "إدراج الأسرة",
+                                "طريق للإقامة والجنسية",
+                                "السفر عبر منطقة شنغن",
+                                "المتطلبات:",
+                                "إثبات العمل عن بعد",
+                                "إثبات الدخل",
+                                "تأمين صحي",
+                                "سجل جنائي نظيف"
+                            ],
+                            en: [
+                                "Ideal for:",
+                                "Remote workers",
+                                "Designers, developers, marketers",
+                                "Freelancers, online consultants",
+                                "Benefits:",
+                                "Live in Spain legally",
+                                "Family inclusion",
+                                "Path to residency and citizenship",
+                                "Travel across the Schengen zone",
+                                "Requirements:",
+                                "Proof of remote work",
+                                "Proof of income",
+                                "Health insurance",
+                                "Clean criminal record"
+                            ]
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "د. الدراسة في إسبانيا",
+                            en: "D. Study in Spain"
+                        },
+                        content: {
+                            ar: "مع جامعاتها المتميزة وحياة الطلاب النابضة بالحياة، إسبانيا هي المكان المثالي لمتابعة التعليم العالي.",
+                            en: "With top universities and vibrant student life, Spain is the perfect place to pursue higher education."
+                        },
+                        list: {
+                            ar: [
+                                "المزايا:",
+                                "رسوم دراسية وتكاليف معيشة معقولة",
+                                "العمل بدوام جزئي مسموح (20 ساعة/أسبوع)",
+                                "سفر شنغن مجاني",
+                                "التقدم بطلب للحصول على تأشيرة عمل بعد التخرج",
+                                "أفضل المدن:",
+                                "مدريد",
+                                "برشلونة",
+                                "بلنسية",
+                                "إشبيلية",
+                                "مالقة"
+                            ],
+                            en: [
+                                "Benefits:",
+                                "Affordable tuition and cost of living",
+                                "Part-time work allowed (20 hrs/week)",
+                                "Free Schengen travel",
+                                "Apply for work visa post-graduation",
+                                "Top Cities:",
+                                "Madrid",
+                                "Barcelona",
+                                "Valencia",
+                                "Seville",
+                                "Malaga"
                             ]
                         }
                     }
@@ -3365,8 +3496,8 @@
                     "https://images.unsplash.com/photo-1503376780353-7b66b6bf1b78?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 ],
                 videos: [
-                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
-                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                    "https://www.youtube.com/embed/5gV2m0M4xYI", // فيديو عن الإقامة في إسبانيا
+                    "https://www.youtube.com/embed/8Q1s2b4dY4w"  // فيديو عن أنواع الإقامة في إسبانيا
                 ]
             },
             "real-estate": {
@@ -3376,33 +3507,61 @@
                 },
                 icon: "fas fa-home",
                 description: {
-                    ar: "نقدم خدمات استثمارية شاملة في سوق العقارات الإسباني. نساعدك في العثور على العقار المناسب الذي يلبي احتياجاتك الاستثمارية وشروط الإقامة.",
-                    en: "We offer comprehensive investment services in the Spanish real estate market. We help you find the right property that meets your investment needs and residency requirements."
+                    ar: "فرص استثمارية ممتازة في سوق العقارات الإسباني: استثمار ذكي في واحدة من أجمل دول أوروبا",
+                    en: "Real Estate Opportunities in Spain: A Smart Investment in One of Europe's Most Beautiful Countries"
                 },
                 sections: [
                     {
                         title: {
-                            ar: "خدماتنا العقارية",
-                            en: "Our Real Estate Services"
+                            ar: "لمquoi الاستثمار في العقارات الإسبانية؟",
+                            en: "Why invest in real estate in Spain?"
                         },
                         content: {
-                            ar: "نقدم مجموعة متكاملة من الخدمات العقارية:",
-                            en: "We offer a comprehensive range of real estate services:"
+                            ar: "إسبانيا ليست مجرد وجهة سياحية رائعة، بل لديها سوق عقاري مزدهر يوفر فرص استثمارية ممتازة للمقيمين والأجانب على حد سواء.",
+                            en: "Spain is not only a wonderful tourist destination, but also has a thriving real estate market that offers excellent investment opportunities for residents and foreigners alike."
                         },
                         list: {
                             ar: [
-                                "البحث عن عقارات استثمارية في أفضل المدن الإسبانية",
-                                "تقييم العقارات وفرص الاستثمار",
-                                "المساعدة في إجراءات الشراء والتسجيل",
-                                "إدارة العقارات بعد الشراء",
-                                "تأجير العقارات وإدارة المستأجرين"
+                                "سعر تنافسي مقارنة ببقية دول أوروبا.",
+                                "متوسط السعر للمتر المربع في إسبانيا أقل بنسبة 30-50% من فرنسا أو ألمانيا.",
+                                "يمكن شراء شقة في المدن الكبرى مثل برشلونة أو مدريد بمبلغ يتراوح بين 150,000-300,000 يورو، بينما في مدن أخرى مثل أليكانتي أو مالقة، تبدأ الأسعار من 100,000 يورو.",
+                                "الوصول إلى سوق الاتحاد الأوروبي"
                             ],
                             en: [
-                                "Searching for investment properties in the best Spanish cities",
-                                "Property valuation and investment opportunities",
-                                "Assistance in purchase and registration procedures",
-                                "Property management after purchase",
-                                "Property rental and tenant management"
+                                "Competitive prices compared to the rest of Europe.",
+                                "The average price per square meter in Spain is 30-50% lower than in France or Germany.",
+                                "An apartment in major cities like Barcelona or Madrid can be purchased for 150,000-300,000 euros, while in other cities like Alicante or Málaga, prices start at 100,000 euros.",
+                                "Business access to the EU"
+                            ]
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "طرق الربح من العقارات الإسبانية؟",
+                            en: "Ways to profit from Spanish real estate?"
+                        },
+                        content: {
+                            ar: "يبلغ حجم سوق العقارات في إسبانيا 189 مليار يورو، مما يوفر فرص استثمارية بعوائد ممتازة.",
+                            en: "The size of the real estate market in Spain is 189 billion euros, providing investment opportunities with excellent returns."
+                        },
+                        list: {
+                            ar: [
+                                "1. الإيجار طويل الأمد. – توفير دخل شهري ثابت.",
+                                "2. الإيجار الموسمي (السياحي)",
+                                "– تحقيق عائد أعلى بنسبة 20-50% من الإيجارات العادية في المناطق السياحية.",
+                                "3. شراء عقار وبيعه بعد زيادة قيمته",
+                                "– الاستفادة من الزيادة التدريجية في أسعار العقارات.",
+                                "4. الاستفادة من برامج الإقامة",
+                                "– الجمع بين الاستثمار العقاري وتسهيل عملية الحصول على الإقامة."
+                            ],
+                            en: [
+                                "1. Long-term rental. – Providing a fixed monthly income.",
+                                "2. Seasonal (tourist) rentals",
+                                "– Achieve a return 20-50% higher than normal rentals in tourist areas.",
+                                "3. Buy a property and sell it after its value increases",
+                                "– Benefit from the gradual increase in real estate prices.",
+                                "4. Benefit from residency programs",
+                                "– Combine real estate investment with facilitating the process of obtaining residency."
                             ]
                         }
                     },
@@ -3421,40 +3580,16 @@
                                 "برشلونة: مركز تجاري وسياحي عالمي",
                                 "فالنسيا: فرص استثمارية واعدة بسعر تنافسي",
                                 "مالقة: وجهة سياحية شهيرة على البحر المتوسط",
-                                "أليكانتي: مدينة ساحلية جذابة للمستثمرين"
+                                "أليكانتي: مدينة ساحلية جذابة للمستثمرين",
+                                "ماربيلا: وجهة فاخرة للاستثمار العقاري"
                             ],
                             en: [
-                                "Madrid: The economic and cultural capital",
-                                "Barcelona: A global commercial and tourist center",
-                                "Valencia: Promising investment opportunities at a competitive price",
-                                "Malaga: A famous tourist destination on the Mediterranean",
-                                "Alicante: An attractive coastal city for investors"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "أنواع العقارات المتاحة",
-                            en: "Types of Properties Available"
-                        },
-                        content: {
-                            ar: "نساعدك في الاستثمار في مختلف أنواع العقارات:",
-                            en: "We help you invest in various types of properties:"
-                        },
-                        list: {
-                            ar: [
-                                "الشقق السكنية في المدن الكبرى",
-                                "الفلل والمنازل الفاخرة",
-                                "العقارات التجارية والمكاتب",
-                                "الفنادق والوحدات السياحية",
-                                "الأراضي والمشاريع الإنمائية"
-                            ],
-                            en: [
-                                "Residential apartments in major cities",
-                                "Villas and luxury homes",
-                                "Commercial properties and offices",
-                                "Hotels and tourist units",
-                                "Land and development projects"
+                                "MADRID",
+                                "BARCELONA",
+                                "VALENCIA",
+                                "MALAGA",
+                                "ALICANTE",
+                                "MARBELLA"
                             ]
                         }
                     }
@@ -3465,8 +3600,8 @@
                     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 ],
                 videos: [
-                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
-                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                    "https://www.youtube.com/embed/1x9v1XkQc1k", // فيديو عن الاستثمار العقاري في إسبانيا
+                    "https://www.youtube.com/embed/7nYvL4gK1i8"  // فيديو عن سوق العقارات في إسبانيا
                 ]
             },
             study: {
@@ -3476,36 +3611,10 @@
                 },
                 icon: "fas fa-graduation-cap",
                 description: {
-                    ar: "نساعدك في تحقيق حلمك بالدراسة في إسبانيا. نقدم خدمات شاملة من البحث عن الجامعة المناسبة إلى الحصول على القبول والتأشيرة.",
-                    en: "We help you achieve your dream of studying in Spain. We offer comprehensive services from finding the right university to obtaining admission and visa."
+                    ar: "هل تحلم بالدراسة في إسبانيا؟ مع جامعاتها المرموقة وثقافتها النابضة بالحياة وتكاليف المعيشة المعقولة، إسبانيا هي الوجهة الأولى للطلاب الدوليين. سواء كنت تسعى للحصول على البكالوريوس أو الماجستير أو الدكتوراه، فإن تأشيرة الطالب الإسبانية تسمح لك بالعيش والدراسة في واحدة من أكثر دول أوروبا إثارة.",
+                    en: "Dreaming of studying in Spain? With its prestigious universities, vibrant culture, and affordable living costs, Spain is a top destination for international students. Whether you're pursuing a bachelor's, master's, or PhD, the Spanish student visa allows you to live and study in one of Europe's most exciting countries."
                 },
                 sections: [
-                    {
-                        title: {
-                            ar: "خدماتنا التعليمية",
-                            en: "Our Educational Services"
-                        },
-                        content: {
-                            ar: "نقدم دعماً شاملاً للطلاب الراغبين في الدراسة في إسبانيا:",
-                            en: "We provide comprehensive support for students wishing to study in Spain:"
-                        },
-                        list: {
-                            ar: [
-                                "البحث عن الجامعات والبرامج المناسبة",
-                                "المساعدة في إجراءات التقديم والقبول",
-                                "إعداد المستندات المطلوبة للتأشيرة",
-                                "توفير السكن المناسب للطلاب",
-                                "الدعم بعد الوصول إلى إسبانيا"
-                            ],
-                            en: [
-                                "Searching for suitable universities and programs",
-                                "Assistance in application and admission procedures",
-                                "Preparing the required documents for the visa",
-                                "Providing suitable accommodation for students",
-                                "Support after arrival in Spain"
-                            ]
-                        }
-                    },
                     {
                         title: {
                             ar: "مزايا الدراسة في إسبانيا",
@@ -3517,44 +3626,118 @@
                         },
                         list: {
                             ar: [
-                                "نظام تعليمي عالي الجودة ومعترف به عالمياً",
-                                "تكاليف دراسية معقولة مقارنة بدول أوروبا الأخرى",
-                                "فرص تعلم اللغة الإسبانية والإنجليزية",
-                                "بيئة دولية متنوعة وثقافية غنية",
-                                "فرص عمل بعد التخرج في إسبانيا وأوروبا"
+                                "تعليم عالي الجودة",
+                                "فرص متعددة اللغات",
+                                "رسوم دراسية وتكاليف معيشة معقولة",
+                                "الوصول إلى منطقة شنغن",
+                                "أسلوب حياة رائع"
                             ],
                             en: [
-                                "High-quality education system recognized worldwide",
-                                "Reasonable tuition fees compared to other European countries",
-                                "Opportunities to learn Spanish and English",
-                                "Diverse international and culturally rich environment",
-                                "Job opportunities after graduation in Spain and Europe"
+                                "High quality education",
+                                "Multilingual Opportunities",
+                                "Affordable Tuition & Living Costs",
+                                "Schengen Access",
+                                "Amazing Lifestyle"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "التخصصات المتاحة",
-                            en: "Available Specializations"
+                            ar: "تعليم عالي الجودة",
+                            en: "High quality education"
                         },
                         content: {
-                            ar: "نساعدك في الالتحاق بمختلف التخصصات:",
-                            en: "We help you enroll in various specializations:"
+                            ar: "إسبانيا تضم جامعات مرموقة مثل جامعة برشلونة وجامعة كمبلوتنسي مدريد ومدرسة الأعمال IE.",
+                            en: "Spain is home to top-ranked universities like Universidad de Barcelona, Universidad Complutense de Madrid, and IE Business School."
+                        },
+                        list: {
+                            ar: [],
+                            en: []
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "فرص متعددة اللغات",
+                            en: "Multilingual Opportunities"
+                        },
+                        content: {
+                            ar: "الدراسة باللغة الإسبانية أو الإنجليزية، واكتساب إتقان واحدة من أكثر اللغات تحدثاً في العالم.",
+                            en: "Study in Spanish or English, and gain fluency in one of the world's most spoken languages."
+                        },
+                        list: {
+                            ar: [],
+                            en: []
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "رسوم دراسية وتكاليف معيشة معقولة",
+                            en: "Affordable Tuition & Living Costs"
+                        },
+                        content: {
+                            ar: "مقارنة بالولايات المتحدة أو المملكة المتحدة، تقدم إسبانيا رسوم دراسية أقل وتكلفة معيشة معقولة.",
+                            en: "Compared to the US or UK, Spain offers lower tuition fees and a reasonable cost of living."
+                        },
+                        list: {
+                            ar: [],
+                            en: []
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "أسلوب حياة رائع",
+                            en: "Amazing Lifestyle"
+                        },
+                        content: {
+                            ar: "استمتع بمناخ البحر الأبيض المتوسط والتاريخ العامل والأجواء الطلابية النابضة بالحياة في مدن مثل مدريد وبرشلونة وفالنسيا ومالقة.",
+                            en: "Enjoy a Mediterranean climate, rich history, and a lively student atmosphere in cities like Madrid, Barcelona, Valencia, and Malaga."
+                        },
+                        list: {
+                            ar: [],
+                            en: []
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "الوصول إلى منطقة شنغن",
+                            en: "Schengen Access"
+                        },
+                        content: {
+                            ar: "سافر بحرية عبر 26 دولة أوروبية بتأشيرة طالب إسبانية.",
+                            en: "Travel freely across 26 European countries with a Spanish student visa."
+                        },
+                        list: {
+                            ar: [],
+                            en: []
+                        }
+                    },
+                    {
+                        title: {
+                            ar: "المتطلبات",
+                            en: "Requirements"
+                        },
+                        content: {
+                            ar: "للحصول على تأشيرة الطالب الإسبانية، ستحتاج إلى:",
+                            en: "To obtain a Spanish student visa, you will need:"
                         },
                         list: {
                             ar: [
-                                "الأعمال والاقتصاد والإدارة",
-                                "الهندسة والتكنولوجيا",
-                                "الطب والعلوم الصحية",
-                                "العلوم الإنسانية والاجتماعية",
-                                "الفنون والتصميم والعمارة"
+                                "رسالة قبول من مؤسسة تعليمية إسبانية معترف بها.",
+                                "إثبات الوسائل المالية (600-1000 يورو على الأقل شهريًا حسب المدينة).",
+                                "التأمين الصحي (تغطية كاملة في إسبانيا).",
+                                "سجل جنائي نظيف (شهادة براءة الذمة).",
+                                "شهادة طبية (تؤكد الصحة الجيدة).",
+                                "إثبات السكن (سكن جامعي أو عقد إيجار).",
+                                "نموذج طلب التأشيرة + جواز سفر (ساري المفعول طوال فترة الإقامة)."
                             ],
                             en: [
-                                "Business, Economics and Management",
-                                "Engineering and Technology",
-                                "Medicine and Health Sciences",
-                                "Humanities and Social Sciences",
-                                "Arts, Design and Architecture"
+                                "Letter of Admission from a recognized Spanish educational institution.",
+                                "Proof of Financial Means (at least €600-1,000/month depending on the city).",
+                                "Health Insurance (full coverage in Spain).",
+                                "Clean Criminal Record (police clearance certificate).",
+                                "Medical Certificate (confirming good health).",
+                                "Accommodation Proof (university housing or rental agreement).",
+                                "Visa Application Form + Passport (valid for the entire stay)."
                             ]
                         }
                     }
@@ -3565,8 +3748,8 @@
                     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 ],
                 videos: [
-                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
-                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                    "https://www.youtube.com/embed/6X1uY4aJ0iM", // فيديو عن الدراسة في إسبانيا
+                    "https://www.youtube.com/embed/3b0i2U2Q2zA"  // فيديو عن جامعات إسبانيا
                 ]
             },
             tourist: {
@@ -3576,99 +3759,93 @@
                 },
                 icon: "fas fa-plane",
                 description: {
-                    ar: "نساعدك في الحصول على تأشيرة سياحية لإسبانيا بسهولة ويسر. نقدم إرشادات دقيقة وإعداد المستندات المطلوبة لضمان قبول طلبك.",
-                    en: "We help you obtain a tourist visa for Spain easily and smoothly. We provide precise guidance and preparation of the required documents to ensure your application is accepted."
+                    ar: "إسبانيا هي دولة نابضة بالحياة في جنوب غرب أوروبا، تشتهر بثقافتها الغنية ومناظرها الطبيعية الخلابة ومدنها الحيوية. تشترك في الحدود مع البرتغال وفرنسا وأندورا وتحيط بها البحر الأبيض المتوسط والمحيط الأطلسي.",
+                    en: "Spain is a vibrant country in southwestern Europe, known for its rich culture, stunning landscapes, and lively cities. It shares borders with Portugal, France, and Andorra and is surrounded by the Mediterranean Sea and the Atlantic Ocean."
                 },
                 sections: [
                     {
                         title: {
-                            ar: "خدماتنا للتأشيرة السياحية",
-                            en: "Our Services for Tourist Visa"
+                            ar: "لماذا تختار خدمات التأشيرة لدينا؟",
+                            en: "Why Choose Our Visa Services?"
                         },
                         content: {
-                            ar: "نقدم دعماً كاملاً للحصول على تأشيرة السياحة:",
-                            en: "We provide complete support for obtaining a tourist visa:"
+                            ar: "يمكن أن تكون عملية التقدم بطلب للحصول على التأشيرة معقدة ومستهلكة للوقت ومسببة للتوتر. في الأندلس للهجرة، نبسط العملية، ونقدم مساعدة سريعة وموثوقة ومخصصة للتأشيرات للمسافرين والشركات والمغتربين. سواء كنت تخطط لعطلة أو رحلة عمل أو إعادة توطين، يضمن خبراؤنا تجربة سلسة وخالية من التوتر.",
+                            en: "Navigating visa applications can be complex, time-consuming, and stressful. At Andalusíes Immigration, we simplify the process, offering fast, reliable, and personalized visa assistance for travelers, businesses, and expatriates. Whether you're planning a vacation, business trip, or relocation, our experts ensure a smooth, stress-free experience"
                         },
                         list: {
                             ar: [
-                                "تقييم أهليتك للحصول على التأشيرة",
-                                "إعداد المستندات المطلوبة بدقة",
-                                "ملء استمارات التقديم بشكل صحيح",
-                                "تحديد المواعيد وحجز المقابلات",
-                                "متابعة حالة الطلب حتى صدور التأشيرة"
+                                "إرشاد الخبراء",
+                                "معالجة سريعة",
+                                "آمن 100%",
+                                "حلول مخصصة",
+                                "دعنا نجعل رحلة التأشيرة الخاصة بك سهلة!"
                             ],
                             en: [
-                                "Evaluating your eligibility for the visa",
-                                "Preparing the required documents accurately",
-                                "Filling out the application forms correctly",
-                                "Scheduling appointments and booking interviews",
-                                "Following up on the application status until the visa is issued"
+                                "Expert Guidance",
+                                "Fast Processing",
+                                "100% secure",
+                                "Tailored Solutions",
+                                "Let's Make Your Visa Journey Effortless!"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "المستندات المطلوبة",
-                            en: "Required Documents"
+                            ar: "تشمل خدمات التأشيرة لدينا:",
+                            en: "Our Visa Services Include:"
                         },
                         content: {
-                            ar: "نساعدك في إعداد جميع المستندات اللازمة:",
-                            en: "We help you prepare all the necessary documents:"
+                            ar: "نقدم مجموعة شاملة من خدمات التأشيرة:",
+                            en: "We offer a comprehensive range of visa services:"
                         },
                         list: {
                             ar: [
-                                "جواز سفر ساري المفعول",
-                                "صور شخصية حديثة",
-                                "تأمين سفر صحي",
-                                "حجز طيران وإقامة",
-                                "إثبات القدرة المالية",
-                                "خط سير الرحلة التفصيلي"
+                                "موعد في السفارة",
+                                "إعداد جميع المستندات المطلوبة",
+                                "إعداد الرحلة في إسبانيا مع شركائنا",
+                                "استشارة حول إمكانية الحصول على الإقامة في إسبانيا"
                             ],
                             en: [
-                                "Valid passport",
-                                "Recent personal photos",
-                                "Travel health insurance",
-                                "Flight and accommodation bookings",
-                                "Proof of financial capacity",
-                                "Detailed travel itinerary"
+                                "Appointment in the embassy",
+                                "Prepare all the required documents",
+                                "Prepare the trip in Spain with our partners",
+                                "Consultation for the possibility of residency in Spain"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "أفضل الوجهات السياحية",
-                            en: "Best Tourist Destinations"
+                            ar: "كيف تعمل الخدمة:",
+                            en: "How it works:"
                         },
                         content: {
-                            ar: "نساعدك في التخطيط لزيارة أفضل الوجهات:",
-                            en: "We help you plan visits to the best destinations:"
+                            ar: "عملية بسيطة وفعالة للحصول على التأشيرة:",
+                            en: "Simple and efficient process for obtaining a visa:"
                         },
                         list: {
                             ar: [
-                                "مدريد: المتاحف والقصور الملكية",
-                                "برشلونة: معرض جوجنهايم وكامب نو",
-                                "إشبيلية: القصر الملكي وحي سانتا كروز",
-                                "غرناطة: الحمراء وحي البيازين",
-                                "بلنسية: مدينة الفنون والعلوم"
+                                "الاستشارة – أخبرنا بخطط سفرك",
+                                "إعداد المستندات – نتحقق من طلبك ونقدمه",
+                                "المعالجة والموافقة – تتبع حالة التأشيرة الخاصة بك في الوقت الفعلي.",
+                                "جاهز للسفر! – استلم تأشيرتك دون مفاجآت"
                             ],
                             en: [
-                                "Madrid: Museums and Royal Palaces",
-                                "Barcelona: Guggenheim Museum and Camp Nou",
-                                "Seville: Royal Palace and Santa Cruz Quarter",
-                                "Granada: Alhambra and Albaicín Quarter",
-                                "Valencia: City of Arts and Sciences"
+                                "Consultation – Tell us your travel plans",
+                                "Document Preparation – We verify and submit your application",
+                                "Processing & Approval – Track your visa status in real time.",
+                                "Ready to Travel! – Receive your visa with no surprises"
                             ]
                         }
                     }
                 ],
                 images: [
                     "https://images.unsplash.com/photo-1543783207-ec92e4b52632?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                    "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                    "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                 ],
                 videos: [
-                    "https://www.youtube.com/embed/H-Y7Mds_gnw",
-                    "https://www.youtube.com/embed/9bZkp7q19f0"
+                    "https://www.youtube.com/embed/4J2G9z0eO9s", // فيديو عن السياحة في إسبانيا
+                    "https://www.youtube.com/embed/2d2sV4Xk1Qw"  // فيديو عن التأشيرة السياحية الإسبانية
                 ]
             }
         };
@@ -4160,18 +4337,15 @@
             const mobileLangAr = document.getElementById('mobileLangAr');
             const mobileLangEn = document.getElementById('mobileLangEn');
             const html = document.documentElement;
-
             // Check if there's a saved language preference
             const savedLang = localStorage.getItem('preferredLanguage') || 'ar';
             setLanguage(savedLang);
-
             // Set active language button
             if (savedLang === 'ar') {
                 langAr.classList.add('active');
                 langEn.classList.remove('active');
                 mobileLangAr.classList.add('active');
                 mobileLangEn.classList.remove('active');
-
                 // Show only English button in Arabic mode
                 langAr.style.display = 'none';
                 langEn.style.display = 'flex';
@@ -4182,14 +4356,12 @@
                 langAr.classList.remove('active');
                 mobileLangEn.classList.add('active');
                 mobileLangAr.classList.remove('active');
-
-                // Show only Arabic button in English mode
+                // Show only Arabic button
                 langEn.style.display = 'none';
                 langAr.style.display = 'flex';
                 mobileLangEn.style.display = 'none';
                 mobileLangAr.style.display = 'flex';
             }
-
             // Add event listeners to language buttons
             langAr.addEventListener('click', function () {
                 setLanguage('ar');
@@ -4198,14 +4370,12 @@
                 mobileLangAr.classList.add('active');
                 mobileLangEn.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'ar');
-
                 // Show only English button
                 langAr.style.display = 'none';
                 langEn.style.display = 'flex';
                 mobileLangAr.style.display = 'none';
                 mobileLangEn.style.display = 'flex';
             });
-
             langEn.addEventListener('click', function () {
                 setLanguage('en');
                 langEn.classList.add('active');
@@ -4213,14 +4383,12 @@
                 mobileLangEn.classList.add('active');
                 mobileLangAr.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'en');
-
                 // Show only Arabic button
                 langEn.style.display = 'none';
                 langAr.style.display = 'flex';
                 mobileLangEn.style.display = 'none';
                 mobileLangAr.style.display = 'flex';
             });
-
             // Add event listeners to mobile language buttons
             mobileLangAr.addEventListener('click', function () {
                 setLanguage('ar');
@@ -4229,14 +4397,12 @@
                 mobileLangAr.classList.add('active');
                 mobileLangEn.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'ar');
-
                 // Show only English button
                 langAr.style.display = 'none';
                 langEn.style.display = 'flex';
                 mobileLangAr.style.display = 'none';
                 mobileLangEn.style.display = 'flex';
             });
-
             mobileLangEn.addEventListener('click', function () {
                 setLanguage('en');
                 langEn.classList.add('active');
@@ -4244,19 +4410,16 @@
                 mobileLangEn.classList.add('active');
                 mobileLangAr.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'en');
-
                 // Show only Arabic button
                 langEn.style.display = 'none';
                 langAr.style.display = 'flex';
                 mobileLangEn.style.display = 'none';
                 mobileLangAr.style.display = 'flex';
             });
-
             function setLanguage(lang) {
                 // Set HTML attributes
                 html.setAttribute('lang', lang);
                 html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
                 // Update all elements with data-lang attribute
                 const elements = document.querySelectorAll('[data-lang]');
                 elements.forEach(element => {
@@ -4270,7 +4433,6 @@
                         }
                     }
                 });
-
                 // Update form placeholders
                 const placeholders = document.querySelectorAll('input[placeholder], textarea[placeholder]');
                 placeholders.forEach(element => {
@@ -4279,7 +4441,6 @@
                         element.setAttribute('placeholder', translations[lang][placeholder]);
                     }
                 });
-
                 // Update page title
                 if (lang === 'en') {
                     document.title = "Andalusia Immigration - Spain Residency Services";
