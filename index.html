@@ -1364,6 +1364,45 @@
                 color: white;
             }
 
+            /* Mobile Language Switcher */
+            .mobile-language-switcher {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid rgba(138, 116, 47, 0.2);
+            }
+
+            .mobile-language-switcher .language-btn {
+                background: none;
+                border: 1px solid var(--gold);
+                border-radius: 20px;
+                padding: 5px 10px;
+                margin: 0 3px;
+                cursor: pointer;
+                font-size: 14px;
+                color: var(--black);
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .mobile-language-switcher .language-btn:hover {
+                background-color: rgba(138, 116, 47, 0.1);
+            }
+
+            .mobile-language-switcher .language-btn.active {
+                background-color: var(--gold);
+                color: white;
+            }
+
+            /* Hide desktop language switcher on mobile */
+            .language-switcher {
+                display: none;
+            }
+
             .hero {
                 height: 60vh;
                 min-height: 400px;
@@ -1508,6 +1547,10 @@
             .mobile-social-links {
                 display: none !important;
             }
+
+            .mobile-language-switcher {
+                display: none !important;
+            }
         }
 
         /* Styles for LTR (English) */
@@ -1579,6 +1622,15 @@
                     <a href="https://www.instagram.com/andalusimmigration" target="_blank"><i
                             class="fab fa-instagram"></i></a>
                     <a href="https://t.snapchat.com/RgqJ9H8y" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                </div>
+                <!-- Mobile Language Switcher -->
+                <div class="mobile-language-switcher">
+                    <button class="language-btn" id="mobileLangAr">
+                        <i class="fas fa-globe"></i> AR
+                    </button>
+                    <button class="language-btn" id="mobileLangEn">
+                        <i class="fas fa-globe"></i> EN
+                    </button>
                 </div>
             </nav>
             <div class="social-links">
@@ -2056,14 +2108,12 @@
                 "hero-title": "الأندلس للهجرة",
                 "hero-subtitle": "الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار وسرعة العمل",
                 "hero-btn": "احصل على استشارتك المجانية",
-
                 // Navigation
                 "nav-home": "الرئيسية",
                 "nav-about": "من نحن",
                 "nav-destinations": "الوجهات",
                 "nav-services": "الخدمات",
                 "nav-contact": "اتصل بنا",
-
                 // Values Section
                 "values-title": "قيمنا",
                 "values-transparency-title": "الشفافية والجودة",
@@ -2072,7 +2122,6 @@
                 "values-customization-desc": "نقدم حلولاً مخصصة تناسب احتياجات كل عميل مع اهتمام فردي فائق",
                 "values-innovation-title": "الابتكار وسرعة العمل",
                 "values-innovation-desc": "نستخدم أحدث التقنيات والأساليب المبتكرة لضمان سرعة إنجاز معاملاتكم",
-
                 // About Section
                 "about-title": "من نحن",
                 "about-company": "الأندلس للهجرة",
@@ -2080,7 +2129,6 @@
                 "about-desc-2": "خبرة موثوقة بناها سنوات من النجاح في مجال الإقامة والاستشارات في إسبانيا. شبكة واسعة من الشراكات مع وكالات الخدمات ووكلاء العقارات والبنوك في إسبانيا.",
                 "about-desc-3": "نجاحك هو أولويتنا. نتابع طلبك بعد الموافقة على الإقامة. نسعى لبناء علاقة دائمة حتى بعد تنفيذ شروط الاتفاقية، علاقة تتطور إلى صداقة تنتج مشاريع مفيدة على جميع المستويات.",
                 "about-btn": "اكتشف خدماتنا",
-
                 // Destinations Section
                 "destinations-title": "اختر وجهتك",
                 "dest-madrid": "مدريد... قلب إسبانيا",
@@ -2089,7 +2137,6 @@
                 "dest-seville": "إشبيلية.. روح الأندلس",
                 "dest-malaga": "مالقة.. كوستا ديل سول",
                 "dest-alicante": "أليكانتي.. مدينة التقاليد",
-
                 // Services Section
                 "services-title": "خدماتنا",
                 "service-residency-title": "الإقامة",
@@ -2101,7 +2148,6 @@
                 "service-tourist-title": "تأشيرة سياحية",
                 "service-tourist-desc": "زر أماكن جديدة لاكتشافها بتأشيرة سياحية. نسلم لك المستندات اللازمة بسرعة وكفاءة.",
                 "service-more": "المزيد",
-
                 // Why Spain Section
                 "why-spain-title": "لماذا إسبانيا؟",
                 "why-spain-subtitle": "إسبانيا واحدة من أكثر الدول جاذبية لمن يبحثون عن جودة حياة عالية",
@@ -2113,7 +2159,6 @@
                 "why-people-desc": "العيش في إسبانيا يعني تبني ثقافة يأتي فيها الناس أولاً. بفضل الشعور القوي بالانتماء للمجتمع، أصبحت إسبانيا مكاناً رائعاً لندعوه وطناً.",
                 "why-infrastructure-title": "بنية تحتية ممتازة",
                 "why-infrastructure-desc": "من القطارات السريعة إلى الرعاية الصحية الممتازة والاتصال الرقمي، فإن البنية التحتية لإسبانيا تجعل الحياة اليومية مريحة وسهلة.",
-
                 // FAQ Section
                 "faq-title": "الأسئلة الشائعة",
                 "faq-q1": "كم من الوقت يستغرق معالجة طلب الإقامة الإسبانية؟",
@@ -2138,7 +2183,6 @@
                 "faq-a4-3": "سنقدم لك خطة عمل مخصصة وفقًا لوضعك.",
                 "faq-a4-4": "بعد موافقتك، سنبدأ في تقديم الخدمات المتفق عليها.",
                 "faq-a4-5": "سنواصل معك طوال العملية حتى تحقيق أهدافك.",
-
                 // Contact Section
                 "contact-title": "اتصل بنا",
                 "contact-form-title": "ارسل لنا رسالة",
@@ -2150,7 +2194,6 @@
                 "contact-info-subtitle": "اتصل بنا الآن وسنكون سعداء بمساعدتك في أي استفسارات تتعلق بالهجرة إلى إسبانيا أو خدماتنا.",
                 "contact-phone-title": "الهاتف",
                 "contact-email-title": "البريد الإلكتروني",
-
                 // Form Fields
                 "form-name": "الاسم",
                 "form-phone": "رقم الهاتف",
@@ -2164,23 +2207,19 @@
                 "form-study": "الدراسة في إسبانيا",
                 "form-tourist": "تأشيرة سياحية",
                 "form-submit": "إرسال الطلب",
-
                 // Consultation Popup
                 "consultation-title": "استشارة مجانية",
                 "consultation-subtitle": "املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن",
-
                 // Newsletter Section
                 "newsletter-title": "النشرة الإخبارية",
                 "newsletter-subtitle": "انتظر إعلان النشرة الإخبارية لمتابعة أحدث الأخبار!",
                 "newsletter-submit": "اشترك",
-
                 // City Details
                 "city-overview": "نظرة عامة",
                 "city-images": "صور المدينة",
                 "city-videos": "فيديوهات توضيحية",
                 "city-consultation": "احصل على استشارة مجانية",
                 "city-close": "إغلاق",
-
                 // Service Details
                 "service-overview": "نظرة عامة",
                 "service-images": "صور الخدمة",
@@ -2193,14 +2232,12 @@
                 "hero-title": "Andalusia Immigration",
                 "hero-subtitle": "Transparency and Quality, Customization and Individual Attention, Innovation and Speed",
                 "hero-btn": "Get Your Free Consultation",
-
                 // Navigation
                 "nav-home": "Home",
                 "nav-about": "About Us",
                 "nav-destinations": "Destinations",
                 "nav-services": "Services",
                 "nav-contact": "Contact Us",
-
                 // Values Section
                 "values-title": "Our Values",
                 "values-transparency-title": "Transparency and Quality",
@@ -2209,7 +2246,6 @@
                 "values-customization-desc": "We offer customized solutions to suit each client's needs with exceptional individual attention",
                 "values-innovation-title": "Innovation and Speed",
                 "values-innovation-desc": "We use the latest technologies and innovative methods to ensure the speed of processing your transactions",
-
                 // About Section
                 "about-title": "About Us",
                 "about-company": "Andalusia Immigration",
@@ -2217,7 +2253,6 @@
                 "about-desc-2": "Reliable experience built by years of success in the field of residency and consultations in Spain. A wide network of partnerships with service agencies, real estate agents, and banks in Spain.",
                 "about-desc-3": "Your success is our priority. We follow up on your request after the residency is approved. We seek to build a permanent relationship even after implementing the terms of the agreement, a relationship that develops into friendship that produces beneficial projects at all levels.",
                 "about-btn": "Discover Our Services",
-
                 // Destinations Section
                 "destinations-title": "Choose Your Destination",
                 "dest-madrid": "Madrid... The Heart of Spain",
@@ -2226,7 +2261,6 @@
                 "dest-seville": "Seville.. The Spirit of Andalusia",
                 "dest-malaga": "Malaga.. Costa del Sol",
                 "dest-alicante": "Alicante.. City of Traditions",
-
                 // Services Section
                 "services-title": "Our Services",
                 "service-residency-title": "Residency",
@@ -2238,7 +2272,6 @@
                 "service-tourist-title": "Tourist Visa",
                 "service-tourist-desc": "Visit new places to discover with a tourist visa. We deliver the necessary documents to you quickly and efficiently.",
                 "service-more": "More",
-
                 // Why Spain Section
                 "why-spain-title": "Why Spain?",
                 "why-spain-subtitle": "Spain is one of the most attractive countries for those looking for a high quality of life",
@@ -2250,7 +2283,6 @@
                 "why-people-desc": "Living in Spain means embracing a culture where people come first. Thanks to the strong sense of community, Spain has become a great place to call home.",
                 "why-infrastructure-title": "Excellent Infrastructure",
                 "why-infrastructure-desc": "From high-speed trains to excellent healthcare and digital connectivity, Spain's infrastructure makes daily life comfortable and easy.",
-
                 // FAQ Section
                 "faq-title": "Frequently Asked Questions",
                 "faq-q1": "How long does it take to process a Spanish residency application?",
@@ -2275,7 +2307,6 @@
                 "faq-a4-3": "We will provide you with a customized work plan according to your situation.",
                 "faq-a4-4": "After your approval, we will start providing the agreed services.",
                 "faq-a4-5": "We will follow up with you throughout the process until your goals are achieved.",
-
                 // Contact Section
                 "contact-title": "Contact Us",
                 "contact-form-title": "Send us a message",
@@ -2287,7 +2318,6 @@
                 "contact-info-subtitle": "Contact us now and we will be happy to help you with any inquiries related to immigration to Spain or our services.",
                 "contact-phone-title": "Phone",
                 "contact-email-title": "Email",
-
                 // Form Fields
                 "form-name": "Full Name",
                 "form-phone": "Phone Number",
@@ -2301,23 +2331,19 @@
                 "form-study": "Study in Spain",
                 "form-tourist": "Tourist Visa",
                 "form-submit": "Submit Request",
-
                 // Consultation Popup
                 "consultation-title": "Free Consultation",
                 "consultation-subtitle": "Fill out the form below and we will contact you as soon as possible",
-
                 // Newsletter Section
                 "newsletter-title": "Newsletter",
                 "newsletter-subtitle": "Stay tuned for the newsletter announcement to follow the latest news!",
                 "newsletter-submit": "Subscribe",
-
                 // City Details
                 "city-overview": "Overview",
                 "city-images": "City Images",
                 "city-videos": "Informational Videos",
                 "city-consultation": "Get a Free Consultation",
                 "city-close": "Close",
-
                 // Service Details
                 "service-overview": "Overview",
                 "service-images": "Service Images",
@@ -2326,7 +2352,6 @@
                 "service-close": "Close"
             }
         };
-
         // بيانات المدن التفصيلية
         const citiesData = {
             madrid: {
@@ -3647,7 +3672,6 @@
                 ]
             }
         };
-
         // Mobile Navigation
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -3675,7 +3699,6 @@
                 });
             });
         });
-
         // FAQ Accordion
         document.addEventListener('DOMContentLoaded', function () {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -3693,7 +3716,6 @@
                 });
             });
         });
-
         // Consultation Popup Form
         document.addEventListener('DOMContentLoaded', function () {
             const consultationBtn = document.getElementById('consultationBtn');
@@ -3774,7 +3796,6 @@
                     });
             });
         });
-
         // City Details Popup
         document.addEventListener('DOMContentLoaded', function () {
             const destCards = document.querySelectorAll('.dest-card');
@@ -3882,7 +3903,6 @@
                 }
             });
         });
-
         // Service Details Popup
         document.addEventListener('DOMContentLoaded', function () {
             const serviceDetailsBtns = document.querySelectorAll('.service-details-btn');
@@ -3992,7 +4012,6 @@
                 }
             });
         });
-
         // Contact Form
         document.addEventListener('DOMContentLoaded', function () {
             const contactForm = document.getElementById('contactForm');
@@ -4042,7 +4061,6 @@
                     });
             });
         });
-
         // Newsletter Form
         document.addEventListener('DOMContentLoaded', function () {
             const newsletterForm = document.getElementById('newsletterForm');
@@ -4112,7 +4130,6 @@
                     });
             });
         });
-
         // Smooth scrolling for all anchor links
         document.addEventListener('DOMContentLoaded', function () {
             // Get all anchor links
@@ -4136,11 +4153,12 @@
                 });
             });
         });
-
         // Language Switcher
         document.addEventListener('DOMContentLoaded', function () {
             const langAr = document.getElementById('langAr');
             const langEn = document.getElementById('langEn');
+            const mobileLangAr = document.getElementById('mobileLangAr');
+            const mobileLangEn = document.getElementById('mobileLangEn');
             const html = document.documentElement;
 
             // Check if there's a saved language preference
@@ -4151,9 +4169,25 @@
             if (savedLang === 'ar') {
                 langAr.classList.add('active');
                 langEn.classList.remove('active');
+                mobileLangAr.classList.add('active');
+                mobileLangEn.classList.remove('active');
+
+                // Show only English button in Arabic mode
+                langAr.style.display = 'none';
+                langEn.style.display = 'flex';
+                mobileLangAr.style.display = 'none';
+                mobileLangEn.style.display = 'flex';
             } else {
                 langEn.classList.add('active');
                 langAr.classList.remove('active');
+                mobileLangEn.classList.add('active');
+                mobileLangAr.classList.remove('active');
+
+                // Show only Arabic button in English mode
+                langEn.style.display = 'none';
+                langAr.style.display = 'flex';
+                mobileLangEn.style.display = 'none';
+                mobileLangAr.style.display = 'flex';
             }
 
             // Add event listeners to language buttons
@@ -4161,14 +4195,61 @@
                 setLanguage('ar');
                 langAr.classList.add('active');
                 langEn.classList.remove('active');
+                mobileLangAr.classList.add('active');
+                mobileLangEn.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'ar');
+
+                // Show only English button
+                langAr.style.display = 'none';
+                langEn.style.display = 'flex';
+                mobileLangAr.style.display = 'none';
+                mobileLangEn.style.display = 'flex';
             });
 
             langEn.addEventListener('click', function () {
                 setLanguage('en');
                 langEn.classList.add('active');
                 langAr.classList.remove('active');
+                mobileLangEn.classList.add('active');
+                mobileLangAr.classList.remove('active');
                 localStorage.setItem('preferredLanguage', 'en');
+
+                // Show only Arabic button
+                langEn.style.display = 'none';
+                langAr.style.display = 'flex';
+                mobileLangEn.style.display = 'none';
+                mobileLangAr.style.display = 'flex';
+            });
+
+            // Add event listeners to mobile language buttons
+            mobileLangAr.addEventListener('click', function () {
+                setLanguage('ar');
+                langAr.classList.add('active');
+                langEn.classList.remove('active');
+                mobileLangAr.classList.add('active');
+                mobileLangEn.classList.remove('active');
+                localStorage.setItem('preferredLanguage', 'ar');
+
+                // Show only English button
+                langAr.style.display = 'none';
+                langEn.style.display = 'flex';
+                mobileLangAr.style.display = 'none';
+                mobileLangEn.style.display = 'flex';
+            });
+
+            mobileLangEn.addEventListener('click', function () {
+                setLanguage('en');
+                langEn.classList.add('active');
+                langAr.classList.remove('active');
+                mobileLangEn.classList.add('active');
+                mobileLangAr.classList.remove('active');
+                localStorage.setItem('preferredLanguage', 'en');
+
+                // Show only Arabic button
+                langEn.style.display = 'none';
+                langAr.style.display = 'flex';
+                mobileLangEn.style.display = 'none';
+                mobileLangAr.style.display = 'flex';
             });
 
             function setLanguage(lang) {
