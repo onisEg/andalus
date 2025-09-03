@@ -878,32 +878,6 @@
             transform: scale(1.05);
         }
 
-        .service-videos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .service-video {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-
         .service-cta {
             text-align: center;
             margin-top: 30px;
@@ -1582,8 +1556,7 @@
                 padding: 20px;
             }
 
-            .service-media,
-            .service-videos {
+            .service-media {
                 grid-template-columns: 1fr;
             }
         }
@@ -2268,7 +2241,6 @@
                 // Service Details
                 "service-overview": "نظرة عامة",
                 "service-images": "صور الخدمة",
-                "service-videos": "فيديوهات توضيحية",
                 "service-consultation": "احصل على استشارة مجانية",
                 "service-close": "إغلاق",
                 // Copyright
@@ -2395,7 +2367,6 @@
                 // Service Details
                 "service-overview": "Overview",
                 "service-images": "Service Images",
-                "service-videos": "Informational Videos",
                 "service-consultation": "Get a Free Consultation",
                 "service-close": "Close",
                 // Copyright
@@ -3307,7 +3278,7 @@
                     }
                 ],
                 images: [
-                    "https://www.servigroup.com/assets/cache/uploads/gallery/proposals/excursiones/que-ver-alicante/1280x720/explanada-paseo-alicante.jpg",
+                    "https://www.servigroup.com/assets/cache/uploads/gallery/proposals/excursions/que-ver-alicante/1280x720/explanada-paseo-alicante.jpg",
                     "https://media.brate.com/images/europa/hiszpania/alicante/alicante-6.jpeg?tr=n-open_graph",
                     "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/50000/50801-Alicante.jpg"
                 ],
@@ -3526,14 +3497,9 @@
                     }
                 ],
                 images: [
-                    "https://lifestylegroup.es/wp-content/uploads/2022/07/spanish_EU_residency_certificate.jpg",
+                    "https://assets.thelocal.com/cdn-cgi/rs:fit:850/quality:75/plain/https://apiwp.thelocal.com/wp-content/uploads/2024/07/renew-long-term-residency-card-spain.jpg@webp",
                     "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-                    "https://lusalegal.es/wp-content/uploads/2023/04/%D0%A0%D0%95%D0%97%D0%98%D0%94%D0%95%D0%9D%D0%A6%D0%98%D0%AF_%D0%92_%D0%98%D0%A1%D0%9F%D0%90%D0%9D%D0%98%D0%98_%D0%94%D0%9B%D0%AF_%D0%9E%D0%A1%D0%9D%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%95%D0%99_%D0%A1%D0%A2%D0%90%D0%A0%D0%A2%D0%90%D0%9F%D0%9E%D0%92-1024x600.jpg"
-                ],
-                videos: [
-                    "https://www.youtube.com/embed/5gV2m0M4xYI", // فيديو عن الإقامة في إسبانيا
-                    "https://www.youtube.com/embed/8Q1s2b4dY4w"  // فيديو عن أنواع الإقامة في إسبانيا
-                ]
+                    "https://thrillingtravel.in/wp-content/uploads/2017/12/British-Residency-Lucknow-Tourist-Attraction.jpg"]
             },
             "real-estate": {
                 title: {
@@ -3633,10 +3599,6 @@
                     "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                ],
-                videos: [
-                    "https://www.youtube.com/embed/1x9v1XkQc1k", // فيديو عن الاستثمار العقاري في إسبانيا
-                    "https://www.youtube.com/embed/7nYvL4gK1i8"  // فيديو عن سوق العقارات في إسبانيا
                 ]
             },
             study: {
@@ -3781,10 +3743,6 @@
                     "https://www.schengenvisas.com/wp-content/uploads/2021/02/Requirements-to-study-in-Spain-scaled.jpg",
                     "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://metaapply.io/wp-content/uploads/2025/05/Spain-Student-Visa-Your-Ultimate-Guide-to-Studying-in-Spain.webp"
-                ],
-                videos: [
-                    "https://www.youtube.com/embed/6X1uY4aJ0iM", // فيديو عن الدراسة في إسبانيا
-                    "https://www.youtube.com/embed/3b0i2U2Q2zA"  // فيديو عن جامعات إسبانيا
                 ]
             },
             tourist: {
@@ -3877,10 +3835,6 @@
                     "https://www.spanishsolutions.net/wp-content/uploads/2021/09/non_lucrative_visa_spain_uk.jpg",
                     "https://www.goindigo.in/content/dam/indigov2/6e-website/header/visa/Spain-Mweb.jpg",
                     "https://www.nimextranjeria.com/wp-content/uploads/2025/05/what-is-iprem-1024x683.webp"
-                ],
-                videos: [
-                    "https://www.youtube.com/embed/SCujFidl-9g", // فيديو عن السياحة في إسبانيا
-                    "https://www.youtube.com/embed/ZicMQVaEVRk"  // فيديو عن التأشيرة السياحية الإسبانية
                 ]
             }
         };
@@ -3888,7 +3842,6 @@
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mainNav = document.getElementById('mainNav');
-
             mobileMenuBtn.addEventListener('click', function () {
                 mainNav.classList.toggle('active');
                 // Change icon
@@ -3901,7 +3854,6 @@
                     icon.classList.add('fa-bars');
                 }
             });
-
             // Close menu when clicking on a link
             const navLinks = mainNav.querySelectorAll('a');
             navLinks.forEach(link => {
@@ -3912,7 +3864,6 @@
                     icon.classList.add('fa-bars');
                 });
             });
-
             // Close menu when clicking outside
             document.addEventListener('click', function (event) {
                 if (!mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target) && mainNav.classList.contains('active')) {
@@ -4178,21 +4129,6 @@
                                     <div class="service-media">
                                         ${service.images.map(img => `
                                             <img src="${img}" alt="${service.title[currentLang]}" loading="lazy">
-                                        `).join('')}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        // Add videos
-                        if (service.videos && service.videos.length > 0) {
-                            contentHTML += `
-                                <div class="service-details-section">
-                                    <h3>${translations[currentLang]['service-videos']}</h3>
-                                    <div class="service-videos">
-                                        ${service.videos.map(video => `
-                                            <div class="service-video">
-                                                <iframe src="${video}" frameborder="0" allowfullscreen></iframe>
-                                            </div>
                                         `).join('')}
                                     </div>
                                 </div>
