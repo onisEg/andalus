@@ -876,13 +876,6 @@
 
         .service-details-section {
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(138, 116, 47, 0.1);
-        }
-
-        .service-details-section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
         }
 
         .service-details-section h3 {
@@ -893,25 +886,18 @@
             padding-bottom: 10px;
         }
 
-        .service-details-section h5 {
-            font-size: 20px;
-            color: var(--gold);
-            margin: 15px 0 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 8px;
+        .service-details-section h4 {
+            font-size: 18px;
+            color: var(--black);
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
-        .service-details-section h5::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--gold);
+        .service-details-section h6 {
+            font-size: 16px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .service-details-section p {
@@ -931,16 +917,6 @@
             line-height: 1.8;
             color: #333;
             margin-bottom: 8px;
-            padding-right: 20px;
-        }
-
-        .service-details-section li ul {
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .service-details-section li ul li {
-            margin-bottom: 6px;
         }
 
         .service-media {
@@ -969,32 +945,7 @@
         }
 
         .service-cta .btn {
-            margin: 10px;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .service-cta .btn:first-child {
-            background-color: var(--gold);
-            color: white;
-            border: 2px solid var(--gold);
-        }
-
-        .service-cta .btn:first-child:hover {
-            background-color: transparent;
-            color: var(--gold);
-        }
-
-        .service-cta .btn:last-child {
-            background-color: transparent;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-
-        .service-cta .btn:last-child:hover {
-            background-color: var(--gold);
-            color: white;
+            margin: 0 10px;
         }
 
         /* Why Spain Section */
@@ -1670,18 +1621,6 @@
             .service-media {
                 grid-template-columns: 1fr;
             }
-
-            /* Mobile responsive for h5 */
-            .service-details-section h5 {
-                font-size: 18px;
-                margin: 12px 0 8px;
-            }
-
-            .service-details-section li {
-                font-size: 15px;
-                line-height: 1.7;
-                padding-right: 15px;
-            }
         }
 
         /* إخفاء أيقونات الموبايل في سطح المكتب */
@@ -1734,16 +1673,6 @@
         html[dir="ltr"] .close-popup {
             left: auto;
             right: 15px;
-        }
-
-        html[dir="ltr"] .service-details-section h5::after {
-            right: auto;
-            left: 0;
-        }
-
-        html[dir="ltr"] .service-details-section li {
-            padding-right: 0;
-            padding-left: 20px;
         }
     </style>
 </head>
@@ -1810,7 +1739,8 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h2 class="hero-title" data-lang="hero-title">الأندلس للهجرة</h2>
-            <p class="hero-subtitle" data-lang="hero-subtitle">بوابتك لحياة جديدة في إسبانيا</p>
+            <p class="hero-subtitle" data-lang="hero-subtitle">الشفافية والجودة، التخصيص والاهتمام الفردي، الابتكار
+                وسرعة العمل</p>
             <button class="btn" id="consultationBtn" data-lang="hero-btn">احصل على استشارتك </button>
         </div>
     </section>
@@ -1957,7 +1887,7 @@
                         alt="أليكانتي"
                         onerror="this.src='https://via.placeholder.com/400x300/8a742f/ffffff?text=أليكانتي'">
                     <div class="dest-info">
-                        <h3 data-lang="dest-alicante">أليكانتي.. مدينة التقاليد</h3>
+                        <h3 data-lang="dest-alicante">أليكانتي: مدينة البحر والابتكار</h3>
                     </div>
                 </div>
             </div>
@@ -2284,7 +2214,7 @@
                 "dest-valencia": "فالنسيا.. جوهرة البحر المتوسط",
                 "dest-seville": "إشبيلية.. روح الأندلس",
                 "dest-malaga": "ملقة.. ساحل الشمس",
-                "dest-alicante": "أليكانتي.. مدينة التقاليد",
+                "dest-alicante": "أليكانتي: مدينة البحر والابتكار",
                 // Services Section
                 "services-title": "خدماتنا",
                 "service-residency-title": "الإقامة",
@@ -2410,7 +2340,7 @@
                 "dest-valencia": "Valencia.. Jewel of the Mediterranean",
                 "dest-seville": "Seville.. The Spirit of Andalusia",
                 "dest-malaga": "Malaga.. Costa del Sol",
-                "dest-alicante": "Alicante.. City of Traditions",
+                "dest-alicante": "Alicante: City of Sea and Innovation",
                 // Services Section
                 "services-title": "Our Services",
                 "service-residency-title": "Residency",
@@ -2514,7 +2444,7 @@
                 icon: "fas fa-city",
                 description: {
                     ar: "مدريد هي عاصمة إسبانيا وأكبر مدنها، وتقع في قلب شبه الجزيرة الأيبيرية. تجمع بين التاريخ الملكي والفن العالمي والحياة الليلية النابضة بالحياة والاقتصاد المزدهر. بفضل ثقافتها النابضة بالحياة وأجوائها المفعمة بالحيوية، تُعدّ مدريد وجهةً مثاليةً للسافرين وراغبي الاقامة.",
-                    en: "Madrid is the capital and largest city of Spain, located in the heart of the Iberian Peninsula. It combines royal history, world-class art, vibrant nightlife, and a prosperous economy. Thanks to its vibrant culture and lively atmosphere, Madrid is an ideal destination for travelers and those seeking residency."
+                    en: "Madrid is the capital and largest city of Spain, located in the heart of the Iberian Peninsula. It combines royal history, world-class art, vibrant nightlife, and a thriving economy. Thanks to its vibrant culture and lively atmosphere, Madrid is an ideal destination for travelers and those seeking residency."
                 },
                 sections: [
                     {
@@ -2523,19 +2453,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "مدريد هي عاصمة إسبانيا وأكبر مدنها، وتقع في قلب شبه الجزيرة الأيبيرية. تجمع بين التاريخ الملكي والفن العالمي والحياة الليلية النابضة بالحياة والاقتصاد المزدهر. بفضل ثقافتها النابضة بالحياة وأجوائها المفعمة بالحيوية، تُعدّ مدريد وجهةً مثاليةً للسافرين وراغبي الاقامة.",
-                            en: "Madrid is the capital and largest city of Spain, located in the heart of the Iberian Peninsula. It combines royal history, world-class art, vibrant nightlife, and a prosperous economy. Thanks to its vibrant culture and lively atmosphere, Madrid is an ideal destination for travelers and those seeking residency."
+                            ar: "مدريد هي عاصمة إسبانيا وأكبر مدنها، وتقع في قلب شبه الجزيرة الأيبيرية. تجمع بين التاريخ الملكي والفن العالمي والحياة الليلية النابضة بالحياة والاقتصاد المزدهر.",
+                            en: "Madrid is the capital and largest city of Spain, located in the heart of the Iberian Peninsula. It combines royal history, world-class art, vibrant nightlife, and a thriving economy."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 3.3 مليون نسمة",
                                 "المساحة: 604.3 كم²",
-                                "اللغة الرسمية: الإسبانية"
+                                "اللغة الرسمية: الإسبانية",
+                                "مركز ثقافي واقتصادي مهم",
+                                "وجهة سياحية عالمية"
                             ],
                             en: [
                                 "Population: Over 3.3 million inhabitants",
                                 "Area: 604.3 km²",
-                                "Official Language: Spanish"
+                                "Official Language: Spanish",
+                                "Important cultural and economic center",
+                                "Global tourist destination"
                             ]
                         }
                     },
@@ -2567,89 +2501,27 @@
                     },
                     {
                         title: {
-                            ar: "الجوانب الاقتصادية",
-                            en: "Economic Aspects"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "تمثل مدريد مركزًا اقتصاديًا رئيسيًا في إسبانيا وأوروبا:",
-                            en: "Madrid represents a major economic center in Spain and Europe:"
+                            ar: "توفر مدريد فرصاً استثمارية متنوعة في قطاعات مختلفة:",
+                            en: "Madrid offers diverse investment opportunities in various sectors:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي والثقل الاقتصادي:",
-                                "- تمثل مدريد حوالي 19% من الناتج المحلي الإجمالي لإسبانيا، مما يجعلها أغنى منطقة في البلاد",
-                                "- يتجاوز ناتجها المحلي الإجمالي (الاسمي) 230 مليار يورو",
-                                "- يبلغ نصيب الفرد من الناتج المحلي الإجمالي 34.000 يورو",
-                                "",
-                                "القطاعات الاقتصادية الرئيسية:",
-                                "- التمويل والخدمات المصرفية: المركز المالي لإسبانيا، حيث تستضيف بورصة مدريد وبنوكًا رئيسية",
-                                "- السياحة: واحدة من أفضل الوجهات في أوروبا (8 ملايين سائح دولي سنويًا)",
-                                "- الخدمات المهنية: مركز لشركات الاستشارات والقانون والتكنولوجيا",
-                                "- الفضاء والدفاع: شركات كبرى مثل إيرباص وإندرا وآي تي بي إيرو",
-                                "- السيارات: مصانع رينو ومرسيدس-بنز ونيسان",
-                                "- التكنولوجيا والشركات الناشئة: بيئة الأعمال الناشئة الرائدة في إسبانيا",
-                                "- البناء والعقارات (8%)",
-                                "",
-                                "التوظيف وسوق العمل:",
-                                "- البطالة: 10% (أقل من متوسط إسبانيا البالغ 12%)",
-                                "- قطاعات العمل الرئيسية: المالية، وتكنولوجيا المعلومات، والسياحة، والإدارة العامة",
-                                "- قوى عاملة ماهرة: تضم جامعات مرموقة",
-                                "",
-                                "مركز للاستثمار الأجنبي والأعمال:",
-                                "- 40% من الشركات متعددة الجنسيات في إسبانيا لديها مقرات رئيسية في مدريد",
-                                "- جاذبة للاستثمار الأجنبي المباشر: بفضل بنيتها التحتية، وتوافر المواهب، وسهولة الوصول إلى أسواق الاتحاد الأوروبي",
-                                "- المناطق الاقتصادية الخاصة: تقدم منطقة مدريد الجنوبية حوافز ضريبية للشركات"
+                                "العقارات: سوق عقاري نشط خاصة في المناطق المركزية",
+                                "التكنولوجيا: حاضنات أعمال ومراكز ابتكار",
+                                "السياحة: فنادق ومطاعم وخدمات سياحية",
+                                "التعليم: مدارس وجامعات خاصة",
+                                "الرعاية الصحية: عيادات ومستشفيات متخصصة"
                             ],
                             en: [
-                                "GDP and Economic Weight:",
-                                "- Madrid represents about 19% of Spain's GDP, making it the richest region in the country",
-                                "- Its GDP (nominal) exceeds 230 billion euros",
-                                "- GDP per capita is 34,000 euros",
-                                "",
-                                "Main Economic Sectors:",
-                                "- Finance and Banking: Spain's financial center, hosting the Madrid Stock Exchange and major banks",
-                                "- Tourism: One of Europe's top destinations (8 million international tourists annually)",
-                                "- Professional Services: A hub for consulting, legal, and technology companies",
-                                "- Aerospace and Defense: Major companies like Airbus, Indra, and ITp",
-                                "- Automotive: Factories of Renault, Mercedes-Benz, and Nissan",
-                                "- Technology and Startups: Spain's leading startup ecosystem",
-                                "- Construction and Real Estate (8%)",
-                                "",
-                                "Employment and Labor Market:",
-                                "- Unemployment: 10% (lower than Spain's average of 12%)",
-                                "- Main employment sectors: Finance, IT, Tourism, Public Administration",
-                                "- Skilled workforce: Home to prestigious universities",
-                                "",
-                                "Center for Foreign Investment and Business:",
-                                "- 40% of multinationals in Spain have their headquarters in Madrid",
-                                "- Attractive for foreign direct investment: Thanks to its infrastructure, talent availability, and access to EU markets",
-                                "- Special Economic Zones: Southern Madrid offers tax incentives for companies"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم مدريد بعضاً من أفضل الجامعات والمعاهد التعليمية في إسبانيا وأوروبا:",
-                            en: "Madrid is home to some of the best universities and educational institutions in Spain and Europe:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة كمبلوتنسي: واحدة من أقدم وأكبر الجامعات في العالم",
-                                "جامعة كارلوس الثالث: متخصصة في الدراسات العليا والبحث العلمي",
-                                "جامعة بوليتكنيكا مدريد: متخصصة في الهندسة والتكنولوجيا",
-                                "معهد الأعمال (IE): واحد من أفضل مدارس الأعمال في العالم",
-                                "العديد من المدارس الدولية المتاحة للطلاب الأجانب"
-                            ],
-                            en: [
-                                "Complutense University: One of the oldest and largest universities in the world",
-                                "Carlos III University: Specialized in postgraduate studies and scientific research",
-                                "Polytechnic University of Madrid: Specialized in engineering and technology",
-                                "IE Business School: One of the best business schools in the world",
-                                "Many international schools available for foreign students"
+                                "Real Estate: Active real estate market especially in central areas",
+                                "Technology: Business incubators and innovation centers",
+                                "Tourism: Hotels, restaurants and tourist services",
+                                "Education: Private schools and universities",
+                                "Healthcare: Specialized clinics and hospitals"
                             ]
                         }
                     }
@@ -2672,7 +2544,7 @@
                 icon: "fas fa-landmark",
                 description: {
                     ar: "برشلونة هي ثاني أكبر مدينة في إسبانيا وعاصمة إقليم كاتالونيا، وهي مدينة ساحلية خلابة تمزج بين العمارة الحديثة والتاريخ الغني والاقتصاد القوي. تشتهر بروحها الفنية، وشغفها بكرة القدم، وسحرها المتوسطي. إنها واحدة من أفضل الوجهات الأوروبية.",
-                    en: "Barcelona is the second largest city in Spain and the capital of Catalonia, a stunning coastal city that blends modern architecture, rich history, and a strong economy. It is famous for its artistic spirit, passion for football, and Mediterranean charm. It is one of Europe's premier destinations."
+                    en: "Barcelona is the second largest city in Spain and the capital of Catalonia, a stunning coastal city that blends modern architecture, rich history, and a strong economy. It is famous for its artistic spirit, passion for football, and Mediterranean charm. It is one of Europe's top destinations."
                 },
                 sections: [
                     {
@@ -2681,19 +2553,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "برشلونة هي ثاني أكبر مدينة في إسبانيا وعاصمة إقليم كاتالونيا، وهي مدينة ساحلية خلابة تمزج بين العمارة الحديثة والتاريخ الغني والاقتصاد القوي. تشتهر بروحها الفنية، وشغفها بكرة القدم، وسحرها المتوسطي. إنها واحدة من أفضل الوجهات الأوروبية.",
-                            en: "Barcelona is the second largest city in Spain and the capital of Catalonia, a stunning coastal city that blends modern architecture, rich history, and a strong economy. It is famous for its artistic spirit, passion for football, and Mediterranean charm. It is one of Europe's premier destinations."
+                            ar: "برشلونة هي ثاني أكبر مدينة في إسبانيا وعاصمة إقليم كاتالونيا، وهي مدينة ساحلية خلابة تمزج بين العمارة الحديثة والتاريخ الغني والاقتصاد القوي.",
+                            en: "Barcelona is the second largest city in Spain and the capital of Catalonia, a stunning coastal city that blends modern architecture, rich history, and a strong economy."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 1.6 مليون نسمة",
                                 "المساحة: 101.9 كم²",
-                                "اللغات الرسمية: الإسبانية والكاتالانية"
+                                "اللغات الرسمية: الإسبانية والكاتالانية",
+                                "مركز تجاري وسياحي عالمي",
+                                "واحدة من أهم المدن الأوروبية"
                             ],
                             en: [
                                 "Population: Over 1.6 million inhabitants",
                                 "Area: 101.9 km²",
-                                "Official Languages: Spanish and Catalan"
+                                "Official Languages: Spanish and Catalan",
+                                "Global commercial and tourist center",
+                                "One of the most important European cities"
                             ]
                         }
                     },
@@ -2725,107 +2601,27 @@
                     },
                     {
                         title: {
-                            ar: "مركز اقتصادي وتجاري",
-                            en: "Economic and Commercial Center"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "برشلونة هي مركز اقتصادي وتجاري هام في أوروبا:",
-                            en: "Barcelona is an important economic and commercial center in Europe:"
+                            ar: "توفر برشلونة فرصاً استثمارية متنوعة بفضل اقتصادها القوي:",
+                            en: "Barcelona offers diverse investment opportunities thanks to its strong economy:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي: يساهم بحوالي 19% من الناتج المحلي الإجمالي لكتالونيا (أكثر من 80 مليار يورو)",
-                                "",
-                                "السياحة (20% من الناتج المحلي الإجمالي):",
-                                "- إحدى أبرز الوجهات الأوروبية (حوالي 12 مليون زائر سنويًا)",
-                                "- أكثر من 12 مليون زائر سنويًا (رابع أكثر مدن أوروبا زيارةً)",
-                                "- مركزٌ للسفن السياحية (أكثر موانئ البحر الأبيض المتوسط ازدحامًا بالرحلات البحرية)",
-                                "- فعاليات رئيسية: المؤتمر العالمي للجوال (MWC)، مهرجان سونار، بريمافيرا ساوند",
-                                "",
-                                "التكنولوجيا والشركات الناشئة:",
-                                "- مركزٌ رائدٌ في جنوب أوروبا (يستضيف المؤتمر العالمي للجوال)",
-                                "- المركز الأول للشركات الناشئة في جنوب أوروبا (أكثر من 5.000 شركة ناشئة)",
-                                "- شركات ناشئة رائدة: جلوفو، والابوب، وترافيل بيرك",
-                                "- فعاليات تقنية: المؤتمر العالمي للجوال، 4YFN",
-                                "- حضورٌ لشركات تقنية عملاقة: أمازون، مايكروسوفت، سيسكو، مركز البحث والتطوير التابع لشركة تسلا",
-                                "",
-                                "الصناعة والخدمات اللوجستية (25% من الناتج المحلي الإجمالي):",
-                                "- ميناء برشلونة: واحد من أكبر 10 موانئ حاويات في أوروبا (يربط الاتحاد الأوروبي بأفريقيا وآسيا)",
-                                "- السيارات: المقر الرئيسي لشركة سيات (مجموعة فولكس فاجن)، وهو مصنع نيسان السابق",
-                                "- الأدوية والكيماويات: شركات كبرى مثل جريفولس، وألميرال، وباير",
-                                "",
-                                "التجارة والأزياء:",
-                                "- موطن لعلامات تجارية مثل مانجو، وديسيجوال",
-                                "- المعارض التجارية: تستضيف أكثر من 50 معرضًا دوليًا سنويًا",
-                                "",
-                                "الخدمات المالية والتجارية:",
-                                "- بنك ساباديل (بنوك كبرى مقرها في كاتالونيا)",
-                                "- الاستشارات والقانون: حضور قوي للشركات متعددة الجنسيات",
-                                "",
-                                "المزايا الاقتصادية:",
-                                "- موقع استراتيجي - بوابة للتجارة في جنوب أوروبا والبحر الأبيض المتوسط",
-                                "- قوى عاملة ماهرة - جامعات مرموقة",
-                                "- منظومة ابتكار - استثمار عام/خاص في التكنولوجيا والطاقة الخضراء"
+                                "العقارات: شقق سكنية وفنادق في المناطق السياحية",
+                                "التكنولوجيا: شركات ناشئة في مجال التكنولوجيا",
+                                "السياحة: مطاعم ومتاجر وخدمات سياحية",
+                                "التصميم والأزياء: شركات أزياء وتصميم",
+                                "الرياضة: مرافق رياضية وأندية رياضية"
                             ],
                             en: [
-                                "GDP: Contributes about 19% of Catalonia's GDP (more than 80 billion euros)",
-                                "",
-                                "Tourism (20% of GDP):",
-                                "- One of Europe's premier destinations (about 12 million visitors annually)",
-                                "- Over 12 million visitors per year (fourth most visited city in Europe)",
-                                "- A cruise hub (the busiest Mediterranean port for cruise ships)",
-                                "- Major events: Mobile World Congress (MWC), Sonar Festival, Primavera Sound",
-                                "",
-                                "Technology and Startups:",
-                                "- A leader in Southern Europe (hosts the Mobile World Congress)",
-                                "- The number one startup hub in Southern Europe (over 5,000 startups)",
-                                "- Leading startups: Glovo, Wallapop, TravelPerk",
-                                "- Tech events: Mobile World Congress, 4YFN",
-                                "- Presence of tech giants: Amazon, Microsoft, Cisco, Tesla's R&D center",
-                                "",
-                                "Industry and Logistics (25% of GDP):",
-                                "- Port of Barcelona: One of Europe's top 10 container ports (connecting the EU with Africa and Asia)",
-                                "- Automotive: Seat's headquarters (Volkswagen Group), former Nissan plant",
-                                "- Pharmaceuticals and Chemicals: Major companies like Grifols, Almirall, Bayer",
-                                "",
-                                "Trade and Fashion:",
-                                "- Home to brands like Mango, Desigual",
-                                "- Trade fairs: Hosts over 50 international fairs annually",
-                                "",
-                                "Financial and Business Services:",
-                                "- Banc Sabadell (major banks headquartered in Catalonia)",
-                                "- Consulting and Law: Strong presence of multinationals",
-                                "",
-                                "Economic Advantages:",
-                                "- Strategic location - Gateway for trade in Southern Europe and the Mediterranean",
-                                "- Skilled workforce - Prestigious universities",
-                                "- Innovation ecosystem - Public/private investment in technology and green energy"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم برشلونة جامعات مرموقة ومعاهد تعليمية متخصصة:",
-                            en: "Barcelona is home to prestigious universities and specialized educational institutions:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة برشلونة: واحدة من أقدم الجامعات في العالم",
-                                "جامعة بومبيو فابرا: متخصصة في العلوم الاجتماعية",
-                                "جامعة بوليتكنيكا كاتالونيا: متخصصة في الهندسة",
-                                "مدرسة ESADE: إحدى أفضل مدارس الأعمال في أوروبا",
-                                "العديد من المدارس الدولية متعددة اللغات"
-                            ],
-                            en: [
-                                "University of Barcelona: One of the oldest universities in the world",
-                                "Pompeu Fabra University: Specialized in social sciences",
-                                "Polytechnic University of Catalonia: Specialized in engineering",
-                                "ESADE: One of the best business schools in Europe",
-                                "Many multilingual international schools"
+                                "Real Estate: Residential apartments and hotels in tourist areas",
+                                "Technology: Startups in the technology sector",
+                                "Tourism: Restaurants, shops and tourist services",
+                                "Design and Fashion: Fashion and design companies",
+                                "Sports: Sports facilities and clubs"
                             ]
                         }
                     }
@@ -2833,7 +2629,7 @@
                 images: [
                     "https://storyateverycorner.com/wp-content/uploads/2020/08/f-IMG_5817-Sagrada-Familia-1024.jpg",
                     "https://travel2next.com/wp-content/uploads/famous-landmarks-in-barcelona-2-1024x714.jpg",
-                    "https://media.timeout.com/images/106185654/750/562/image.jpg"
+                    "https://media.cntraveler.com/photos/591f1c7d1f187a2af3dedef0/16%3A9/pass/barcelona-park-guell-GettyImages-512152500.jpg"
                 ],
                 videos: [
                     "https://www.youtube.com/embed/w_bjNaGSuqk",
@@ -2847,8 +2643,8 @@
                 },
                 icon: "fas fa-umbrella-beach",
                 description: {
-                    ar: "فالنسيا، ثالث أكبر مدينة في إسبانيا، تجمع بين التاريخ العريق والعمارة العصرية والمهرجانات النابضة بالحياة والاقتصاد المزدهر. تقع على ساحل البحر الأبيض المتوسط، وتقدم مزيجًا فريدًا من التقاليد والابتكار، مع طبق الباييلا الشهير عالميًا، وشواطئ خلابة، ومشهد تكنولوجي متنامي.",
-                    en: "Valencia, Spain's third largest city, combines rich history, modern architecture, vibrant festivals, and a prosperous economy. Located on the Mediterranean coast, it offers a unique blend of tradition and innovation, with the world-famous paella dish, beautiful beaches, and a growing tech scene."
+                    ar: "فالنسيا، ثالث أكبر مدينة في إسبانيا، تجمع بين التاريخ العريق والعمارة العصرية والمهرجانات النابضة بالحياة والاقتصاد المزدهر. تقع على ساحل البحر الأبيض المتوسط، وتقدم مزيجاً فريداً من التقاليد والابتكار، مع طبق الباييلا الشهير عالمياً، وشواطئ خلابة، ومشهد تكنولوجي متنامي.",
+                    en: "Valencia, the third largest city in Spain, combines ancient history, modern architecture, vibrant festivals, and a thriving economy. Located on the Mediterranean coast, it offers a unique blend of tradition and innovation, with the world-famous paella dish, beautiful beaches, and a growing tech scene."
                 },
                 sections: [
                     {
@@ -2857,19 +2653,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "فالنسيا، ثالث أكبر مدينة في إسبانيا، تجمع بين التاريخ العريق والعمارة العصرية والمهرجانات النابضة بالحياة والاقتصاد المزدهر. تقع على ساحل البحر الأبيض المتوسط، وتقدم مزيجًا فريدًا من التقاليد والابتكار، مع طبق الباييلا الشهير عالميًا، وشواطئ خلابة، ومشهد تكنولوجي متنامي.",
-                            en: "Valencia, Spain's third largest city, combines rich history, modern architecture, vibrant festivals, and a prosperous economy. Located on the Mediterranean coast, it offers a unique blend of tradition and innovation, with the world-famous paella dish, beautiful beaches, and a growing tech scene."
+                            ar: "فالنسيا، ثالث أكبر مدينة في إسبانيا، تجمع بين التاريخ العريق والعمارة العصرية والمهرجانات النابضة بالحياة والاقتصاد المزدهر.",
+                            en: "Valencia, the third largest city in Spain, combines ancient history, modern architecture, vibrant festivals, and a thriving economy."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 800,000 نسمة",
                                 "المساحة: 134.6 كم²",
-                                "اللغات الرسمية: الإسبانية والفالنسية"
+                                "اللغات الرسمية: الإسبانية والفالنسية",
+                                "مدينة ساحلية على البحر المتوسط",
+                                "مشهد تكنولوجي متنامي"
                             ],
                             en: [
                                 "Population: Over 800,000 inhabitants",
                                 "Area: 134.6 km²",
-                                "Official Languages: Spanish and Valencian"
+                                "Official Languages: Spanish and Valencian",
+                                "Coastal city on the Mediterranean",
+                                "Growing tech scene"
                             ]
                         }
                     },
@@ -2901,85 +2701,27 @@
                     },
                     {
                         title: {
-                            ar: "الجوانب الاقتصادية",
-                            en: "Economic Aspects"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "تتميز فالنسيا باقتصاد متنوع ومتنامٍ:",
-                            en: "Valencia features a diverse and growing economy:"
+                            ar: "توفر فالنسيا فرصاً استثمارية متنوعة بفضل موقعها الاستراتيجي:",
+                            en: "Valencia offers diverse investment opportunities thanks to its strategic location:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي والوزن الاقتصادي:",
-                                "- تساهم بحوالي 5% من الناتج المحلي الإجمالي لإسبانيا (حوالي 40 مليار يورو)",
-                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 26.000 يورو (أقل بقليل من المتوسط الوطني ولكنه في ازدياد)",
-                                "",
-                                "الصناعة والتصنيع (25% من الناتج المحلي الإجمالي):",
-                                "- السيارات: مصنع فورد في ألموسافيس (أكبر مُشغِّل في فالنسيا)",
-                                "- السيراميك والبلاط: رائد عالميًا (مثل بورسيلانوسا وباميسا)",
-                                "- الأغذية الزراعية: البرتقال والأرز والنبيذ (فالنسيا هي أكبر مُصدِّر للحمضيات في إسبانيا)",
-                                "",
-                                "السياحة (15% من الناتج المحلي الإجمالي):",
-                                "- أكثر من 6 ملايين زائر سنويًا (شواطئ، مدينة الفنون والعلوم، مهرجانات)",
-                                "- ميناء الرحلات البحرية: من أكثر الموانئ ازدحامًا في البحر الأبيض المتوسط",
-                                "",
-                                "التكنولوجيا والابتكار:",
-                                "- جامعة البوليتكنيك في فالنسيا (UPV): أفضل كلية هندسة",
-                                "- الشركات الناشئة: فلاي واير، زيلروس (هايبرلوب)، كويبيم (الرعاية الصحية القائمة على الذكاء الاصطناعي)",
-                                "- المركز الطبي الحيوي: معهد لا في لأبحاث الصحة",
-                                "",
-                                "التجارة والخدمات اللوجستية:",
-                                "- ميناء فالنسيا: ميناء الحاويات الأول في إسبانيا (يربط الاتحاد الأوروبي بأفريقيا وآسيا)",
-                                "- مطار VLC: حركة مرور منخفضة التكلفة متنامية (قاعدة رايان إير)"
+                                "العقارات: شقق ساحلية وفنادق سياحية",
+                                "الزراعة: زراعة الحمضيات والأرز",
+                                "التكنولوجيا: شركات تكنولوجيا في مجال المعلومات",
+                                "السياحة: مطاعم وخدمات سياحية متنوعة",
+                                "الصناعات الإبداعية: تصميم وأزياء وفنون"
                             ],
                             en: [
-                                "GDP and Economic Weight:",
-                                "- Contributes about 5% of Spain's GDP (about 40 billion euros)",
-                                "- GDP per capita: about 26,000 euros (slightly below the national average but growing)",
-                                "",
-                                "Industry and Manufacturing (25% of GDP):",
-                                "- Automotive: Ford factory in Almussafes (Valencia's largest employer)",
-                                "- Ceramics and Tiles: World leader (like Porcelanosa and Pamesa)",
-                                "- Agri-food: Oranges, rice, wine (Valencia is Spain's largest citrus exporter)",
-                                "",
-                                "Tourism (15% of GDP):",
-                                "- Over 6 million visitors per year (beaches, City of Arts and Sciences, festivals)",
-                                "- Cruise port: One of the busiest in the Mediterranean",
-                                "",
-                                "Technology and Innovation:",
-                                "- Polytechnic University of Valencia (UPV): Best engineering school",
-                                "- Startups: Flywire, Zeleros (Hyperloop), Cuibim (AI-based healthcare)",
-                                "- Biomedical Center: La Fe Institute for Health Research",
-                                "",
-                                "Trade and Logistics:",
-                                "- Port of Valencia: Spain's number one container port (connecting the EU with Africa and Asia)",
-                                "- VLC Airport: Growing low-cost traffic (Ryanair base)"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم فالنسيا جامعات مرموقة ومعاهد تعليمية متخصصة:",
-                            en: "Valencia is home to prestigious universities and specialized educational institutions:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة فالنسيا: واحدة من أقدم الجامعات في إسبانيا",
-                                "جامعة بوليتكنيكا فالنسيا: متخصصة في الهندسة والتكنولوجيا",
-                                "جامعة كاردينال هيريرا: جامعة خاصة مرموقة",
-                                "مدرسة الأعمال EDEM: متخصصة في ريادة الأعمال",
-                                "العديد من المدارس الدولية متعددة اللغات"
-                            ],
-                            en: [
-                                "University of Valencia: One of the oldest universities in Spain",
-                                "Polytechnic University of Valencia: Specialized in engineering and technology",
-                                "Cardinal Herrera University: A prestigious private university",
-                                "EDEM Business School: Specialized in entrepreneurship",
-                                "Many multilingual international schools"
+                                "Real Estate: Coastal apartments and tourist hotels",
+                                "Agriculture: Citrus and rice cultivation",
+                                "Technology: IT technology companies",
+                                "Tourism: Various restaurants and tourist services",
+                                "Creative Industries: Design, fashion and arts"
                             ]
                         }
                     }
@@ -3001,8 +2743,8 @@
                 },
                 icon: "fas fa-mosque",
                 description: {
-                    ar: "إشبيلية، عاصمة الأندلس، مدينةٌ تنبض بالحياة بالتراث الأندلسي، وشغف الفلامنكو، والتقاليد النابضة بالحياة. بهندستها المعمارية الذهبية، وشوارعها المزدانة بأشجار البرتقال، ومهرجاناتها النابضة بالحياة، تُجسّد إشبيلية جوهر جنوب إسبانيا.",
-                    en: "Seville, the capital of Andalusia, is a city brimming with Andalusian heritage, flamenco passion, and vibrant traditions. With its golden architecture, orange-tree-lined streets, and lively festivals, Seville embodies the essence of southern Spain."
+                    ar: "إشبيلية، عاصمة الأندلس، مدينةٌ تنبض بالحياة بالتراث الأندلسي، وشغف الفلامنكو، والتقاليد النابضة بالحياة. بهندستها المعمارية الذهبية، وشوارعها المزدانة بأشجار البرتقال، ومهرجاناتها النابضة بالحياة، تُجس ّ د إشبيلية جوهر جنوب إسبانيا.",
+                    en: "Seville, the capital of Andalusia, is a city alive with Andalusian heritage, flamenco passion, and vibrant traditions. With its golden architecture, orange-tree-lined streets, and lively festivals, Seville embodies the essence of southern Spain."
                 },
                 sections: [
                     {
@@ -3011,19 +2753,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "إشبيلية، عاصمة الأندلس، مدينةٌ تنبض بالحياة بالتراث الأندلسي، وشغف الفلامنكو، والتقاليد النابضة بالحياة. بهندستها المعمارية الذهبية، وشوارعها المزدانة بأشجار البرتقال، ومهرجاناتها النابضة بالحياة، تُجسّد إشبيلية جوهر جنوب إسبانيا.",
-                            en: "Seville, the capital of Andalusia, is a city brimming with Andalusian heritage, flamenco passion, and vibrant traditions. With its golden architecture, orange-tree-lined streets, and lively festivals, Seville embodies the essence of southern Spain."
+                            ar: "إشبيلية، عاصمة الأندلس، مدينةٌ تنبض بالحياة بالتراث الأندلسي، وشغف الفلامنكو، والتقاليد النابضة بالحياة.",
+                            en: "Seville, the capital of Andalusia, is a city alive with Andalusian heritage, flamenco passion, and vibrant traditions."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 690,000 نسمة",
                                 "المساحة: 140.8 كم²",
-                                "اللغة الرسمية: الإسبانية"
+                                "اللغة الرسمية: الإسبانية",
+                                "عاصمة منطقة الأندلس",
+                                "مدينة تاريخية غنية"
                             ],
                             en: [
                                 "Population: Over 690,000 inhabitants",
                                 "Area: 140.8 km²",
-                                "Official Language: Spanish"
+                                "Official Language: Spanish",
+                                "Capital of Andalusia region",
+                                "Rich historic city"
                             ]
                         }
                     },
@@ -3055,81 +2801,27 @@
                     },
                     {
                         title: {
-                            ar: "الجوانب الاقتصادية",
-                            en: "Economic Aspects"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "لإشبيلية اقتصاد متنوع ومتنامٍ:",
-                            en: "Seville has a diverse and growing economy:"
+                            ar: "توفر إشبيلية فرصاً استثمارية متنوعة بفضل ثقافتها الغنية:",
+                            en: "Seville offers diverse investment opportunities thanks to its rich culture:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي والثقل الاقتصادي:",
-                                "- تساهم بحوالي 4% من الناتج المحلي الإجمالي لإسبانيا (حوالي 35 مليار يورو)",
-                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 22.000 يورو (أقل من مدريد/برشلونة ولكنه في ازدياد)",
-                                "",
-                                "السياحة (20% من الناتج المحلي الإجمالي):",
-                                "- أكثر من 3 ملايين زائر سنويًا (يجذبهم أسبوع الآلام (Semana Santa) والمعرض (Feria) والمواقع التاريخية)",
-                                "- سياحة الرحلات البحرية: محطة متنامية لرحلات البحر الأبيض المتوسط البحرية",
-                                "",
-                                "الصناعة والتصنيع:",
-                                "- الفضاء والطيران: تمتلك شركة إيرباص مصنعًا رئيسيًا في سان بابلو المجاورة",
-                                "- المأكولات والمشروبات: زيت الزيتون، نبيذ الشيري (خيريز)، والمأكولات البحرية",
-                                "",
-                                "الخدمات والتجارة:",
-                                "- ميناء إشبيلية: الميناء التجاري الداخلي الوحيد في إسبانيا (نهر الوادي الكبير)",
-                                "- التجزئة والتجارة: شارع كالي سيربيس هو شارع التسوق الرئيسي",
-                                "",
-                                "الشركات الناشئة والابتكار:",
-                                "- المشهد التكنولوجي الناشئ: التركيز على تكنولوجيا السياحة، والأغذية الزراعية، والطاقة المتجددة",
-                                "- الجامعات: تعمل جامعة إشبيلية على تعزيز الأبحاث في مجال الهندسة والعلوم الإنسانية"
+                                "العقارات: منازل تقليدية وفنادق تراثية",
+                                "السياحة الثقافية: متاحف وخدمات سياحية",
+                                "الزراعة: زراعة الزيتون والفواكه",
+                                "الصناعات اليدوية: منتجات تقليدية وحرف يدوية",
+                                "الطاقة المتجددة: مشاريع طاقة شمسية"
                             ],
                             en: [
-                                "GDP and Economic Weight:",
-                                "- Contributes about 4% of Spain's GDP (about 35 billion euros)",
-                                "- GDP per capita: about 22,000 euros (lower than Madrid/Barcelona but growing)",
-                                "",
-                                "Tourism (20% of GDP):",
-                                "- Over 3 million visitors per year (attracted by Holy Week, the April Fair, and historical sites)",
-                                "- Cruise tourism: A growing port for Mediterranean cruises",
-                                "",
-                                "Industry and Manufacturing:",
-                                "- Aerospace and Aviation: Airbus has a major factory in nearby San Pablo",
-                                "- Food and Beverages: Olive oil, sherry wine (Jerez), and seafood",
-                                "",
-                                "Services and Trade:",
-                                "- Port of Seville: Spain's only inland commercial port (Guadalquivir River)",
-                                "- Retail and Commerce: Calle Sierpes is the main shopping street",
-                                "",
-                                "Startups and Innovation:",
-                                "- Emerging tech scene: Focus on tourism technology, agri-food, and renewable energy",
-                                "- Universities: University of Seville is enhancing research in engineering and humanities"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم إشبيلية جامعات مرموقة ومعاهد تعليمية متخصصة:",
-                            en: "Seville is home to prestigious universities and specialized educational institutions:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة إشبيلية: واحدة من أقدم الجامعات في إسبانيا",
-                                "جامعة بابلو دي أولافيد: جامعة حديثة مرموقة",
-                                "المدرسة العليا للهندسة: متخصصة في الهندسة المعمارية",
-                                "معهد الأعمال EADA: متخصص في إدارة الأعمال",
-                                "العديد من المدارس الدولية متعددة اللغات"
-                            ],
-                            en: [
-                                "University of Seville: One of the oldest universities in Spain",
-                                "Pablo de Olavide University: A prestigious modern university",
-                                "Higher School of Engineering: Specialized in architectural engineering",
-                                "EADA Business School: Specialized in business administration",
-                                "Many multilingual international schools"
+                                "Real Estate: Traditional houses and heritage hotels",
+                                "Cultural Tourism: Museums and tourist services",
+                                "Agriculture: Olive and fruit cultivation",
+                                "Handicrafts: Traditional products and crafts",
+                                "Renewable Energy: Solar energy projects"
                             ]
                         }
                     }
@@ -3151,8 +2843,8 @@
                 },
                 icon: "fas fa-umbrella-beach",
                 description: {
-                    ar: "مالقة، عاصمة ساحل الشمس النابضة بالحياة، تجمع بين التاريخ العريق والفن الحديث والحياة الشاطئية، ومشهد تكنولوجي مزدهر. وبصفتها مسقط رأس بيكاسو وموطنًا لسواحلها المشمسة، تقدم مالقة مزيجًا مثاليًا من الثقافة والابتكار وسحر البحر الأبيض المتوسط.",
-                    en: "Málaga, the vibrant capital of the Costa del Sol, combines rich history, modern art, beach life, and a thriving tech scene. As the birthplace of Picasso and home to its sunny coasts, Málaga offers a perfect blend of culture, innovation, and Mediterranean charm."
+                    ar: "ملقة، عاصمة ساحل الشمس النابضة بالحياة، تجمع بين التاريخ العريق والفن الحديث والحياة الشاطئية، ومشهد تكنولوجي مزدهر. وبصفتها مسقط رأس بيكاسو وموطنًا لسواحلها المشمسة، تقدم ملقة مزيجاً مثالياً من الثقافة والابتكار وسحر البحر الأبيض المتوسط.",
+                    en: "Malaga, the vibrant capital of the Costa del Sol, combines ancient history, modern art, beach life, and a thriving tech scene. As the birthplace of Picasso and home to its sunny coasts, Malaga offers the perfect blend of culture, innovation, and Mediterranean charm."
                 },
                 sections: [
                     {
@@ -3161,19 +2853,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "مالقة، عاصمة ساحل الشمس النابضة بالحياة، تجمع بين التاريخ العريق والفن الحديث والحياة الشاطئية، ومشهد تكنولوجي مزدهر. وبصفتها مسقط رأس بيكاسو وموطنًا لسواحلها المشمسة، تقدم مالقة مزيجًا مثاليًا من الثقافة والابتكار وسحر البحر الأبيض المتوسط.",
-                            en: "Málaga, the vibrant capital of the Costa del Sol, combines rich history, modern art, beach life, and a thriving tech scene. As the birthplace of Picasso and home to its sunny coasts, Málaga offers a perfect blend of culture, innovation, and Mediterranean charm."
+                            ar: "ملقة، عاصمة ساحل الشمس النابضة بالحياة، تجمع بين التاريخ العريق والفن الحديث والحياة الشاطئية، ومشهد تكنولوجي مزدهر.",
+                            en: "Malaga, the vibrant capital of the Costa del Sol, combines ancient history, modern art, beach life, and a thriving tech scene."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 570,000 نسمة",
                                 "المساحة: 395 كم²",
-                                "اللغة الرسمية: الإسبانية"
+                                "اللغة الرسمية: الإسبانية",
+                                "مسقط رأس بيكاسو",
+                                "مدينة ساحلية مشمسة"
                             ],
                             en: [
                                 "Population: Over 570,000 inhabitants",
                                 "Area: 395 km²",
-                                "Official Language: Spanish"
+                                "Official Language: Spanish",
+                                "Birthplace of Picasso",
+                                "Sunny coastal city"
                             ]
                         }
                     },
@@ -3184,7 +2880,7 @@
                         },
                         content: {
                             ar: "تتميز ملقة بالعديد من المعالم السياحية التي تجذب الزوار:",
-                            en: "Málaga features many tourist attractions that attract visitors:"
+                            en: "Malaga features many tourist attractions that attract visitors:"
                         },
                         list: {
                             ar: [
@@ -3205,89 +2901,33 @@
                     },
                     {
                         title: {
-                            ar: "الجوانب الاقتصادية",
-                            en: "Economic Aspects"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "تمتلك ملقة اقتصادًا متنوعًا وسريع النمو:",
-                            en: "Málaga has a diverse and rapidly growing economy:"
+                            ar: "توفر ملقة فرصاً استثمارية متنوعة بفضل موقعها السياحي:",
+                            en: "Malaga offers diverse investment opportunities thanks to its tourist location:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي والثقل الاقتصادي:",
-                                "- تساهم بنحو 2.5% من الناتج المحلي الإجمالي لإسبانيا (حوالي 20 مليار يورو)",
-                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 23.000 يورو (ينمو بمعدل أسرع من متوسط الأندلس)",
-                                "",
-                                "السياحة (25% من الناتج المحلي الإجمالي):",
-                                "- أكثر من 14 مليون زائر سنويًا (شواطئ، ثقافة، وسياحة بحرية)",
-                                "- ميناء الرحلات البحرية: من أكثر الموانئ ازدحامًا في إسبانيا (طرق البحر الأبيض المتوسط)",
-                                "",
-                                "التكنولوجيا والابتكار (أسرع القطاعات نموًا):",
-                                "- 'تكنولوجيا الأندلس': تُصبح ملقة 'شاطئ السيليكون' في إسبانيا",
-                                "- مقرات شركات التكنولوجيا الكبرى: جوجل، وأوراكل، وفودافون لديها مكاتب هنا",
-                                "- صناعة ألعاب الفيديو: موطن EA Sports، Upisoft، وGame Campus Málaga",
-                                "",
-                                "الصناعة والخدمات اللوجستية:",
-                                "- ميناء ملقة: مفتاح للتجارة والسياحة البحرية",
-                                "- صناعة الطيران: مصانع إيرباص القريبة في قادس وإشبيلية",
-                                "",
-                                "الزراعة والطهي:",
-                                "- زيت الزيتون واللوز: صادرات ملقة التاريخية",
-                                "- الأفوكادو والفواكه الاستوائية: منطقة الشرقية هي المنتج الرئيسي في أوروبا"
+                                "العقارات: شقق ساحلية وفنادق سياحية",
+                                "السياحة: مطاعم وخدمات سياحية متنوعة",
+                                "التكنولوجيا: شركات تكنولوجيا في مجال السياحة",
+                                "الزراعة: زراعة الفواكه الاستوائية والخضروات",
+                                "الصناعات الغذائية: منتجات غذائية عضوية"
                             ],
                             en: [
-                                "GDP and Economic Weight:",
-                                "- Contributes about 2.5% of Spain's GDP (about 20 billion euros)",
-                                "- GDP per capita: about 23,000 euros (growing faster than the Andalusian average)",
-                                "",
-                                "Tourism (25% of GDP):",
-                                "- Over 14 million visitors per year (beaches, culture, and maritime tourism)",
-                                "- Cruise port: One of the busiest in Spain (Mediterranean routes)",
-                                "",
-                                "Technology and Innovation (fastest growing sector):",
-                                "- 'Andalusia Tech': Málaga is becoming Spain's 'Silicon Beach'",
-                                "- Major tech company offices: Google, Oracle, and Vodafone have offices here",
-                                "- Video game industry: Home to EA Sports, Ubisoft, and Game Campus Málaga",
-                                "",
-                                "Industry and Logistics:",
-                                "- Port of Málaga: Key for trade and maritime tourism",
-                                "- Aviation industry: Nearby Airbus factories in Cádiz and Seville",
-                                "",
-                                "Agriculture and Gastronomy:",
-                                "- Olive oil and almonds: Málaga's historical exports",
-                                "- Avocados and tropical fruits: The eastern region is Europe's main producer"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم ملقة جامعات مرموقة ومعاهد تعليمية متخصصة:",
-                            en: "Málaga is home to prestigious universities and specialized educational institutions:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة ملقة: جامعة عامة مرموقة",
-                                "المدرسة العليا للفنون المسرحية: متخصصة في الفنون",
-                                "معهد الأعمال ESIC: متخصص في إدارة الأعمال",
-                                "المدرسة الدولية ملقة: مدرسة دولية مرموقة",
-                                "العديد من المدارس الخاصة المتعددة اللغات"
-                            ],
-                            en: [
-                                "University of Málaga: A prestigious public university",
-                                "Higher School of Dramatic Arts: Specialized in the arts",
-                                "ESIC Business School: Specialized in business administration",
-                                "Málaga International School: A prestigious international school",
-                                "Many private multilingual schools"
+                                "Real Estate: Coastal apartments and tourist hotels",
+                                "Tourism: Various restaurants and tourist services",
+                                "Technology: Technology companies in the tourism sector",
+                                "Agriculture: Tropical fruit and vegetable cultivation",
+                                "Food Industries: Organic food products"
                             ]
                         }
                     }
                 ],
                 images: [
-                    "https://media.cntraveller.com/photos/68372cd8a950cb88d7133bfb/4:3/w_7100,h_5325,c_limit/Malaga_280525_GettyImages-1988664077.jpg",
+                    "https://media.cntraveler.com/photos/68372cd8a950cb88d7133bfb/4:3/w_7100,h_5325,c_limit/Malaga_280525_GettyImages-1988664077.jpg",
                     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ef/d3/f7/caption.jpg?w=600&h=400&s=1",
                     "https://images.squarespace-cdn.com/content/v1/5a86b05bcf81e0af04936cc7/1722873639111-426CQK9XPK9X0AGELSGF/que-ver-cerca-de-malaga.jpg?format=1000w"
                 ],
@@ -3304,7 +2944,7 @@
                 icon: "fas fa-umbrella-beach",
                 description: {
                     ar: "أليكانتي، عاصمة الساحل الأبيض، خامس أكبر منطقة حضرية في إسبانيا، تجمع بين شواطئ ساحرة، تراث تاريخي، ومكانة اقتصادية متنامية. تقع على ساحل البحر الأبيض المتوسط في إقليم فالنسيا، وتشتهر بقلعة سانتا باربرا المطلة على البحر، ومناخها المشمس على مدار العام، مما يجعلها وجهة مفضلة للسياحة والعيش.",
-                    en: "Alicante, the capital of the White Coast, is the fifth largest urban area in Spain, combining charming beaches, historical heritage, and a growing economic status. Located on the Mediterranean coast in the Valencia region, it is famous for its seaside Santa Barbara Castle and year-round sunny climate, making it a preferred destination for tourism and living."
+                    en: "Alicante, capital of the Costa Blanca, is the fifth largest urban area in Spain, combining enchanting beaches, historical heritage, and a growing economic status. Located on the Mediterranean coast in the Valencia region, it is famous for the Santa Barbara Castle overlooking the sea, its sunny climate year-round, making it a preferred destination for tourism and living."
                 },
                 sections: [
                     {
@@ -3313,19 +2953,23 @@
                             en: "City Overview"
                         },
                         content: {
-                            ar: "أليكانتي، عاصمة الساحل الأبيض، خامس أكبر منطقة حضرية في إسبانيا، تجمع بين شواطئ ساحرة، تراث تاريخي، ومكانة اقتصادية متنامية. تقع على ساحل البحر الأبيض المتوسط في إقليم فالنسيا، وتشتهر بقلعة سانتا باربرا المطلة على البحر، ومناخها المشمس على مدار العام، مما يجعلها وجهة مفضلة للسياحة والعيش.",
-                            en: "Alicante, the capital of the White Coast, is the fifth largest urban area in Spain, combining charming beaches, historical heritage, and a growing economic status. Located on the Mediterranean coast in the Valencia region, it is famous for its seaside Santa Barbara Castle and year-round sunny climate, making it a preferred destination for tourism and living."
+                            ar: "أليكانتي، عاصمة الساحل الأبيض، خامس أكبر منطقة حضرية في إسبانيا، تجمع بين شواطئ ساحرة، تراث تاريخي، ومكانة اقتصادية متنامية.",
+                            en: "Alicante, capital of the Costa Blanca, is the fifth largest urban area in Spain, combining enchanting beaches, historical heritage, and a growing economic status."
                         },
                         list: {
                             ar: [
                                 "عدد السكان: أكثر من 330,000 نسمة",
                                 "المساحة: 201.3 كم²",
-                                "اللغات الرسمية: الإسبانية والفالنسية"
+                                "اللغات الرسمية: الإسبانية والفالنسية",
+                                "عاصمة الساحل الأبيض",
+                                "وجهة سياحية مفضلة"
                             ],
                             en: [
                                 "Population: Over 330,000 inhabitants",
                                 "Area: 201.3 km²",
-                                "Official Languages: Spanish and Valencian"
+                                "Official Languages: Spanish and Valencian",
+                                "Capital of the Costa Blanca",
+                                "Preferred tourist destination"
                             ]
                         }
                     },
@@ -3357,93 +3001,27 @@
                     },
                     {
                         title: {
-                            ar: "الجوانب الاقتصادية",
-                            en: "Economic Aspects"
+                            ar: "الفرص الاستثمارية",
+                            en: "Investment Opportunities"
                         },
                         content: {
-                            ar: "لأليكانتي اقتصاد متنامٍ ومتنوع:",
-                            en: "Alicante has a growing and diverse economy:"
+                            ar: "توفر أليكانتي فرصاً استثمارية متنوعة بفضل موقعها السياحي:",
+                            en: "Alicante offers diverse investment opportunities thanks to its tourist location:"
                         },
                         list: {
                             ar: [
-                                "الناتج المحلي الإجمالي والوزن الاقتصادي:",
-                                "- تساهم بحوالي 2% من الناتج المحلي الإجمالي لإسبانيا (حوالي 16 مليار يورو)",
-                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 23.000 يورو (أقل من المتوسط الوطني، لكن مدعوم بالنمو في السياحة والخدمات)",
-                                "",
-                                "السياحة (20% من الناتج المحلي الإجمالي):",
-                                "- أكثر من 5 ملايين سائح سنويًا، معظمهم من المملكة المتحدة، ألمانيا، والدول الاسكندنافية",
-                                "- ميناء أليكانتي: محطة رحلات بحرية مهمة في البحر المتوسط",
-                                "- مناطق الجذب: شواطئ سان خوان، إكسيل، جزيرة تاباركا، مهرجان Las Hogueras de San Juan",
-                                "",
-                                "التجارة والخدمات اللوجستية:",
-                                "- ميناء أليكانتي: نقطة تصدير رئيسية للنبيذ والرخام",
-                                "- قربها من فالنسيا يجعلها محورًا تكميليًا في التجارة",
-                                "- مطار أليكانتي – إلتشه (ALC): خامس أكبر مطار في البلاد وواحد من أسرع المطارات نموًا في إسبانيا، بوابة رئيسية للسياحة الأوروبية",
-                                "",
-                                "الصناعة والتصنيع (15% من الناتج المحلي الإجمالي):",
-                                "- الرخام والأحجار الطبيعية: أليكانتي رائدة عالميًا في إنتاج وتصدير الرخام",
-                                "- صناعة الأحذية: إلدا (بالقرب من أليكانتي) مركز مهم لإنتاج الأحذية الإسبانية",
-                                "- الأغذية الزراعية: اللوز، الزيتون، العنب (مركز لإنتاج نبيذ موسكاتيل)",
-                                "",
-                                "التكنولوجيا والابتكار:",
-                                "- جامعة أليكانتي (UA): مركز أبحاث نشط في التكنولوجيا والعلوم التطبيقية",
-                                "- نمو الشركات الناشئة في قطاعات:",
-                                "- الطاقة المتجددة",
-                                "- التكنولوجيا الصحية",
-                                "- الخدمات الرقمية المرتبطة بالسياحة"
+                                "العقارات: شقق ساحلية وفنادق سياحية",
+                                "السياحة: مطاعم وخدمات سياحية متنوعة",
+                                "التكنولوجيا: شركات تكنولوجيا في مجال المعلومات",
+                                "الزراعة: زراعة الفواكه والخضروات",
+                                "الصناعات الغذائية: منتجات غذائية عضوية"
                             ],
                             en: [
-                                "GDP and Economic Weight:",
-                                "- Contributes about 2% of Spain's GDP (about 16 billion euros)",
-                                "- GDP per capita: about 23,000 euros (below the national average, but supported by growth in tourism and services)",
-                                "",
-                                "Tourism (20% of GDP):",
-                                "- Over 5 million tourists per year, mostly from the UK, Germany, and Scandinavian countries",
-                                "- Port of Alicante: An important cruise terminal in the Mediterranean",
-                                "- Attractions: San Juan beaches, Elche, Tabarca Island, Las Hogueras de San Juan festival",
-                                "",
-                                "Trade and Logistics:",
-                                "- Port of Alicante: A major export point for wine and marble",
-                                "- Its proximity to Valencia makes it a complementary hub in trade",
-                                "- Alicante-Elche Airport (ALC): Fifth largest airport in the country and one of the fastest growing in Spain, a main gateway for European tourism",
-                                "",
-                                "Industry and Manufacturing (15% of GDP):",
-                                "- Marble and Natural Stone: Alicante is a world leader in marble production and export",
-                                "- Footwear Industry: Elda (near Alicante) is an important center for Spanish shoe production",
-                                "- Agri-food: Almonds, olives, grapes (a center for muscatel wine production)",
-                                "",
-                                "Technology and Innovation:",
-                                "- University of Alicante (UA): Active research center in technology and applied sciences",
-                                "- Startup growth in sectors:",
-                                "- Renewable Energy",
-                                "- Health Technology",
-                                "- Digital Services related to tourism"
-                            ]
-                        }
-                    },
-                    {
-                        title: {
-                            ar: "التعليم",
-                            en: "Education"
-                        },
-                        content: {
-                            ar: "تضم أليكانتي جامعات مرموقة ومعاهد تعليمية متخصصة:",
-                            en: "Alicante is home to prestigious universities and specialized educational institutions:"
-                        },
-                        list: {
-                            ar: [
-                                "جامعة أليكانتي: جامعة عامة مرموقة",
-                                "جامعة ميغيل هيرنانديز: جامعة عامة قريبة",
-                                "المدرسة العليا للفنون الجميلة: متخصصة في الفنون",
-                                "معهد الأعمال CEF: متخصص في إدارة الأعمال",
-                                "العديد من المدارس الدولية متعددة اللغات"
-                            ],
-                            en: [
-                                "University of Alicante: A prestigious public university",
-                                "Miguel Hernández University: A nearby public university",
-                                "Higher School of Fine Arts: Specialized in the arts",
-                                "CEF Business School: Specialized in business administration",
-                                "Many multilingual international schools"
+                                "Real Estate: Coastal apartments and tourist hotels",
+                                "Tourism: Various restaurants and tourist services",
+                                "Technology: IT technology companies",
+                                "Agriculture: Fruit and vegetable cultivation",
+                                "Food Industries: Organic food products"
                             ]
                         }
                     }
@@ -3483,23 +3061,23 @@
                         },
                         list: {
                             ar: [
-                                "الإقامة الذهبية عبر الاستثمار",
-                                "الإقامة غير الربحية",
-                                "تأشيرة الرحل الرقميين",
-                                "تأشيرة الطالب"
+                                "إقامة ريادة الأعمال (Entrepreneurship residency)",
+                                "الإقامة غير الربحية (Non Lucrative)",
+                                "تأشيرة الرحل الرقميين (Digital Nomad)",
+                                "تأشيرة الطالب (Students)"
                             ],
                             en: [
-                                "Investment Residency",
-                                "Non-Lucrative Residency",
-                                "Digital Nomad Visa",
-                                "Student Visa"
+                                "Entrepreneurship residency",
+                                "Non Lucrative",
+                                "Digital Nomad",
+                                "Students"
                             ]
                         }
                     },
                     {
                         title: {
-                            ar: "أ. الإقامة الذهبية (ريادة الأعمال والاستثمار)",
-                            en: "A. Investment Residency (Entrepreneurship and Investment)"
+                            ar: "أ. إقامة ريادة الأعمال",
+                            en: "A. Entrepreneurship Residency"
                         },
                         content: {
                             ar: "هل ترغب في تأسيس شركة أو الاستثمار في إسبانيا؟ تسمح لك هذه التأشيرة بالعيش والعمل بشكل قانوني أثناء نمو عملك في السوق الأوروبية.",
@@ -3572,7 +3150,7 @@
                                 "Family reunification allowed",
                                 "Renewable up to 5 years",
                                 "Permanent residency after 5 years",
-                                "Ideal for:",
+                                "Ideal For:",
                                 "Retirees",
                                 "People with savings",
                                 "Passive income individuals",
@@ -3595,15 +3173,15 @@
                         },
                         list: {
                             ar: [
-                                "مثالية ل:",
-                                "العاملين عن بعد",
-                                "المصممين والمطورين والمسوقين",
-                                "المستقلين والمستشارين عبر الإنترنت",
-                                "المزايا:",
+                                "لماذا تختار هذه التأشيرة؟",
                                 "العيش في إسبانيا بشكل قانوني",
                                 "إدراج الأسرة",
                                 "طريق للإقامة والجنسية",
                                 "السفر عبر منطقة شنغن",
+                                "مثالية ل:",
+                                "العاملين عن بعد",
+                                "المصممين والمطورين والمسوقين",
+                                "المستقلين والمستشارين عبر الإنترنت",
                                 "المتطلبات:",
                                 "إثبات العمل عن بعد",
                                 "إثبات الدخل",
@@ -3611,15 +3189,15 @@
                                 "سجل جنائي نظيف"
                             ],
                             en: [
-                                "Ideal for:",
-                                "Remote workers",
-                                "Designers, developers, marketers",
-                                "Freelancers, online consultants",
-                                "Benefits:",
+                                "Why choose this visa?",
                                 "Live in Spain legally",
                                 "Family inclusion",
                                 "Path to residency and citizenship",
                                 "Travel across the Schengen zone",
+                                "Ideal For:",
+                                "Remote workers",
+                                "Designers, developers, marketers",
+                                "Freelancers, online consultants",
                                 "Requirements:",
                                 "Proof of remote work",
                                 "Proof of income",
@@ -3630,8 +3208,8 @@
                     },
                     {
                         title: {
-                            ar: "د. الدراسة في إسبانيا",
-                            en: "D. Study in Spain"
+                            ar: "د. تأشيرة الطالب",
+                            en: "D. Student Visa"
                         },
                         content: {
                             ar: "مع جامعاتها المتميزة وحياة الطلاب النابضة بالحياة، إسبانيا هي المكان المثالي لمتابعة التعليم العالي.",
@@ -3639,7 +3217,7 @@
                         },
                         list: {
                             ar: [
-                                "المزايا:",
+                                "لماذا تختار هذه التأشيرة؟",
                                 "رسوم دراسية وتكاليف معيشة معقولة",
                                 "العمل بدوام جزئي مسموح (20 ساعة/أسبوع)",
                                 "سفر شنغن مجاني",
@@ -3652,7 +3230,7 @@
                                 "ملقة"
                             ],
                             en: [
-                                "Benefits:",
+                                "Why choose this visa?",
                                 "Affordable tuition and cost of living",
                                 "Part-time work allowed (20 hrs/week)",
                                 "Free Schengen travel",
@@ -3668,7 +3246,7 @@
                     }
                 ],
                 images: [
-                    "https://assets.thelocal.com/cdn-cgi/rs:fit:850/quality:75/plain/https://apiwp.thelocal.com/wp-content/uploads/2024/07/renew-long-term-residency-card-spain.jpg",
+                    "https://assets.thelocal.com/cdn-cgi/rs:fit:850/quality:75/plain/https://apiwp.thelocal.com/wp-content/uploads/2024/07/renew-long-term-residency-card-spain.jpg@webp",
                     "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                     "https://thrillingtravel.in/wp-content/uploads/2017/12/British-Residency-Lucknow-Tourist-Attraction.jpg"]
             },
@@ -3785,8 +3363,8 @@
                 sections: [
                     {
                         title: {
-                            ar: "مزايا الدراسة في إسبانيا",
-                            en: "Advantages of Studying in Spain"
+                            ar: "لماذا تختار هذه التأشيرة؟",
+                            en: "Why choose this visa?"
                         },
                         content: {
                             ar: "الدراسة في إسبانيا تقدم العديد من المزايا:",
@@ -4286,35 +3864,34 @@
                                 <div class="service-details-section">
                                     <h3>${section.title[currentLang]}</h3>
                                     <p>${section.content[currentLang]}</p>
-                                    ${section.list[currentLang] ? `
-                                        <ul>
-                                            ${section.list[currentLang].map(item => {
-                                // الكلمات المفتاحية التي نريد تحويلها إلى h5
-                                const keywordsAr = [
-                                    "أفضل المدن:",
-                                    "لماذا تختار هذه التأشيرة؟",
-                                    "مثالية ل:", "المتطلبات:", "المزايا:", "لماذا تختار خدماتنا؟", "تشمل خدمات التأشيرة لدينا:", "كيف تعمل الخدمة:"
-                                ];
-                                const keywordsEn = [
-                                    "Best Cities:",
-                                    "Why choose this visa?",
-                                    "Ideal for:", "Requirements:",
-                                    "Benefits:",
-                                    "Top Cities:",
-                                    "Why choose our services?", "Our Visa Services Include:", "How it works:"
-                                ];
-                                // اختيار الكلمات المفتاحية حسب اللغة الحالية
-                                const keywords = currentLang === 'ar' ? keywordsAr : keywordsEn;
+                            `;
 
-                                // التحقق إذا كان العنصر يحتوي على إحدى الكلمات المفتاحية
-                                if (keywords.some(keyword => item.includes(keyword))) {
-                                    return `<li><h5>${item}</h5></li>`;
-                                } else {
-                                    return `<li>${item}</li>`;
+                            if (section.list[currentLang]) {
+                                // تحويل العناوين إلى h6 والبقاء كعناصر قائمة للمحتوى الآخر
+                                let listItems = section.list[currentLang];
+                                let formattedList = '';
+
+                                for (let i = 0; i < listItems.length; i++) {
+                                    // إذا كان العنصر هو أحد العناوين المحددة، استخدم h6
+                                    if (listItems[i] === "لماذا تختار هذه التأشيرة؟" ||
+                                        listItems[i] === "Why choose this visa?" ||
+                                        listItems[i] === "مثالية ل:" ||
+                                        listItems[i] === "Ideal For:" ||
+                                        listItems[i] === "المتطلبات:" ||
+                                        listItems[i] === "Requirements:" ||
+                                        listItems[i] === "أفضل المدن:" ||
+                                        listItems[i] === "Top Cities:") {
+
+                                        formattedList += `<h6>${listItems[i]}</h6>`;
+                                    } else {
+                                        formattedList += `<li>${listItems[i]}</li>`;
+                                    }
                                 }
-                            }).join('')}
-                                        </ul>
-                                    ` : ''}
+
+                                contentHTML += formattedList;
+                            }
+
+                            contentHTML += `
                                 </div>
                             `;
                         });
@@ -4470,6 +4047,7 @@
                             background-color: #f44336;
                             color: white;
                             padding: 10px;
+                            border-radius: 5px;
                                 margin-top: 10px;
                             text-align: center;
                         `;
