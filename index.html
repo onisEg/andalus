@@ -876,6 +876,13 @@
 
         .service-details-section {
             margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(138, 116, 47, 0.1);
+        }
+
+        .service-details-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
 
         .service-details-section h3 {
@@ -884,6 +891,27 @@
             margin-bottom: 15px;
             border-bottom: 2px solid var(--beige);
             padding-bottom: 10px;
+        }
+
+        .service-details-section h5 {
+            font-size: 20px;
+            color: var(--gold);
+            margin: 15px 0 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .service-details-section h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold);
         }
 
         .service-details-section p {
@@ -903,6 +931,16 @@
             line-height: 1.8;
             color: #333;
             margin-bottom: 8px;
+            padding-right: 20px;
+        }
+
+        .service-details-section li ul {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service-details-section li ul li {
+            margin-bottom: 6px;
         }
 
         .service-media {
@@ -931,7 +969,32 @@
         }
 
         .service-cta .btn {
-            margin: 0 10px;
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .service-cta .btn:first-child {
+            background-color: var(--gold);
+            color: white;
+            border: 2px solid var(--gold);
+        }
+
+        .service-cta .btn:first-child:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+
+        .service-cta .btn:last-child {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .service-cta .btn:last-child:hover {
+            background-color: var(--gold);
+            color: white;
         }
 
         /* Why Spain Section */
@@ -1607,6 +1670,18 @@
             .service-media {
                 grid-template-columns: 1fr;
             }
+
+            /* Mobile responsive for h5 */
+            .service-details-section h5 {
+                font-size: 18px;
+                margin: 12px 0 8px;
+            }
+
+            .service-details-section li {
+                font-size: 15px;
+                line-height: 1.7;
+                padding-right: 15px;
+            }
         }
 
         /* إخفاء أيقونات الموبايل في سطح المكتب */
@@ -1659,6 +1734,16 @@
         html[dir="ltr"] .close-popup {
             left: auto;
             right: 15px;
+        }
+
+        html[dir="ltr"] .service-details-section h5::after {
+            right: auto;
+            left: 0;
+        }
+
+        html[dir="ltr"] .service-details-section li {
+            padding-right: 0;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -2981,7 +3066,7 @@
                             ar: [
                                 "الناتج المحلي الإجمالي والثقل الاقتصادي:",
                                 "- تساهم بحوالي 4% من الناتج المحلي الإجمالي لإسبانيا (حوالي 35 مليار يورو)",
-                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 22,000 يورو (أقل من مدريد/برشلونة ولكنه في ازدياد)",
+                                "- نصيب الفرد من الناتج المحلي الإجمالي: حوالي 22.000 يورو (أقل من مدريد/برشلونة ولكنه في ازدياد)",
                                 "",
                                 "السياحة (20% من الناتج المحلي الإجمالي):",
                                 "- أكثر من 3 ملايين زائر سنويًا (يجذبهم أسبوع الآلام (Semana Santa) والمعرض (Feria) والمواقع التاريخية)",
@@ -3539,6 +3624,7 @@
                                 "Proof of remote work",
                                 "Proof of income",
                                 "Health insurance",
+                                "Top Cities:",
                                 "Clean criminal record"
                             ]
                         }
@@ -4203,7 +4289,28 @@
                                     <p>${section.content[currentLang]}</p>
                                     ${section.list[currentLang] ? `
                                         <ul>
-                                            ${section.list[currentLang].map(item => `<li>${item}</li>`).join('')}
+                                            ${section.list[currentLang].map(item => {
+                                // الكلمات المفتاحية التي نريد تحويلها إلى h5
+                                const keywordsAr = [
+                                    "أفضل المدن:",
+                                    "لماذا تختار هذه التأشيرة؟",
+                                    "مثالية ل:", "المتطلبات:", "المزايا:", "لماذا تختار خدماتنا؟", "تشمل خدمات التأشيرة لدينا:", "كيف تعمل الخدمة:"
+                                ];
+                                const keywordsEn = [
+                                    "Best Cities:",
+                                    "Why choose this visa?",
+                                    "Ideal for:", "Requirements:", "Benefits:", "Why choose our services?", "Our Visa Services Include:", "How it works:"
+                                ];
+                                // اختيار الكلمات المفتاحية حسب اللغة الحالية
+                                const keywords = currentLang === 'ar' ? keywordsAr : keywordsEn;
+
+                                // التحقق إذا كان العنصر يحتوي على إحدى الكلمات المفتاحية
+                                if (keywords.some(keyword => item.includes(keyword))) {
+                                    return `<li><h5>${item}</h5></li>`;
+                                } else {
+                                    return `<li>${item}</li>`;
+                                }
+                            }).join('')}
                                         </ul>
                                     ` : ''}
                                 </div>
@@ -4361,7 +4468,6 @@
                             background-color: #f44336;
                             color: white;
                             padding: 10px;
-                            border-radius: 5px;
                                 margin-top: 10px;
                             text-align: center;
                         `;
